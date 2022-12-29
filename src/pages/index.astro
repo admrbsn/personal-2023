@@ -1,66 +1,66 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import dribbble from '@icon/dribbble.svg';
-import github from '@icon/github.svg';
-import linkedin from '@icon/linkedin.svg';
-import email from '@icon/email.svg';
-import wavingHand from '@svg/waving-hand.svg';
-import figmaLogo from '@svg/figma-logo.svg';
-import webflowLogoOutline from '@svg/webflow-logo-outline.svg';
-import webflowLogo from '@svg/webflow-logo.svg';
-import tailwindLogo from '@svg/tailwind-logo.svg';
-import figmaLogoOutline from '@svg/figma-logo-outline.svg';
-import vueLogoOutline from '@svg/vue-logo-outline.svg';
-import vueLogo from '@svg/vue-logo.svg';
-import tailwindLogoOutline from '@svg/tailwind-logo-outline.svg';
-import optimizeLogoOutline from '@svg/optimize-logo-outline.svg';
-import optimizeLogo from '@svg/optimize-logo.svg';
-import gtmLogoOutline from '@svg/gtm-logo-outline.svg';
-import gtmLogo from '@svg/gtm-logo.svg';
-import gaLogoOutline from '@svg/ga-logo-outline.svg';
-import gaLogo from '@svg/ga-logo.svg';
-import bootstrapLogoOutline from '@svg/bootstrap-logo-outline.svg';
-import bootstrapLogo from '@svg/bootstrap-logo.svg';
-import ionicLogoOutline from '@svg/ionic-logo-outline.svg';
-import ionicLogo from '@svg/ionic-logo.svg';
-import wordPressLogoOutline from '@svg/wordpress-logo-outline.svg';
-import wordPressLogo from '@svg/wordpress-logo.svg';
-import sketchLogoOutline from '@svg/sketch-logo-outline.svg';
-import sketchLogo from '@svg/sketch-logo.svg';
-import astroLogo from '@svg/astro-logo.svg';
-import adam1 from '@img/adam1.jpg';
-import tributeCo from '@img/tribute-co.png';
-import tributeGreetings from '@img/tribute-greetings.png';
-import Project from '../components/Project.astro';
+import Layout from '../layouts/Layout.astro'
+import Experience from '../components/Experience.astro'
+import Project from '../components/Project.astro'
+import dribbble from '@icon/dribbble.svg'
+import github from '@icon/github.svg'
+import linkedin from '@icon/linkedin.svg'
+import email from '@icon/email.svg'
+import adam from '@img/adam.jpg'
+import figmaLogo from '@svg/figma-logo.svg'
+import figmaLogoOutline from '@svg/figma-logo-outline.svg'
+import webflowLogo from '@svg/webflow-logo.svg'
+import webflowLogoOutline from '@svg/webflow-logo-outline.svg'
+import tailwindLogo from '@svg/tailwind-logo.svg'
+import tailwindLogoOutline from '@svg/tailwind-logo-outline.svg'
+import vueLogo from '@svg/vue-logo.svg'
+import vueLogoOutline from '@svg/vue-logo-outline.svg'
+import optimizeLogo from '@svg/optimize-logo.svg'
+import optimizeLogoOutline from '@svg/optimize-logo-outline.svg'
+import gtmLogo from '@svg/gtm-logo.svg'
+import gtmLogoOutline from '@svg/gtm-logo-outline.svg'
+import gaLogo from '@svg/ga-logo.svg'
+import gaLogoOutline from '@svg/ga-logo-outline.svg'
+import bootstrapLogo from '@svg/bootstrap-logo.svg'
+import bootstrapLogoOutline from '@svg/bootstrap-logo-outline.svg'
+import ionicLogo from '@svg/ionic-logo.svg'
+import ionicLogoOutline from '@svg/ionic-logo-outline.svg'
+import wordPressLogo from '@svg/wordpress-logo.svg'
+import wordPressLogoOutline from '@svg/wordpress-logo-outline.svg'
+import sketchLogo from '@svg/sketch-logo.svg'
+import sketchLogoOutline from '@svg/sketch-logo-outline.svg'
+import tributeCo from '@img/tribute-co.png'
+import tributeGreetings from '@img/tribute-greetings.png'
+import petersonsTestPrep from '@img/petersons-test-prep.png'
 ---
 
 <Layout title="Adam Robertson | Prodcut Designer and Developer">
-	<header role="banner" class="relative w-full max-w-5xl flex flex-col md:flex-row md:items-center justify-between px-3 md:px-0 py-5 z-40">
+	<header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-40 flex flex-col justify-between w-full max-w-5xl px-3 py-5">
 		<div>
-			<h1 class="fixed p-2 bg-black text-white rounded-b-sm text-2xl font-extrabold uppercase tracking-wide	">Adam</h1>
+			<h1 class=" fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-b-sm">Adam</h1>
 		</div>
-		<nav class="hidden md:block md:mt-0">
+		<nav class="md:block md:mt-0 hidden">
 			<ul class="flex flex-row">
 				<li class="mr-3">
-					<a class="marker flex items-center font-semibold cursor-pointer" href="#">
+					<a class="highlight flex items-center font-semibold cursor-pointer" href="https://dribbble.com/adamrobertson" target="_blank">
 						<img class="w-5 mr-1.5" src={dribbble} alt="Dribbble icon."/>
-						Work
+						Dribble
 					</a>
 				</li>
 				<li class="mx-3">
-					<a class="marker flex items-center font-semibold cursor-pointer" href="#">
+					<a class="highlight flex items-center font-semibold cursor-pointer" href="https://github.com/admrbsn" target="_blank">
 						<img class="w-5 mr-1.5" src={github} alt="Github icon."/>
 						Github
 					</a>
 				</li>
 				<li class="mx-3">
-					<a class="marker flex items-center font-semibold cursor-pointer" href="#">
+					<a class="highlight flex items-center font-semibold cursor-pointer" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
 						<img class="w-5 mr-1.5" src={linkedin} alt="LinkedIn icon."/>
-						CV
+						LinkedIn
 					</a>
 				</li>
 				<li class="mx-3">
-					<a class="marker flex items-center font-semibold cursor-pointer" href="mailto:hi@adam.build">
+					<a class="highlight flex items-center font-semibold cursor-pointer" href="mailto:hi@adam.build">
 						<img class="w-5 mr-1.5" src={email} alt="Email icon."/>
 						hi@adam.build
 					</a>
@@ -69,52 +69,53 @@ import Project from '../components/Project.astro';
 		</nav>
 	</header>
 	<main>
+		<!-- Hero -->
 		<div id="hero" class="relative z-30 bg-[#f8f5f2]">
-			<div class="w-full max-w-5xl h-screen right-0 left-0 flex flex-col md:flex-row md:items-center justify-center mt-[-68px] pt-12 md:pt-0 px-3 md:px-0">
-				<div class="order-1 md:order-none">
-					<h2 class="max-w-3xl mb-6 text-4xl md:text-5xl font-heading font-extrabold leading-tight tracking-tight">I'm a multi-disciplinary and grizzled product designer.</h2>
-					<h3 class="max-w-3xl md:ml-auto text-xl leading-relaxed dark:opacity-75"><!--<img class="inline w-7 -mt-1 mr-1.5" src={wavingHand} alt="Waving hand."/>-->Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design working for a startup based out of Brooklyn.</h3>
-					<ul class="flex flex-row mt-12 md:hidden">
+			<div class="w-full max-w-5xl h-screen right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto mt-[-68px] pt-12 md:pt-0 px-3 md:px-0">
+				<div class="md:order-none order-1">
+					<h2 class="md:text-5xl font-heading max-w-3xl mb-6 text-4xl font-extrabold leading-tight tracking-tight">I'm a multi-disciplinary and grizzled product designer.</h2>
+					<h3 class="md:ml-auto dark:opacity-75 max-w-3xl text-xl leading-relaxed">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design working for a startup based out of Brooklyn.</h3>
+					<ul class="md:hidden flex flex-row mt-12">
 						<li class="mr-3">
-							<a class="marker flex items-center font-semibold cursor-pointer" href="#">
+							<a class="highlight flex items-center font-semibold cursor-pointer" href="#">
 								<img class="w-5 mr-1.5" src={dribbble} alt="Dribbble icon."/>
-								Work
+								Dribble
 							</a>
 						</li>
 						<li class="mx-3">
-							<a class="marker flex items-center font-semibold cursor-pointer" href="#">
+							<a class="highlight flex items-center font-semibold cursor-pointer" href="#">
 								<img class="w-5 mr-1.5" src={github} alt="Github icon."/>
 								Github
 							</a>
 						</li>
 						<li class="mx-3">
-							<a class="marker flex items-center font-semibold cursor-pointer" href="#">
+							<a class="highlight flex items-center font-semibold cursor-pointer" href="#">
 								<img class="w-5 mr-1.5" src={linkedin} alt="LinkedIn icon."/>
-								CV
+								LinkedIn
 							</a>
 						</li>
 						<li class="mx-3">
-							<a class="marker flex items-center font-semibold cursor-pointer" href="mailto:hi@adam.build">
+							<a class="highlight flex items-center font-semibold cursor-pointer" href="mailto:hi@adam.build">
 								<img class="w-5 mr-1.5" src={email} alt="Email icon."/>
 								Email
 							</a>
 						</li>
 					</ul>
 				</div>
-				<img class="w-1/2 md:w-1/3 md:ml-12 mb-6 md:mb-0 rounded-xl shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.1)]" src={adam1} alt="Portrait of Adam Robertson."/>
+				<img class="w-1/2 md:w-1/3 md:ml-12 mb-6 md:mb-0 rounded-xl shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.1)]" src={adam} alt="Portrait of Adam Robertson."/>
 			</div>
 		</div>
 		<!-- About section -->
-		<div id="about" class="relative z-20 md:max-w-5xl flex flex-col md:flex-row mt-12 pb-12 md:my-24 px-3 md:px-0 md:pb-0 bg-white">
-			<div class="order-1 md:order-none md:max-w-2xl md:mr-auto">
-				<p class="mb-8 text-base leading-relaxed dark:opacity-75">Lorem ipsum dolor sit amet, <a class="marker text-[#47dbcb]" href="#">consectetur</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p class="mb-8 text-base leading-relaxed dark:opacity-75">I like to wear hats. In fact, I wear so many hats at work, I've adopted the nickname "Slash." While I love design, I'm always growing my T-shape, whether it's reading usability studies, geeking out with new tools, or experimenting with JavaScript libraries. My expertise, however, is rooted in UX design and frontend development. Good design is what separates the best products from the good ones. One of my favorite quotes is "The details are not the details—They make the design," by Charles Eames. I obsess over typography, alignment, colors, and neat code.</p>
-				<p class="mb-8 first-letter:text-base leading-relaxed dark:opacity-75">Originally from northwestern Ohio, I moved to Colorado shortly after graduating college with a BA in Foreign Affairs. I've been building websites since I was 16, working to some capacity for numerous businesses and startups. In my free time, I enjoy hiking, cooking, DIYing, and spending time with my family.</p>
+		<div id="about" class="md:max-w-5xl md:flex-row md:my-24 md:mx-auto md:px-0 md:pb-0 relative z-20 flex flex-col px-3 pb-12 mt-12 bg-white">
+			<div class="md:order-none md:max-w-2xl md:mr-auto order-1">
+				<p class="dark:opacity-75 mb-8 text-base leading-relaxed">Lorem ipsum dolor sit amet, <a class="highlight text-[#47dbcb]" href="#">consectetur</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="dark:opacity-75 mb-8 text-base leading-relaxed">I like to wear hats. In fact, I wear so many hats at work, I've adopted the nickname "Slash." While I love design, I'm always growing my T-shape, whether it's reading usability studies, geeking out with new tools, or experimenting with JavaScript libraries. My expertise, however, is rooted in UX design and frontend development. Good design is what separates the best products from the good ones. One of my favorite quotes is "The details are not the details—They make the design," by Charles Eames. I obsess over typography, alignment, colors, and neat code.</p>
+				<p class="first-letter:text-base dark:opacity-75 mb-8 leading-relaxed">Originally from northwestern Ohio, I moved to Colorado shortly after graduating college with a BA in Foreign Affairs. I've been building websites since I was 16, working to some capacity for numerous businesses and startups. In my free time, I enjoy hiking, cooking, DIYing, and spending time with my family.</p>
 				<p class="mb-4 font-bold">I consider myself an expert in the following:</p>
 				<div id="skills" class="columns-2">
 					<ul>
 						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={webflowLogoOutline} alt="Webflow logo."/><img aria-hidden="true" class="absolute w-full h-full" src={webflowLogo} alt="Webflow logo."/></div>Webflow</li>
-						<li class="flex items-center py-1.5 font-semibold"><div class="relative first-letter:flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={figmaLogoOutline} alt="Figma logo."/><img aria-hidden="true" class="absolute w-full h-full" src={figmaLogo} alt="Figma logo."/></div>Figma</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="first-letter:flex relative items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={figmaLogoOutline} alt="Figma logo."/><img aria-hidden="true" class="absolute w-full h-full" src={figmaLogo} alt="Figma logo."/></div>Figma</li>
 						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={tailwindLogoOutline} alt="Tailwind logo."/><img aria-hidden="true" class="absolute w-full h-full" src={tailwindLogo} alt="Tailwind logo."/></div>Tailwind</li>
 						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={vueLogoOutline} alt="Vue logo."/><img aria-hidden="true" class="absolute w-full h-full" src={vueLogo} alt="Vue logo."/></div>Vue</li>
 						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={optimizeLogoOutline} alt="Google Optimize logo."/><img aria-hidden="true" class="absolute w-full h-full" src={optimizeLogo} alt="Google Optimize logo."/></div>Google Optimize</li>
@@ -130,104 +131,154 @@ import Project from '../components/Project.astro';
 			</div>
 			<div class="title sticky top-24 md:top-8 flex flex-col self-start md:mt-1.5 md:ml-12 pb-20 md:pb-0 bg-gradient-to-b from-white to-transparent text-4xl font-heading font-extrabold tracking-tight">
 				<div class="w-16 mb-3 border-2 border-black"></div>
-				<!--<img class="w-12 mb-4" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%20stroke%3D%22%23000000%22%20stroke-width%3D%221.5%22%20height%3D%2230%22%20width%3D%2230%22%3E%3Ccircle%20cx%3D%226.75%22%20cy%3D%2217.25%22%20r%3D%226%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fcircle%3E%3Cpath%20d%3D%22M3.75%2017.25a3%203%200%200%201%203-3%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2218.75%22%20cy%3D%228.25%22%20r%3D%224.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fcircle%3E%3Cpath%20d%3D%22M17.25%208.25a1.5%201.5%200%200%201%201.5-1.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%226%22%20cy%3D%223%22%20r%3D%222.25%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fcircle%3E%3Cpath%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22m11.961%2014.274%203.436-3.024m-.759-4.83L8.149%203.664%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E">-->
 				Designer, developer, & creative.
-				<!--<div class="mt-3 text-neutral-500 text-base font-sans font-semibold tracking-normal">A little about myself</div>-->
+				<div class="mt-3 font-sans text-lg font-semibold tracking-normal">A little about myself</div>
 			</div>
 		</div>
 		<!-- Experience section -->
 		<div class="relative z-10 bg-[#e8faf8]">
-			<div id="experience" class="md:max-w-5xl flex flex-col md:flew-row my-12 md:my-24 px-3 md:px-0">
+			<div id="experience" class="md:max-w-5xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">
 				<div class="title blue sticky z-10 top-24 md:top-28 flex flex-col self-start md:mt-1.5 md:mr-12 pb-20 md:pb-0 bg-gradient-to-b from-[#e8faf8] to-transparent text-4xl font-heading font-extrabold tracking-tight">
 					<div class="w-16 mb-3 border-2 border-black"></div>
-					<!--<img class="w-12 mb-4" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%20stroke%3D%22%23000000%22%20stroke-width%3D%221.5%22%20height%3D%2230%22%20width%3D%2230%22%3E%3Ccircle%20cx%3D%226.75%22%20cy%3D%2217.25%22%20r%3D%226%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fcircle%3E%3Cpath%20d%3D%22M3.75%2017.25a3%203%200%200%201%203-3%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2218.75%22%20cy%3D%228.25%22%20r%3D%224.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fcircle%3E%3Cpath%20d%3D%22M17.25%208.25a1.5%201.5%200%200%201%201.5-1.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%226%22%20cy%3D%223%22%20r%3D%222.25%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fcircle%3E%3Cpath%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22m11.961%2014.274%203.436-3.024m-.759-4.83L8.149%203.664%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E">-->
 					Some of the things I've done.
-					<!--<div class="mt-3 text-lg font-sans font-semibold tracking-normal">Experience is growth</div>-->
+					<div class="mt-3 font-sans text-lg font-semibold tracking-normal">Experience is growth</div>
 				</div>
-				<div class="order-1 md:order-none md:max-w-2xl md:ml-auto">
+				<div class="md:order-none md:max-w-2xl md:ml-auto order-1">
 					<ol>
-						<li class="mb-8 pb-8 border-b-2 border-[#c6ebe7]">
-							<div class="text-[#2bb0a3] text-lg font-semibold">March 2020 - Present</div>
-							<div class="mb-5 text-2xl font-extrabold">VP of Product Design</div>
-							<p class="text-base leading-relaxed dark:opacity-75">Consulted Droplr on rebranding and redesigning all consumer-facing sites. Built a custom WordPress multi-site theme with a focus on SEO and page speed; increased organic traffic by ~115% over 3 months and achieved a 99/85 on Google PageSpeed Insights. Led an effort to standardize, improve, and codify the use of brand assets. Assisted in an advanced configuration of Google Analytics to capture all stages of the purchase flow.</p>
-						</li>
-						<li class="mb-8 pb-8 border-b-2 border-[#c6ebe7]">
-							<div class="text-[#2bb0a3] text-lg font-semibold">December 2019 - March 2020</div>
-							<div class="mb-5 text-2xl font-extrabold">Consultant at Droplr</div>
-							<p class="text-base leading-relaxed dark:opacity-75">Consulted Droplr on rebranding and redesigning all consumer-facing sites. Built a custom WordPress multi-site theme with a focus on SEO and page speed; increased organic traffic by ~115% over 3 months and achieved a 99/85 on Google PageSpeed Insights. Led an effort to standardize, improve, and codify the use of brand assets. Assisted in an advanced configuration of Google Analytics to capture all stages of the purchase flow.</p>
-						</li>
-						<li class="mb-8 pb-8 border-b-2 border-[#c6ebe7]">
-							<div class="text-[#2bb0a3] text-lg font-semibold">March 20?? - March 2020</div>
-							<div class="mb-5 text-2xl font-extrabold">Lead UI Designer/Developer</div>
-							<p class="text-base leading-relaxed dark:opacity-75">Consulted Droplr on rebranding and redesigning all consumer-facing sites. Built a custom WordPress multi-site theme with a focus on SEO and page speed; increased organic traffic by ~115% over 3 months and achieved a 99/85 on Google PageSpeed Insights. Led an effort to standardize, improve, and codify the use of brand assets. Assisted in an advanced configuration of Google Analytics to capture all stages of the purchase flow.</p>
-						</li>
-						<li class="mb-8 pb-8 border-b-2 border-[#c6ebe7]">
-							<div class="text-[#2bb0a3] text-lg font-semibold">Current</div>
-							<div class="mb-5 text-2xl font-extrabold">Freelance</div>
-							<p class="text-base leading-relaxed dark:opacity-75">I've worked with a handful of brands throughout my career, notably American Express, Inspirato, SquareMouth, the city of San Francisco, and the state of Colorado.</p>
-						</li>
+						<Experience
+							dates="March 2020 - Present"
+							role="VP of Product Design"
+							body="Fill in"
+						/>
+						<Experience
+							dates="December 2019 - March 2020"
+							role="Consultant at Droplr"
+							body="Consulted Droplr on rebranding and redesigning all consumer-facing sites. Built a custom WordPress multi-site theme with a focus on SEO and page speed; increased organic traffic by ~115% over 3 months and achieved a 99/85 on Google PageSpeed Insights. Led an effort to standardize, improve, and codify the use of brand assets. Assisted in an advanced configuration of Google Analytics to capture all stages of the purchase flow."
+						/>
+						<Experience
+							dates="March 2014 - March 2020"
+							role="Sr. Manager, UX/UI & Frontend Development at Peterson's"
+							body="Combined design and development efforts to lead all UX/UI and frontend development for the company, including managing small teams. Was responsible for executing product visions from wireframing and high-fidelity mocks to prototyping and production-ready code, all in an Agile environment. Helped spearhead a 6 month effort to migrate Peterson's from a 15+ year-old .NET stack to Bootstrap, Laravel, and VueJS. Worked alongside our international development team to design a complex native mobile app within 3 months. Experience with Auth0, AWS, Docker/Vagrant, Node/Yarn, Git/GitLab, and WordPress/WooCommerce. Earned a CSM from Scrum Alliance."
+						/>
+						<Experience
+							dates="December 2011 - March 2014"
+							role="Sr. WordPress Designer/Developer at Webolutions"
+							body="Responsible for the design and frontend development of all client websites with a focus on user-centered design principles, best practices, and industry trends. Worked independently to meet tight deadlines, sometimes delivering a new site every week. Responsible for all branding and print design."
+						/>
+						<Experience
+							dates="July 2017 - November 2019"
+							role="Freelance Design & Development at ETHDenver"
+							body="Led all web efforts for ETHDenver, the world's largest Etherium hackathon event with over 2,000 participants. This included the promotional site, application forms for teams, event schedules, and social media assets. Used WordPress and integrated with Devfolio."
+						/>
+						<Experience
+							dates="January 2014 - August 2017"
+							role="Freelance Design & Development at Inspirato"
+							body="Inspirato is a luxury hospitality company that provides its members access to several hundred million dollars worth of luxury vacation homes in beach, mountain, and metropolitan destinations around the world. Designed and developed the company's WordPress blog . Designed and developed Inspirato with American Express, a partnership offering benefits to American Express cardmembers."
+						/>
+						<Experience
+							dates="July 2006 - December 2011"
+							role="Lead Interactive Designer at Miles Media"
+							body="The creative lead for all web and interactive design for over 10 clients, including sites, banner ads, iOS apps, and Adobe Flash applications. Notable clients included the official tourism sites for Colorado, San Francisco, Philadelphia, Austin, and Seattle. Responsible for the design and management of banner ads via 24/7 Open AdStream."
+						/>
+						<Experience
+							dates="Februrary 2014 - April 2014"
+							role="Freelance Design & Development at Squaremouth"
+							body="Tin Leg was founded in 2014 by the travel insurance industry experts at Squaremouth. I helped launch the consumer-facing site by building brand guidelines and a custom WordPress site."
+						/>
 					</ol>
 				</div>
 			</div>
 		</div>
-		<!-- Work section -->
-		<div class="md:max-w-5xl flex flex-col md:flex-row my-12 md:my-24 pl-3 md:pl-0">
-			<div class="order-1 md:order-none md:max-w-2xl md:mr-auto">
-				<ul role="list" class="flex md:block md:mt-2 overflow-auto">
+		<!-- Projects section -->
+		<div class="md:max-w-5xl md:flex-row md:my-24 md:mx-auto md:pl-0 flex flex-col pl-3 my-12">
+			<div class="md:order-none md:max-w-2xl md:mr-auto order-1">
+				<ul role="list" class="md:block md:mt-2 flex overflow-auto">
 					<Project
-						href="https://docs.astro.build/"
+						href="https://adamrobertson.medium.com/tribute-greetings-case-study-860794e1c1cd"
+						title="Tribute Greetings"
+						body="Supercharge your project with new frameworks and libraries."
+						image={tributeGreetings}
+					/>
+					<Project
+						href="https://adamrobertson.medium.com/tribute-co-case-study-23e5785e9e24"
 						title="Tribute.co"
 						body="Learn how Astro works and explore the official API docs."
 						image={tributeCo}
 					/>
 					<Project
-						href="https://astro.build/integrations/"
-						title="Tribute Greetings"
+						href="https://adamrobertson.medium.com/petersons-test-prep-ios-android-mobile-app-case-study-488e8389183d"
+						title="Peterson's Test Prep"
 						body="Supercharge your project with new frameworks and libraries."
-						image={tributeGreetings}
+						image={petersonsTestPrep}
 					/>
 				</ul>
 			</div>
 			<div class="title sticky top-24 md:top-8 flex flex-col self-start md:mt-1.5 md:ml-12 pb-20 md:pb-0 bg-gradient-to-b from-white to-transparent text-4xl font-heading font-extrabold tracking-tight">
 				<div class="w-16 mb-3 border-2 border-black"></div>
 				Recent work.
+				<div class="mt-3 font-sans text-lg font-semibold tracking-normal">Blah Blah Blah</div>
+			</div>
+		</div>
+		<!-- Experience section -->
+		<div class="relative z-10 bg-[#f7f5f2]">
+			<div id="experience" class="md:max-w-5xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">
+				<div class="title sticky z-10 top-24 md:top-28 flex flex-col self-start md:mt-1.5 md:mr-36 pb-20 md:pb-0 bg-gradient-to-b from-[#f7f5f2] to-transparent text-4xl font-heading font-extrabold tracking-tight">
+					<div class="w-16 mb-3 border-2 border-black"></div>
+					What co-workers have to say
+					<div class="mt-3 font-sans text-lg font-semibold tracking-normal">Behind every positive interaction is an experience that matters. Whether it's freelance clients or ex-supervisors, I cherish those positive interactions. At the end of the day, work is personal. And some of my best friendships are a result of work relationships.</div>
+				</div>
+				<div class="md:order-none md:max-w-2xl md:ml-auto order-1">
+					<div class="-left-12 border-sold rounded-xl relative p-10 mb-6 bg-white border-2 border-black">
+						It was a pleasure working with Adam and I'd so again in a heartbeat. He's the type of guy you want on your team: creative, driven, resourceful, and fun to work with. Any company would be lucky to have him.
+					</div>
+					<div class="border-sold rounded-xl p-10 bg-white border-2 border-black">
+						It was a pleasure working with Adam and I'd so again in a heartbeat. He's the type of guy you want on your team: creative, driven, resourceful, and fun to work with. Any company would be lucky to have him.
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
 	<footer class="relative h-screen flex flex-col items-center justify-center md:block md:h-auto bg-[#f7f5f2]">
-		<div class="max-w-5xl mx-auto pt-24 pb-20 text-center">
-			<h6 class="mb-5 text-5xl font-heading font-extrabold tracking-tight leading-snug">
+		<div class="max-w-5xl pt-24 pb-20 mx-auto text-center">
+			<h6 class="font-heading mb-5 text-5xl font-extrabold leading-snug tracking-tight">
 				Let's Work Together.
 			</h6>
-			<p class="mb-10 mx-auto text-xl leading-relaxed dark:opacity-75">Have a project? Let's chat. I'm currently accepting inquiries for small and medium sized projects.			</p>
-			<a class="marker inline-flex items-center font-semibold cursor-pointer text-2xl" href="mailto:hi@adambuild"><img class="w-5 mr-1.5" src={email} alt="Email icon."/>hi@adam.build</a>
+			<p class="dark:opacity-75 mx-auto mb-10 text-xl leading-relaxed">Have a project? Let's chat. I'm currently accepting inquiries for small and medium sized projects.			</p>
+			<a class="highlight inline-flex items-center text-2xl font-semibold cursor-pointer" href="mailto:hi@adambuild"><img class="w-5 mr-1.5" src={email} alt="Email icon."/>hi@adam.build</a>
 		</div>
-		<div class="absolute bottom-5 md:relative w-full text-center">
+		<div class="bottom-5 md:relative absolute w-full text-center">
 			Built with <a class="text-[#9333e9] underline" href="https://astro.build/" target="_blank">Astro</a>, <a class="text-[#0ca5e9] underline" href="https://tailwindcss.com/" target="_blank">Tailwind</a>, and <a class="underline" href="https://vanillajstoolkit.com/" target="_blank">Vanilla JS</a>.
 		</div>
 	</footer>
 </Layout>
 
 <script>
-var isInViewport = function (elem) {
-	var bounding = elem.getBoundingClientRect();
-	return (
-			bounding.top >= 0 &&
-			bounding.left >= 0 &&
-			bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-			bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-	);
-};
-window.addEventListener('scroll', function(event) {
-	const scrollTop = window.pageYOffset
-  const hero = document.getElementById('hero')
-	const skills = document.getElementById('skills')
-  hero.style.opacity = 0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight
-	if (isInViewport(skills)) {
+// Function to check if an element is in the viewport
+function isInViewport(elem: HTMLElement): boolean {
+  const bounding = elem.getBoundingClientRect()
+
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+}
+// Modifying the DOM on scroll
+window.addEventListener('scroll', (event: Event) => {
+  const scrollTop = window.pageYOffset as number
+  const hero = document.getElementById('hero') as HTMLElement
+  const skills = document.getElementById('skills') as HTMLElement
+
+  // Setting hero opacity
+	hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
+	
+  // Toggling skill icons between filled and outline
+  if (isInViewport(skills)) {
     skills.classList.add("filled")
-	} else {
-		skills.classList.remove("filled")
-	}
+  } else {
+    skills.classList.remove("filled")
+  }
 }, false)
 </script>
 
@@ -238,66 +289,36 @@ window.addEventListener('scroll', function(event) {
 		font-weight: 100 1000;
   	font-stretch: 75% 200%;
 	}
-	@font-face {
-		font-family: 'Armin Soft';
-		src: url('/fonts/ArminSoft-VF.woff2') format('woff2');
-		font-weight: 100 1000;
-  	font-stretch: 75% 200%;
-	}
-	body.invert {
-		background-color: #000;
-		transition: all 0.25s ease-out;
-	}
-	.marker {
-    transition: all .15s ease-out;
-    text-decoration: none;
+	:global(.highlight) {
+		@apply w-fit ease-in-out duration-100 pb-0.5 no-underline bg-no-repeat border-b-2 border-solid border-black;
     background-image: linear-gradient(transparent 50%, #bff2ec 0%);
     background-size: 0 100%;
-    background-repeat: no-repeat;
-    border-bottom: 2px solid;
-		padding-bottom: 2px;
 	}
-	.marker:hover {
+	:global(.highlight:hover) {
+		@apply border-[#4edbcb];
 		background-size: 100% 100%;
-    border-bottom: 2px solid #4edbcb;
 	}
 	h1:before {
+		@apply absolute -top-full left-0 w-full h-full bg-black;
 		content: "";
-		position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-		height: 100%;
-    background-color: black;
 	}
 	#skills {
-		transition: all .5s ease-in-out;
+		@apply ease-in-out duration-500;
 	}
+	#skills.filled img,
 	#skills img + img {
-		visibility: hidden;
-		opacity: 0;
-		transition: all .5s ease-in-out;
-	}
-	#skills.filled img {
-		visibility: hidden;
-		opacity: 0;
-		transition: all .5s ease-in-out;
+		@apply invisible opacity-0 ease-in-out duration-500;
 	}
 	#skills.filled img + img {
-		visibility: visible;
-		opacity: 1;
-		transition: all .5s ease-in-out;
+		@apply visible opacity-100 ease-in-out duration-500;
 	}
-	.title:before {
-		content: "";
-		position: absolute;
-    top: -100%;
-    left: -0.75rem;
-    width: calc(100% + 1.5rem);
-		height: 100%;
-    background-color: white;
-	}
-	.title.blue:before {
-		background-color: #e8faf8;
+	@media(max-width: 767px) {
+		.title:before {
+			@apply absolute -top-full -left-3 w-[calc(100%+1.5rem)] h-full bg-white;
+			content: "";
+		}
+		.title.blue:before {
+			@apply bg-[#e8faf8];
+		}
 	}
 </style>
