@@ -71,7 +71,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 	<main>
 		<!-- Hero -->
 		<div id="hero" class="relative z-30 bg-[#f8f5f2]">
-			<div class="w-full max-w-5xl h-screen right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto mt-[-68px] pt-12 md:pt-0 px-3 md:px-0">
+			<div class="w-full max-w-5xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto mt-[-68px] pt-12 md:pt-0 px-3 md:px-0">
 				<div class="md:order-none order-1">
 					<h2 class="md:text-5xl font-heading max-w-3xl mb-6 text-3xl font-extrabold leading-tight tracking-tight">I'm a multi-disciplinary and grizzled product designer.</h2>
 					<h3 class="md:ml-auto md:text-xl max-w-3xl text-lg leading-relaxed opacity-75">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design working for a startup based out of Brooklyn.</h3>
@@ -253,36 +253,53 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 </Layout>
 
 <script>
-// Function to check if an element is in the viewport
-function isInViewport(elem: HTMLElement): boolean {
-  const bounding = elem.getBoundingClientRect()
+	// Doc height hack to defeate 100vh bugs
+	let timeoutId = null;
+	const documentHeight = () => {
+		clearTimeout(timeoutId) // avoid execution of previous timeouts
+		timeoutId = setTimeout(() => {
+			const doc = document.documentElement
+			doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+		}, 200)
+	}
 
-  return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-  )
-}
-// Modifying the DOM on scroll
-window.addEventListener('scroll', (event: Event) => {
-  const scrollTop = window.pageYOffset as number
-  const hero = document.getElementById('hero') as HTMLElement
-  const skills = document.getElementById('skills') as HTMLElement
+	window.addEventListener('resize', documentHeight)
+	documentHeight()
 
-  // Setting hero opacity
-	hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
-	
-  // Toggling skill icons between filled and outline
-  if (isInViewport(skills)) {
-    skills.classList.add("filled")
-  } else {
-    skills.classList.remove("filled")
-  }
-}, false)
+	// Function to check if an element is in the viewport
+	function isInViewport(elem: HTMLElement): boolean {
+		const bounding = elem.getBoundingClientRect()
+
+		return (
+			bounding.top >= 0 &&
+			bounding.left >= 0 &&
+			bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+			bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+		)
+	}
+
+	// Modifying the DOM on scroll
+	window.addEventListener('scroll', (event: Event) => {
+		const scrollTop = window.pageYOffset as number
+		const hero = document.getElementById('hero') as HTMLElement
+		const skills = document.getElementById('skills') as HTMLElement
+
+		// Setting hero opacity
+		hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
+		
+		// Toggling skill icons between filled and outline
+		if (isInViewport(skills)) {
+			skills.classList.add("filled")
+		} else {
+			skills.classList.remove("filled")
+		}
+	}, false)
 </script>
 
 <style>
+	:root {
+		--doc-height: 100%;
+	}
 	@font-face {
 		font-family: 'Martian Grotesk';
 		src: url('/fonts/MartianGrotesk-VF.woff2') format('woff2');
@@ -304,6 +321,9 @@ window.addEventListener('scroll', (event: Event) => {
 
 	.has-tooltip:hover .tooltip {
 		@apply visible z-50;
+	}
+	#hero > div {
+		height: var(--doc-height);
 	}
 	h1:before {
 		@apply absolute -top-full left-0 w-full h-full bg-black;
