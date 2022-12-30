@@ -72,41 +72,123 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 	</header>
 	<main>
 		<!-- Hero -->
-		
-		<!-- About section -->
-	
-		<!-- Experience section -->
-	
-		<!-- Projects section -->
-		<div class="md:max-w-5xl md:flex-row md:my-24 md:mx-auto md:pl-0 relative z-10 flex flex-col pl-3 my-12">
-			<div class="md:order-none md:max-w-2xl md:mr-auto order-1 overflow-hidden">
-				<ul role="list" class="md:block md:mt-2 flex overflow-auto">
-					<Project
-						href="https://adamrobertson.medium.com/tribute-greetings-case-study-860794e1c1cd"
-						title="Tribute Greetings"
-						body="Supercharge your project with new frameworks and libraries."
-						image={tributeGreetings}
-					/>
-					<Project
-						href="https://adamrobertson.medium.com/tribute-co-case-study-23e5785e9e24"
-						title="Tribute.co"
-						body="Learn how Astro works and explore the official API docs."
-						image={tributeCo}
-					/>
-					<Project
-						href="https://adamrobertson.medium.com/petersons-test-prep-ios-android-mobile-app-case-study-488e8389183d"
-						title="Peterson's Test Prep"
-						body="Supercharge your project with new frameworks and libraries."
-						image={petersonsTestPrep}
-					/>
-				</ul>
-			</div>
-			<div class="title sticky top-24 md:top-8 w-full md:w-auto flex flex-col self-start md:mt-1.5 md:ml-12 pb-20 md:pb-0 bg-gradient-to-b from-white to-transparent text-3xl md:text-4xl font-heading font-extrabold tracking-tight">
-				<div class="w-16 mb-3 border-2 border-black"></div>
-				Recent work.
-				<div class="md:block hidden mt-3 font-sans text-lg font-semibold tracking-normal">What I've been up to.</div>
+		<div id="hero" class="relative z-50 bg-[#f8f5f2]">
+			<div class="w-full max-w-5xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto -mt-10 md:mt-[-68px] pt-12 md:pt-0 px-3 md:px-0">
+				<div class="md:order-none order-1">
+					<h2 class="md:text-5xl font-heading max-w-3xl mb-6 text-3xl font-extrabold leading-tight tracking-tight">I'm a multi-disciplinary and grizzled product designer.</h2>
+					<h3 class="md:ml-auto md:text-xl max-w-3xl text-lg leading-relaxed opacity-75">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design working for a startup based out of Brooklyn.</h3>
+					<ul class="md:hidden flex flex-row mt-12">
+						<li class="mr-3">
+							<a class="flex items-center" href="https://dribbble.com/adamrobertson" target="_blank">
+								<img class="w-8 mr-0.5" src={dribbble} alt="Dribbble icon."/>
+							</a>
+						</li>
+						<li class="mx-3">
+							<a class="flex items-center" href="https://github.com/admrbsn" target="_blank">
+								<img class="w-8 mr-0.5" src={github} alt="Github icon."/>
+							</a>
+						</li>
+						<li class="mx-3">
+							<a class="flex items-center" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
+								<img class="w-8 mr-0.5" src={linkedin} alt="LinkedIn icon."/>
+							</a>
+						</li>
+						<li class="mx-3">
+							<a class="flex items-center" href="mailto:hi@adam.build">
+								<img class="w-8 mr-0.5" src={emailAlt} alt="Email icon."/>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<img class="w-[91.45px] md:w-1/3 md:ml-12 mb-6 md:mb-0 rounded-sm md:rounded-xl shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.1)]" src={adam} alt="Portrait of Adam Robertson."/>
 			</div>
 		</div>
+		<!-- About section -->
+		<div id="about" class="md:max-w-5xl md:flex-row md:my-24 md:mx-auto md:px-0 md:pb-0 relative z-40 flex flex-col px-3 pb-12 mt-12 bg-white">
+			<div class="md:order-none md:max-w-2xl md:mr-auto order-1">
+				<p class="mb-8 text-base leading-relaxed opacity-75">Lorem ipsum dolor sit amet...</p>
+				<p class="mb-8 text-base leading-relaxed opacity-75">I like to wear hats. In fact, I wear so many hats at work, I've adopted the nickname "Slash." While I love design, I'm always growing my <a class="highlight has-tooltip relative" href="https://www.forbes.com/sites/lisabodell/2020/08/28/futurethink-forecasts-t-shaped-teams-are-the-future-of-work/" target="_blank"><span class="tooltip left-1/2 whitespace-nowrap absolute px-2 py-1 -mt-6 text-xs text-white -translate-x-1/2 bg-black rounded shadow-lg">Forbes article on T-Shape in work</span>T-shape</a>, whether it's reading usability studies, geeking out with new tools, or experimenting with JavaScript libraries. My expertise, however, is rooted in UX design and frontend development. Good design is what separates the best products from the good ones. One of my favorite quotes is "The details are not the details—They make the design," by Charles Eames. I obsess over typography, alignment, colors, and neat code.</p>
+				<p class="first-letter:text-base mb-8 leading-relaxed opacity-75">Originally from northwestern Ohio, I moved to Colorado shortly after graduating college with a BA in Foreign Affairs. I've been building websites <a class="highlight has-tooltip relative" href="https://web.archive.org/web/20020930020107/https://sccresources.com/" target="_blank"><span class="tooltip left-1/2 whitespace-nowrap absolute px-2 py-1 -mt-6 text-xs text-white -translate-x-1/2 bg-black rounded shadow-lg">My first commercial website from 2002</span>since I was 16</a>, working to some capacity for numerous businesses and startups. In my free time, I enjoy hiking, cooking, DIYing, and spending time with my family.</p>	
+				<p class="mb-4 font-bold">I consider myself an expert in the following:</p>
+				<div id="skills" class="columns-2">
+					<ul>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={webflowLogoOutline} alt="Webflow logo."/><img aria-hidden="true" class="absolute w-full h-full" src={webflowLogo} alt="Webflow logo."/></div>Webflow</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="first-letter:flex relative items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={figmaLogoOutline} alt="Figma logo."/><img aria-hidden="true" class="absolute w-full h-full" src={figmaLogo} alt="Figma logo."/></div>Figma</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={tailwindLogoOutline} alt="Tailwind logo."/><img aria-hidden="true" class="absolute w-full h-full" src={tailwindLogo} alt="Tailwind logo."/></div>Tailwind</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={vueLogoOutline} alt="Vue logo."/><img aria-hidden="true" class="absolute w-full h-full" src={vueLogo} alt="Vue logo."/></div>Vue</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={optimizeLogoOutline} alt="Google Optimize logo."/><img aria-hidden="true" class="absolute w-full h-full" src={optimizeLogo} alt="Google Optimize logo."/></div>Google Optimize</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={bootstrapLogoOutline} alt="Bootstrap logo."/><img aria-hidden="true" class="absolute w-full h-full" src={bootstrapLogo} alt="Bootstrap logo."/></div>Bootstrap</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={ionicLogoOutline} alt="Ionic logo."/><img aria-hidden="true" class="absolute w-full h-full" src={ionicLogo} alt="Ionic logo."/></div>Ionic</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={wordPressLogoOutline} alt="WordPress logo."/><img aria-hidden="true" class="absolute w-full h-full" src={wordPressLogo} alt="WordPress logo."/></div>WordPress</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={gaLogoOutline} alt="Google Analytics logo."/><img aria-hidden="true" class="absolute w-full h-full" src={gaLogo} alt="Google Analytics logo."/></div>Google Analytics</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={gtmLogoOutline} alt="Google Tag Manager logo."/><img aria-hidden="true" class="absolute w-full h-full" src={gtmLogo} alt="Google Tag Manager logo."/></div>Tag Manager</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={sketchLogoOutline} alt="Sketch logo."/><img aria-hidden="true" class="absolute w-full h-full" src={sketchLogo} alt="Sketch logo."/></div>Sketch</li>
+						<li class="flex items-center py-1.5 font-semibold"><div class="relative flex items-center justify-center w-8 h-8 mr-2 border-2 border-black rounded-sm"><img class="absolute w-full h-full" src={sketchLogoOutline} alt="Sketch logo."/><img aria-hidden="true" class="absolute w-full h-full" src={sketchLogo} alt="Sketch logo."/></div>Sketch</li>
+					</ul>
+				</div>
+			</div>
+			<div class="title sticky top-24 md:top-8 flex flex-col self-start md:mt-1.5 md:ml-12 pb-20 md:pb-0 bg-gradient-to-b from-white to-transparent text-3xl md:text-4xl font-heading font-extrabold tracking-tight">
+				<div class="w-16 mb-3 border-2 border-black"></div>
+				Designer, developer, & creative.
+				<div class="md:block hidden mt-3 font-sans text-lg font-semibold tracking-normal">A little about myself.</div>
+			</div>
+		</div>
+		<!-- Experience section -->
+		<div class="relative z-30 bg-[#e8faf8]">
+			<div id="experience" class="md:max-w-5xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">
+				<div class="title blue sticky z-10 top-24 md:top-28 flex flex-col self-start md:mt-1.5 md:mr-12 pb-20 md:pb-0 bg-gradient-to-b from-[#e8faf8] to-transparent text-3xl md:text-4xl font-heading font-extrabold tracking-tight">
+					<div class="w-16 mb-3 border-2 border-black"></div>
+					Some of the things I've done.
+					<div class="md:block hidden mt-3 font-sans text-lg font-semibold tracking-normal">Experience is growth.</div>
+				</div>
+				<div class="md:order-none md:max-w-2xl md:ml-auto order-1">
+					<ol>
+						<Experience
+							dates="March 2020 - Present"
+							role="VP of Product Design"
+							body="Fill in"
+						/>
+						<Experience
+							dates="December 2019 - March 2020"
+							role="Consultant at Droplr"
+							body="Consulted Droplr on rebranding and redesigning all consumer-facing sites. Built a custom WordPress multi-site theme with a focus on SEO and page speed; increased organic traffic by ~115% over 3 months and achieved a 99/85 on Google PageSpeed Insights. Led an effort to standardize, improve, and codify the use of brand assets. Assisted in an advanced configuration of Google Analytics to capture all stages of the purchase flow."
+						/>
+						<Experience
+							dates="March 2014 - March 2020"
+							role="Sr. Manager, UX/UI & Frontend Development at Peterson's"
+							body="Combined design and development efforts to lead all UX/UI and frontend development for the company, including managing small teams. Was responsible for executing product visions from wireframing and high-fidelity mocks to prototyping and production-ready code, all in an Agile environment. Helped spearhead a 6 month effort to migrate Peterson's from a 15+ year-old .NET stack to Bootstrap, Laravel, and VueJS. Worked alongside our international development team to design a complex native mobile app within 3 months. Experience with Auth0, AWS, Docker/Vagrant, Node/Yarn, Git/GitLab, and WordPress/WooCommerce. Earned a CSM from Scrum Alliance."
+						/>
+						<Experience
+							dates="December 2011 - March 2014"
+							role="Sr. WordPress Designer/Developer at Webolutions"
+							body="Responsible for the design and frontend development of all client websites with a focus on user-centered design principles, best practices, and industry trends. Worked independently to meet tight deadlines, sometimes delivering a new site every week. Responsible for all branding and print design."
+						/>
+						<Experience
+							dates="July 2017 - November 2019"
+							role="Freelance Design & Development at ETHDenver"
+							body="Led all web efforts for ETHDenver, the world's largest Etherium hackathon event with over 2,000 participants. This included the promotional site, application forms for teams, event schedules, and social media assets. Used WordPress and integrated with Devfolio."
+						/>
+						<Experience
+							dates="January 2014 - August 2017"
+							role="Freelance Design & Development at Inspirato"
+							body="Inspirato is a luxury hospitality company that provides its members access to several hundred million dollars worth of luxury vacation homes in beach, mountain, and metropolitan destinations around the world. Designed and developed the company's WordPress blog . Designed and developed Inspirato with American Express, a partnership offering benefits to American Express cardmembers."
+						/>
+						<Experience
+							dates="July 2006 - December 2011"
+							role="Lead Interactive Designer at Miles Media"
+							body="The creative lead for all web and interactive design for over 10 clients, including sites, banner ads, iOS apps, and Adobe Flash applications. Notable clients included the official tourism sites for Colorado, San Francisco, Philadelphia, Austin, and Seattle. Responsible for the design and management of banner ads via 24/7 Open AdStream."
+						/>
+						<Experience
+							dates="Februrary 2014 - April 2014"
+							role="Freelance Design & Development at Squaremouth"
+							body="Tin Leg was founded in 2014 by the travel insurance industry experts at Squaremouth. I helped launch the consumer-facing site by building brand guidelines and a custom WordPress site."
+						/>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- Projects section -->
+		
 		<!-- Recommendations section -->
 		<!-- <div class="relative z-10 bg-[#fffacd]">
 			<div id="recommendations" class="md:max-w-5xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">
@@ -148,7 +230,18 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 			</div>
 		</div> -->
 	</main>
-	
+	<footer class="relative h-screen flex flex-col items-center justify-center md:block md:h-auto bg-[#f7f5f2]">
+		<div class="max-w-5xl pt-24 pb-20 mx-auto text-center">
+			<h6 class="font-heading mb-5 text-5xl font-extrabold leading-snug tracking-tight">
+				Let's Work Together.
+			</h6>
+			<p class="mx-auto mb-10 text-xl leading-relaxed opacity-75">Have a project? Let's chat. I'm currently accepting inquiries for small and medium sized projects.			</p>
+			<a class="highlight inline-flex items-center text-2xl font-semibold cursor-pointer" href="mailto:hi@adambuild"><img class="hidden md:block w-5 mr-1.5" src={email} alt="Email icon."/>hi@adam.build</a>
+		</div>
+		<div class="bottom-5 md:relative absolute w-full text-center">
+			Built with <a class="text-[#9333e9] underline" href="https://astro.build/" target="_blank">Astro</a>, <a class="text-[#0ca5e9] underline" href="https://tailwindcss.com/" target="_blank">Tailwind</a>, and <a class="underline" href="https://vanillajstoolkit.com/" target="_blank">Vanilla JS</a>.
+		</div>
+	</footer>
 </Layout>
 
 <script>
