@@ -273,7 +273,12 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 
 <script>
 	// Doc height hack to defeate 100vh bugs
-
+	const documentHeight = () => {
+		const doc = document.documentElement
+		doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+	}
+	window.addEventListener('resize', documentHeight)
+	documentHeight()
 
 	// Function to check if an element is in the viewport
 	function isInViewport(elem: HTMLElement): boolean {
