@@ -74,7 +74,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 			<div class="w-full max-w-5xl h-screen right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto mt-[-68px] pt-12 md:pt-0 px-3 md:px-0">
 				<div class="md:order-none order-1">
 					<h2 class="md:text-5xl font-heading max-w-3xl mb-6 text-4xl font-extrabold leading-tight tracking-tight">I'm a multi-disciplinary and grizzled product designer.</h2>
-					<h3 class="md:ml-auto dark:opacity-75 max-w-3xl text-xl leading-relaxed">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design working for a startup based out of Brooklyn.</h3>
+					<h3 class="md:ml-auto max-w-3xl text-xl leading-relaxed opacity-75">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design working for a startup based out of Brooklyn.</h3>
 					<ul class="md:hidden flex flex-row mt-12">
 						<li class="mr-3">
 							<a class="highlight flex items-center font-semibold cursor-pointer" href="#">
@@ -108,9 +108,9 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 		<!-- About section -->
 		<div id="about" class="md:max-w-5xl md:flex-row md:my-24 md:mx-auto md:px-0 md:pb-0 relative z-20 flex flex-col px-3 pb-12 mt-12 bg-white">
 			<div class="md:order-none md:max-w-2xl md:mr-auto order-1">
-				<p class="dark:opacity-75 mb-8 text-base leading-relaxed">Lorem ipsum dolor sit amet, <a class="highlight text-[#47dbcb]" href="#">consectetur</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p class="dark:opacity-75 mb-8 text-base leading-relaxed">I like to wear hats. In fact, I wear so many hats at work, I've adopted the nickname "Slash." While I love design, I'm always growing my T-shape, whether it's reading usability studies, geeking out with new tools, or experimenting with JavaScript libraries. My expertise, however, is rooted in UX design and frontend development. Good design is what separates the best products from the good ones. One of my favorite quotes is "The details are not the details—They make the design," by Charles Eames. I obsess over typography, alignment, colors, and neat code.</p>
-				<p class="first-letter:text-base dark:opacity-75 mb-8 leading-relaxed">Originally from northwestern Ohio, I moved to Colorado shortly after graduating college with a BA in Foreign Affairs. I've been building websites since I was 16, working to some capacity for numerous businesses and startups. In my free time, I enjoy hiking, cooking, DIYing, and spending time with my family.</p>
+				<p class="mb-8 text-base leading-relaxed opacity-75">Lorem ipsum dolor sit amet...</p>
+				<p class="mb-8 text-base leading-relaxed opacity-75">I like to wear hats. In fact, I wear so many hats at work, I've adopted the nickname "Slash." While I love design, I'm always growing my <a class="highlight has-tooltip relative" href="https://www.forbes.com/sites/lisabodell/2020/08/28/futurethink-forecasts-t-shaped-teams-are-the-future-of-work/" target="_blank"><span class="tooltip left-1/2 whitespace-nowrap absolute px-2 py-1 -mt-6 text-xs text-white -translate-x-1/2 bg-black rounded shadow-lg">Forbes article on T-Shape in work</span>T-shape</a>, whether it's reading usability studies, geeking out with new tools, or experimenting with JavaScript libraries. My expertise, however, is rooted in UX design and frontend development. Good design is what separates the best products from the good ones. One of my favorite quotes is "The details are not the details—They make the design," by Charles Eames. I obsess over typography, alignment, colors, and neat code.</p>
+				<p class="first-letter:text-base mb-8 leading-relaxed opacity-75">Originally from northwestern Ohio, I moved to Colorado shortly after graduating college with a BA in Foreign Affairs. I've been building websites <a class="highlight has-tooltip relative" href="https://web.archive.org/web/20020930020107/https://sccresources.com/" target="_blank"><span class="tooltip left-1/2 whitespace-nowrap absolute px-2 py-1 -mt-6 text-xs text-white -translate-x-1/2 bg-black rounded shadow-lg">My first commercial website from 2002</span>since I was 16</a>, working to some capacity for numerous businesses and startups. In my free time, I enjoy hiking, cooking, DIYing, and spending time with my family.</p>	
 				<p class="mb-4 font-bold">I consider myself an expert in the following:</p>
 				<div id="skills" class="columns-2">
 					<ul>
@@ -243,7 +243,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 			<h6 class="font-heading mb-5 text-5xl font-extrabold leading-snug tracking-tight">
 				Let's Work Together.
 			</h6>
-			<p class="dark:opacity-75 mx-auto mb-10 text-xl leading-relaxed">Have a project? Let's chat. I'm currently accepting inquiries for small and medium sized projects.			</p>
+			<p class="mx-auto mb-10 text-xl leading-relaxed opacity-75">Have a project? Let's chat. I'm currently accepting inquiries for small and medium sized projects.			</p>
 			<a class="highlight inline-flex items-center text-2xl font-semibold cursor-pointer" href="mailto:hi@adambuild"><img class="w-5 mr-1.5" src={email} alt="Email icon."/>hi@adam.build</a>
 		</div>
 		<div class="bottom-5 md:relative absolute w-full text-center">
@@ -297,6 +297,13 @@ window.addEventListener('scroll', (event: Event) => {
 	:global(.highlight:hover) {
 		@apply border-[#4edbcb];
 		background-size: 100% 100%;
+	}
+	.tooltip {
+		@apply invisible;
+	}
+
+	.has-tooltip:hover .tooltip {
+		@apply visible z-50;
 	}
 	h1:before {
 		@apply absolute -top-full left-0 w-full h-full bg-black;
