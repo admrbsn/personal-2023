@@ -273,17 +273,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 
 <script>
 	// Doc height hack to defeate 100vh bugs
-	let timeoutId = null
-	const documentHeight = () => {
-		clearTimeout(timeoutId) // avoid execution of previous timeouts
-		timeoutId = setTimeout(() => {
-			const doc = document.documentElement
-			doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
-		}, 200)
-	}
 
-	window.addEventListener('resize', documentHeight)
-	documentHeight()
 
 	// Function to check if an element is in the viewport
 	function isInViewport(elem: HTMLElement): boolean {
@@ -298,7 +288,21 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 	}
 
 	// Modifying the DOM on scroll
+	window.addEventListener('scroll', (event: Event) => {
+		const scrollTop = window.pageYOffset as number
+		const hero = document.getElementById('hero') as HTMLElement
+		const skills = document.getElementById('skills') as HTMLElement
 
+		// Setting hero opacity
+		hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
+		
+		// Toggling skill icons between filled and outline
+		if (isInViewport(skills)) {
+			skills.classList.add("filled")
+		} else {
+			skills.classList.remove("filled")
+		}
+	}, false)
 </script>
 
 <style>
