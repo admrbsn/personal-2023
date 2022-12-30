@@ -6,6 +6,7 @@ import dribbble from '@icon/dribbble.svg'
 import github from '@icon/github.svg'
 import linkedin from '@icon/linkedin.svg'
 import email from '@icon/email.svg'
+import star from '@svg/star.svg'
 import adam from '@img/adam.jpg'
 import figmaLogo from '@svg/figma-logo.svg'
 import figmaLogoOutline from '@svg/figma-logo-outline.svg'
@@ -77,23 +78,23 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 					<h3 class="md:ml-auto md:text-xl max-w-3xl text-lg leading-relaxed opacity-75">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design working for a startup based out of Brooklyn.</h3>
 					<ul class="md:hidden flex flex-row mt-12">
 						<li class="mr-3">
-							<a class="flex items-center font-semibold cursor-pointer" href="https://dribbble.com/adamrobertson" target="_blank">
-								<img class="w-10 mr-1" src={dribbble} alt="Dribbble icon."/>
+							<a class="flex items-center" href="https://dribbble.com/adamrobertson" target="_blank">
+								<img class="w-8 mr-1" src={dribbble} alt="Dribbble icon."/>
 							</a>
 						</li>
 						<li class="mx-3">
-							<a class="flex items-center font-semibold cursor-pointer" href="https://github.com/admrbsn" target="_blank">
-								<img class="w-10 mr-1" src={github} alt="Github icon."/>
+							<a class="flex items-center" href="https://github.com/admrbsn" target="_blank">
+								<img class="w-8 mr-1" src={github} alt="Github icon."/>
 							</a>
 						</li>
 						<li class="mx-3">
-							<a class="flex items-center font-semibold cursor-pointer" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
-								<img class="w-10 mr-1" src={linkedin} alt="LinkedIn icon."/>
+							<a class="flex items-center" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
+								<img class="w-8 mr-1" src={linkedin} alt="LinkedIn icon."/>
 							</a>
 						</li>
 						<li class="mx-3">
-							<a class="flex items-center font-semibold cursor-pointer" href="mailto:hi@adam.build">
-								<img class="w-10 mr-1" src={email} alt="Email icon."/>
+							<a class="flex items-center" href="mailto:hi@adam.build">
+								<img class="w-8 mr-1" src={email} alt="Email icon."/>
 							</a>
 						</li>
 					</ul>
@@ -186,7 +187,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 			</div>
 		</div>
 		<!-- Projects section -->
-		<div class="md:max-w-5xl md:flex-row md:my-24 md:mx-auto md:pl-0 flex flex-col pl-3 my-12">
+		<div class="md:max-w-5xl md:flex-row md:my-24 md:mx-auto md:pl-0 relative z-20 flex flex-col pl-3 my-12">
 			<div class="md:order-none md:max-w-2xl md:mr-auto order-1">
 				<ul role="list" class="md:block md:mt-2 flex overflow-auto">
 					<Project
@@ -215,20 +216,42 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 				<div class="mt-3 font-sans text-lg font-semibold tracking-normal">Blah Blah Blah</div>
 			</div>
 		</div>
-		<!-- Experience section -->
-		<div class="relative z-10 bg-[#f7f5f2]">
-			<div id="experience" class="md:max-w-5xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">
-				<div class="title sticky z-10 top-24 md:top-28 flex flex-col self-start md:mt-1.5 md:mr-36 pb-20 md:pb-0 bg-gradient-to-b from-[#f7f5f2] to-transparent text-4xl font-heading font-extrabold tracking-tight">
+		<!-- Recommendations section -->
+		<div class="relative z-10 bg-[#fffacd]">
+			<div id="recommendations" class="md:max-w-5xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">
+				<div class="title yellow sticky z-10 top-24 md:top-28 flex flex-col self-start md:mt-1.5 md:mr-36 pb-20 md:pb-0 bg-gradient-to-b from-[#fffacd] to-transparent text-4xl font-heading font-extrabold tracking-tight">
 					<div class="w-16 mb-3 border-2 border-black"></div>
 					What co-workers have to say
-					<div class="mt-3 font-sans text-lg font-semibold tracking-normal">Behind every positive interaction is an experience that matters. Whether it's freelance clients or ex-supervisors, I cherish those positive interactions. At the end of the day, work is personal. And some of my best friendships are a result of work relationships.</div>
+					<div class="mt-3 font-sans text-lg font-normal tracking-normal">Behind every positive interaction is an experience that matters. Whether it's freelance clients or ex-supervisors, I cherish those positive interactions. At the end of the day, work is personal.</div>
 				</div>
 				<div class="md:order-none md:max-w-2xl md:ml-auto order-1">
-					<div class="-left-12 border-sold rounded-xl relative p-10 mb-6 bg-white border-2 border-black">
-						It was a pleasure working with Adam and I'd so again in a heartbeat. He's the type of guy you want on your team: creative, driven, resourceful, and fun to work with. Any company would be lucky to have him.
+					<div class="-left-12 rounded-xl relative p-8 mb-6 bg-white border-2 border-black">
+						<div class="flex justify-end mb-4">
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+						</div>
+						<p class="mb-5 text-lg font-bold text-black">
+							It was a pleasure working with Adam and I'd so again in a heartbeat. He's the type of guy you want on your team: creative, driven, resourceful, and fun to work with. Any company would be lucky to have him.
+						</p>
+						<p class="text-base font-bold text-black">Nate</p>
+						<p class="text-base font-normal text-black opacity-75">Vice President of Services, Wayin</p>
 					</div>
-					<div class="border-sold rounded-xl p-10 bg-white border-2 border-black">
-						It was a pleasure working with Adam and I'd so again in a heartbeat. He's the type of guy you want on your team: creative, driven, resourceful, and fun to work with. Any company would be lucky to have him.
+					<div class="rounded-xl relative p-8 mb-6 bg-white border-2 border-black">
+						<div class="flex justify-end mb-4">
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+							<img class="w-10 mr-1" src={star} alt="Star."/>
+						</div>
+						<p class="mb-5 text-lg font-bold text-black">
+							Our WordPress theme works flawlessly. Adam was prompt, thorough, and knowledgeable on everything from the design to the migration and hosting. He configured WordPress in a way that I've never seen before—we're able to update virtually every piece of content without having to worry about the layout breaking.
+						</p>
+						<p class="text-base font-bold text-black">Erin</p>
+						<p class="text-base font-normal text-black opacity-75">Vice President of Marketing, TinLeg</p>
 					</div>
 				</div>
 			</div>
@@ -342,6 +365,9 @@ import petersonsTestPrep from '@img/petersons-test-prep.png'
 		}
 		.title.blue:before {
 			@apply bg-[#e8faf8];
+		}
+		.title.yellow:before {
+			@apply bg-[#fffacd];
 		}
 	}
 </style>
