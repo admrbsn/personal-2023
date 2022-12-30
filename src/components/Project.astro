@@ -9,7 +9,7 @@ export interface Props {
 const { href, title, body, image } = Astro.props;
 ---
 
-<li class="w-3/4 min-w-[75%] pr-5 md:w-auto md:min-w-0 md:mb-8 md:pr-0">
+<li class="snap-center w-3/4 min-w-[75%] pr-5 md:w-auto md:min-w-0 md:mb-8 md:pr-0">
 	<a href={href} class="md:flex items-center">
 		<img class="md:w-1/2 md:mr-10 bg-[#f7f5f2] border-2 border-white rounded-2xl" src={image} alt="{title} thumbnail.">
 		<div class="md:w-3/5 md:py-12 md:pr-12 py-5 pl-0">
