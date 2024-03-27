@@ -1,30 +1,33 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from "astro:assets"
 import arrowBack from '@icon/arrow-back.svg'
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import 'photoswipe/style.css';
+import { type CollectionEntry, getCollection } from 'astro:content'
+import BaseHead from '../../components/BaseHead.astro'
+import 'photoswipe/style.css'
 
 // Load the collection and define the static paths
 export async function getStaticPaths() {
-  const posts = await getCollection('case-studies');
+  const posts = await getCollection('case-studies')
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
-  }));
+  }))
 }
 
 // Define the type for the props
-type Props = CollectionEntry<'case-studies'>['data'];
+type Props = CollectionEntry<'case-studies'>['data']
 
 // Load the current post data
-const post = Astro.props;
-const { slug, title, description, cover} = post.data
-const { Content } = await post.render();
+const post = Astro.props
+const { title, description} = post.data
+const { Content } = await post.render()
 const allImageFiles = await Astro.glob(`../../assets/img/**/*`)
+const heroImageFile = allImageFiles.filter(file => {
+  return file.default.src.includes(`/assets/img/${post.slug}.png`)
+})
 const imageFiles = allImageFiles.filter(file => {
-  return file.default.src.includes(`/assets/img/${post.slug}/`);
-});
+  return file.default.src.includes(`/assets/img/${post.slug}/`)
+})
 ---
 
 <html lang="en">
@@ -43,9 +46,12 @@ const imageFiles = allImageFiles.filter(file => {
 		</header>
     <main>
       <!-- Hero -->
-			<div id="hero" class="relative z-30">
-				<div style={`background-image: url(${cover});`} class="w-full max-w-5xl h-72 md:mx-auto md:mt-12 bg-cover bg-center rounded-xl">
-        </div>
+      <div id="hero" class="relative z-30">
+        {
+          heroImageFile.map((img) => (
+          <div style={`background-image: url(${img.default.src});`} class="w-full max-w-5xl h-72 md:mx-auto md:mt-12 bg-cover bg-center rounded-xl"></div>
+          ))
+        }
       </div>
       <!-- Article section -->
       <article class="md:max-w-3xl mt-8 md:mt-12 md:mb-24 md:mx-auto px-4 md:px-0 z-40">
@@ -156,7 +162,7 @@ const imageFiles = allImageFiles.filter(file => {
     @apply hidden md:block absolute left-2.5 w-1.5 h-10 inset-y-0 my-auto bg-[#f0f0f0] rounded-full shadow-[inset_1px_0px_2px_rgba(0,0,0,0.1)];
   }
   :global(.ipad .screen) {
-    @apply relative block overflow-scroll aspect-video md:shadow-[inset_1px_0px_3px_0px_rgba(0,0,0,0.5)] z-10 rounded md:rounded-none;
+    @apply relative block overflow-scroll aspect-video md:shadow-[inset_1px_0px_6px_0px_rgba(0,0,0,0.25)] z-10 rounded md:rounded-none;
   }
   :global(.ipad img) {
     @apply mix-blend-color;

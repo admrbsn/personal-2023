@@ -1,7 +1,6 @@
 ---
 title: 'Tribute.co Case Study'
 description: 'Lorem ipsum dolor sit amet'
-cover: "/tribute-co.png"
 ---
 
 ## Overview
