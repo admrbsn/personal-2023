@@ -3,6 +3,7 @@ import { Image } from "astro:assets"
 import arrowBack from '@icon/arrow-back.svg'
 import { type CollectionEntry, getCollection } from 'astro:content'
 import BaseHead from '../../components/BaseHead.astro'
+import { Debug } from 'astro:components'
 import 'photoswipe/style.css'
 
 // Load the collection and define the static paths
@@ -35,13 +36,14 @@ const imageFiles = allImageFiles.filter(file => {
     <BaseHead title={title} description={description} />
   </head>
   <body>
+    <Debug {allImageFiles} />
     <header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-50 flex justify-between w-full max-w-5xl px-3 py-5">
       <div>
         <h1 class="md:fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-b-sm">Adam</h1>
       </div>
       <a href="/" class="relative md:top-6 flex items-center text-black font-bold">
         <Image class="w-6 mr-1.5" src={arrowBack} alt="Back icon."/>
-        Back<span class="hidden md:inline"> to homepage</span>
+        Back<span class="hidden md:inline">&nbsp;to homepage</span>
       </a>
 		</header>
     <main>
