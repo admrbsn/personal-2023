@@ -136,9 +136,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"case-studies": {
-"first-post.md": {
-	id: "first-post.md";
-  slug: "first-post";
+"tribute.md": {
+	id: "tribute.md";
+  slug: "tribute";
   body: string;
   collection: "case-studies";
   data: any
