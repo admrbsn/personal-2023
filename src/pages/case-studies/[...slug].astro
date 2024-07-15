@@ -40,8 +40,8 @@ const imageFiles = allImageFiles.filter(file => {
         <h1 class="md:fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-b-sm">Adam</h1>
       </div>
       <a href="/" class="relative md:top-6 flex items-center text-black font-bold">
-        <Image class="w-6 mr-1.5" src={arrowBack} alt="Back icon."/>
-        Back<span class="hidden md:inline">&nbsp;to homepage</span>
+        <Image class="w-6 mr-1.5 " src={arrowBack} alt="Back icon."/>
+        Back<span class="hidden md:inline">&nbsp;home</span>
       </a>
 		</header>
     <main>
@@ -49,7 +49,7 @@ const imageFiles = allImageFiles.filter(file => {
       <div id="hero" class="relative z-30">
         {
           heroImageFile.map((img) => (
-          <div style={`background-image: url(${img.default.src});`} class="w-full max-w-5xl h-72 md:mx-auto md:mt-12 bg-cover bg-center bg-[#f8f5f2] rounded-xl"></div>
+          <div style={`background-image: url(${img.default.src});`} class="w-full max-w-5xl h-72 md:mx-auto md:mt-12 bg-cover bg-center bg-[#f8f5f2] shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.1)] rounded-xl"></div>
           ))
         }
       </div>
@@ -77,7 +77,7 @@ const imageFiles = allImageFiles.filter(file => {
                   width={img.default.width}
                   height={img.default.height}
                   alt="Image."
-                  class="w-full rounded"
+                  class="w-full aspect-[4/3] object-cover rounded"
                 />
               </a>
             ))
