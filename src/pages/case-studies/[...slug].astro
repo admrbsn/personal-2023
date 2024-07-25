@@ -19,12 +19,18 @@ type Props = CollectionEntry<'case-studies'>['data']
 
 // Load the current post data
 const post = Astro.props
-const { title, description} = post.data
+const { title, description } = post.data
 const { Content } = await post.render()
 const allImageFiles = await Astro.glob(`../../assets/img/**/*`)
+
+console.log("All Image Files:", allImageFiles)
+
 const heroImageFile = allImageFiles.filter(file => {
   return file.default.src.includes(`${post.slug}-hero`)
-})
+})[0] // Ensure only the first match is used
+
+console.log("Hero Image File:", heroImageFile)
+
 const imageFiles = allImageFiles.filter(file => {
   return file.default.src.includes(`${post.slug}-gallery`)
 })
@@ -43,14 +49,14 @@ const imageFiles = allImageFiles.filter(file => {
         <Image class="w-6 mr-1.5 " src={arrowBack} alt="Back icon."/>
         Back<span class="hidden md:inline">&nbsp;home</span>
       </a>
-		</header>
+    </header>
     <main>
       <!-- Hero -->
       <div id="hero" class="relative z-30">
         {
-          heroImageFile.map((img) => (
-          <div style={`background-image: url(${img.default.src});`} class="w-full max-w-5xl h-72 md:mx-auto md:mt-12 bg-cover bg-center bg-[#f8f5f2] shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.1)] rounded-xl"></div>
-          ))
+          heroImageFile && (
+          <div style={`background-image: url(${heroImageFile.default.src});`} class="w-full max-w-5xl h-72 md:mx-auto md:mt-12 bg-cover bg-center bg-[#f8f5f2] shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.1)] rounded-xl"></div>
+          )
         }
       </div>
       <!-- Article section -->
@@ -89,14 +95,14 @@ const imageFiles = allImageFiles.filter(file => {
 </html>
 
 <script>
-	// Modifying the DOM on scroll
-	window.addEventListener('scroll', (event: Event) => {
-		const scrollTop = window.pageYOffset as number
-		const hero = document.getElementById('hero') as HTMLElement
+  // Modifying the DOM on scroll
+  window.addEventListener('scroll', (event: Event) => {
+    const scrollTop = window.pageYOffset as number
+    const hero = document.getElementById('hero') as HTMLElement
 
-		// Setting hero opacity
-		hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
-	}, false)
+    // Setting hero opacity
+    hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
+  }, false)
 </script>
 
 <script type="module">
@@ -174,10 +180,10 @@ const imageFiles = allImageFiles.filter(file => {
     @apply rounded;
   }
   #gallery a img {
-		border: 2px solid transparent;
+    border: 2px solid transparent;
     @apply transition-all;
-	}
+  }
   #gallery a:hover img {
-		border: 2px solid black;
-	}
+    border: 2px solid black;
+  }
 </style>
