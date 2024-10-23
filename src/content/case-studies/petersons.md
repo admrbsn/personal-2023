@@ -102,7 +102,8 @@ Two of the most challenging technical aspects were:
 
 Production JS:
 
-```function loadCSS() {
+```
+function loadCSS() {
   var userAgent = window.navigator.userAgent.toLowerCase(),
       safari = /safari/.test(userAgent),
       ios = /iphone|ipod|ipad/.test(userAgent),
@@ -117,11 +118,13 @@ Production JS:
         );
     }
 }
-document.addEventListener(“DOMContentLoaded”, loadCSS);```
+document.addEventListener(“DOMContentLoaded”, loadCSS);`
+``
 
 Production CSS:
 
-```/* Light mode (default) */
+~~~
+/* Light mode (default) */
 :root {
   --h-color: #1e2024;
   --p-color: #383b3e;
@@ -138,6 +141,7 @@ Production CSS:
     --border-color: #3c424a;
     --box-shadow-color: rgba(0, 5, 10, .08);
   }
-}```
+}
+~~~
 
 
