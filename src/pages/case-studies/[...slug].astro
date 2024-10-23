@@ -177,17 +177,14 @@ const imageFiles = allImageFiles.filter(file => {
   :global(.inline-img img) {
     @apply rounded;
   }
+  :global(pre) {
+    @apply p-8 rounded-sm text-sm;
+  }
   #gallery a img {
     border: 2px solid transparent;
     @apply transition-all;
   }
   #gallery a:hover img {
     border: 2px solid black;
-  }
-  pre {
-    @apply p-8 rounded-sm text-sm;
-  }
-  img {
-    @apply rounded-sm;
   }
 </style>
