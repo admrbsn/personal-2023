@@ -29,8 +29,6 @@ const heroImageFile = allImageFiles.filter(file => {
   return file.default.src.includes(`${post.slug}-hero`)
 })[0] // Ensure only the first match is used
 
-console.log("Hero Image File:", heroImageFile)
-
 const imageFiles = allImageFiles.filter(file => {
   return file.default.src.includes(`${post.slug}-gallery`)
 })
