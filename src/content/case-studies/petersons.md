@@ -100,9 +100,9 @@ Two of the most challenging technical aspects were:
 1. Since we’re using Auth0 for SSO authentication, designing the hosted Auth0 login and signup pages to reflect the app both visually and functionally. Because of this, I wrote a custom UI switcher in JS that served up a completely optimized app experience via JS and CSS. After two rounds of user testing, applicants didn’t notice that the login and signup weren’t native experiences and actually commented on smooth the UI was.
 2. Since actual course content was being served as webviews, I needed to find a way to style them that wouldn’t adversely affect the desktop and mobile responsive views. While D2L looks okay on desktop, it certainly didn’t carry the same sexy visuals as the new app. Additionally, light and dark mode didn’t work. Again, I wrote a little JS to detect the user agent, and if it matches iOS or Android native, I served a specific stylesheet. I was also able to use the `prefers-color-scheme` media query and standard CSS variables to easily toggle dark and light modes.
 
-Production JS:
 
-```
+**Production JS:**
+~~~
 function loadCSS() {
   var userAgent = window.navigator.userAgent.toLowerCase(),
       safari = /safari/.test(userAgent),
@@ -119,10 +119,10 @@ function loadCSS() {
     }
 }
 document.addEventListener(“DOMContentLoaded”, loadCSS);
-```
+~~~
 
-Production CSS:
 
+**Production CSS:**
 ~~~
 /* Light mode (default) */
 :root {
