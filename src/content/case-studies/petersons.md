@@ -119,11 +119,6 @@ Two of the most challenging technical aspects were:
 document.addEventListener(“DOMContentLoaded”, loadCSS);
 ~~~
 
-\
-&nbsp;
-\
-&nbsp;
-
 ### Production CSS:
 ~~~
 /* Light mode (default) */
