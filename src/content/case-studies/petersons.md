@@ -118,8 +118,8 @@ function loadCSS() {
         );
     }
 }
-document.addEventListener(“DOMContentLoaded”, loadCSS);`
-``
+document.addEventListener(“DOMContentLoaded”, loadCSS);
+```
 
 Production CSS:
 
