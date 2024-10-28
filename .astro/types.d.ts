@@ -143,6 +143,13 @@ declare module 'astro:content' {
   collection: "case-studies";
   data: any
 } & { render(): Render[".md"] };
+"petersons.md": {
+	id: "petersons.md";
+  slug: "petersons";
+  body: string;
+  collection: "case-studies";
+  data: any
+} & { render(): Render[".md"] };
 "tribute.md": {
 	id: "tribute.md";
   slug: "tribute";

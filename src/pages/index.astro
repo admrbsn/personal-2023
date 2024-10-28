@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Experience from '../components/Experience.astro'
 import Project from '../components/Project.astro'
+import DribbbleImages from '../components/DribbbleImages.astro'
 import { Image } from 'astro:assets'
 import dribbble from '@icon/dribbble.svg'
 import github from '@icon/github.svg'
@@ -220,6 +221,8 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 					<div class="md:block hidden mt-3 font-sans text-lg font-semibold tracking-normal">What I've been up to.</div>
 				</div>
 			</div>
+
+			<DribbbleImages client:load />
 			<!-- Recommendations section -->
 			<!-- <div class="relative z-10 bg-[#fffacd]">
 				<div id="recommendations" class="md:max-w-5xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">

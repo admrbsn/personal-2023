@@ -1,0 +1,40 @@
+---
+const apiToken = 'bc54a1ae5df5d3af6b74b7e5c163261f80def80f6161ae02b91a20838bd4df74';
+const shotsPerPage = 32;
+
+// Fetch Dribbble images server-side
+const fetchDribbbleImages = async () => {
+  try {
+    const response = await fetch(`https://api.dribbble.com/v2/user/shots?access_token=${apiToken}&per_page=${shotsPerPage}`);
+    if (!response.ok) {
+      console.error("Failed to fetch Dribbble shots:", response.statusText);
+      return [];
+    }
+    const data = await response.json();
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    console.error("Error fetching Dribbble images:", error);
+    return [];
+  }
+};
+
+const dribbbleImages = await fetchDribbbleImages();
+---
+
+<div class="grid grid-cols-4 grid-rows-8 md:grid-cols-6 md:grid-rows-5 lg:grid-cols-8 lg:grid-rows-4">
+  {dribbbleImages.length > 0 ? (
+    dribbbleImages.map((shot) => (
+      <a href={shot.html_url} target="_blank" rel="noopener noreferrer" aria-label={`Dribbble shot: ${shot.title}`} class="group relative">
+        <img
+          src={shot.images.normal}
+          alt={shot.title}
+          class="w-full h-full object-cover group-hover:opacity-75 transition-opacity duration-300"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-25 transition-opacity duration-200"></div>
+      </a>
+    ))
+  ) : (
+    <p>No images to display.</p>
+  )}
+</div>
