@@ -36,6 +36,8 @@ User path analysis was truly worth it throughout this redesigning process since 
 
 This technique revealed important information that would otherwise not have been apparent from aggregate conversion rates. For instance, we could distinguish between users who dropped off immediately after looking at the recording interface and those who attempted to record but encountered technical problems along the way.
 
+<span class="inline-img">![Recording User Flow.](../../assets/img/recording-flowchart.webp)</span><span class="caption block mt-3">Recording User Flow</span>
+
 ### Funnel Analysis with PostHog
 
 When we dug into the data using PostHog's funnel tools, the picture became really clear:
