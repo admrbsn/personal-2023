@@ -22,13 +22,14 @@ These issues were creating major friction for our users and hurting our metrics.
 
 I used the SMART framework to set clear goals for the redesign:
 
-<div class="mb-1">
-1. **Boost conversion rates** from 40% to at least 65% for users who start recording to actually submitting
-2. **Make the tech more reliable** by moving away from problematic dependencies
+1. **Boost conversion rates** from 40% to at least 65% for users who start recording to actually submitting.
+2. **Make the tech more reliable** by moving away from problematic dependencies.
 3. **Add new features** including:
    - Photo uploads
    - Gift card integration
-</div>
+   - Stretch goal of adding a resumable upload feature that works throughout the UI, allowing uploads to continue in the background while users navigate the app, plus the ability for users to retry failed uploads themselves
+
+Having these measurable targets helped keep the project focused and gave us a clear way to know if we succeeded. Plus, it made sure we were tackling both the technical issues and the new features users had been asking for.
 
 ## User Research & Analysis
 
@@ -44,9 +45,9 @@ This technique revealed important information that would otherwise not have been
 
 When we dug into the data using PostHog's funnel tools, the picture became really clear:
 
-1. 100% of users intended to record a video (where they entered our funnel)
-2. 79% made it past the initial video record screen
-3. But only 42% of those users actually completed submitting a video
+1. 100% of users intended to record a video (where they entered our funnel).
+2. 79% made it past the initial video record screen.
+3. But only 42% of those users actually completed submitting a video.
 
 That gave us an overall conversion of about 33% from start to finish - pretty low for such a core feature.
 
@@ -60,9 +61,9 @@ Our customer surveys showed that many users, especially those who consider thems
 
 This psychological barrier created a unique challenge. We needed to:
 
-1. **Make recording feel more approachable and less intimidating** with a better UI, clearer guidance, and reliable tech
-2. **Add alternatives like photo uploads** for those not comfortable with video, while still keeping video as the main option
-3. **Balance these carefully** so we didn't accidentally discourage video submissions, which are what make a Tribute special
+1. **Make recording feel more approachable and less intimidating** with a better UI, clearer guidance, and reliable tech.
+2. **Add alternatives like photo uploads** for those not comfortable with video, while still keeping video as the main option.
+3. **Balance these carefully** so we didn't accidentally discourage video submissions, which are what make a Tribute special.
 
 We needed to acknowledge these emotional barriers while guiding users toward completion. That's why we designed the photo upload as a complementary feature rather than highlighting it as a primary alternative - we wanted to preserve the emphasis on video while giving options to users who might otherwise abandon the process.
 
