@@ -5,7 +5,7 @@ description: 'Lorem ipsum dolor sit amet'
 
 ## Background & Challenge
 
-At Tribute, video submissions are really the heart of what we offer, with over 5 million videos collected so far. The recording flow isn't just another feature - it's the fundamental interaction that makes our platform what it is.
+At Tribute, video submissions are really the heart of what we offer, with over 20 million videos collected so far. The recording flow isn't just another feature - it's the fundamental interaction that makes our platform what it is.
 
 But our existing system had some serious problems:
 
@@ -22,11 +22,13 @@ These issues were creating major friction for our users and hurting our metrics.
 
 I used the SMART framework to set clear goals for the redesign:
 
+<div class="mb-1">
 1. **Boost conversion rates** from 40% to at least 65% for users who start recording to actually submitting
 2. **Make the tech more reliable** by moving away from problematic dependencies
 3. **Add new features** including:
    - Photo uploads
    - Gift card integration
+</div>
 
 ## User Research & Analysis
 
@@ -92,3 +94,22 @@ For the new recording flow, we built with a modern tech stack:
 - Stripe for e-commerce integration
 
 One of our best decisions was our approach to mobile: while our desktop flow used a custom recording interface, the mobile experience tapped into native HTML inputs to capture video directly through iOS and Android's capabilities. This was a huge improvement because it worked with the operating systems instead of fighting against them - why reinvent what the OS already does so well?
+
+## Design Enhancements
+
+Beyond the technical rebuild, we focused on thoughtful design improvements that directly addressed user needs:
+
+### Contextual Experience
+We added dynamic placeholders behind the core flow to allow the selected Tribute theme (birthday, graduation, congratulations, etc.) to carry through the entire experience. This provided important context and ensured users felt connected to the purpose of their recording throughout the process.
+
+### Real-Time Validation
+We utilized form best practices by implementing reactive checkmarks for real-time validation. This immediate feedback helped users understand when they had successfully completed a step, reducing uncertainty and confusion.
+
+### Intuitive Interface Controls
+One subtle but important UI improvement was disabling the upload option when the record function was hovered over, and vice versa. During our research, we observed users showing confusion about whether they needed to both record and upload. This simple design decision eliminated that confusion and created a clearer path forward.
+
+### Participant Notes Feature
+We added a "notes" feature that allowed participants to jot down talking points that remained visible only to them during recording. This addressed a common pain point we discovered during research - many users were recording multiple takes because they forgot what they wanted to say during recording.
+
+### Moments of Delight
+On the confirmation page, we added pulsing buttons and a confetti Lottie animation to celebrate successful submissions. This small moment of delight reinforced positive feelings about completing the process and added a touch of personality to the experience.
