@@ -1,5 +1,5 @@
 ---
-title: 'Recording Flow Redesign: Tribute's Video Submission System Overhaul'
+title: 'Recording Flow Redesign: Tribute&#39;s Video Submission System Overhaul'
 description: 'Lorem ipsum dolor sit amet'
 ---
 
