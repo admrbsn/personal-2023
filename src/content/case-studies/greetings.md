@@ -4,89 +4,135 @@ description: 'Lorem ipsum dolor sit amet'
 ---
 
 ## Overview
-In the ever-evolving digital landscape, the quest for meaningful connections remains paramount. Recognizing the burgeoning market of digital gifting and greetings, Tribute ventured to redefine this space with the launch of Tribute Greetings in 2022. The inception of this mobile app stems from a keen observation of the e-commerce gifting market's trajectory towards a $1T valuation and the e-card market's exponential growth. Tribute Greetings is designed to bridge the gap in the digital gifting and greetings sector by offering a platform that emphasizes emotional connection through curated gifts and personalized video greetings. This case study outlines the strategic approach undertaken by the Tribute team to introduce a product that stands out in a crowded market by prioritizing meaningful interactions.
+
+Digital connections remain essential in today's evolving digital landscape. Tribute recognized the growing digital gift and greeting market and decided to disrupt it when launching Tribute Greetings in 2022. The mobile application of Tribute Greetings was developed based on the observed trend in the e-commerce gifting market, projected to reach $1 trillion, and the rapid growth of the e-card market. Tribute Greetings seeks to bridge the gap within the digital gifting and greetings marketplace by creating a platform that uses curated gifts and personalized video greetings to facilitate emotional connections. This case study will outline the strategic approach taken by the Tribute team to develop a product that can differentiate itself in the competitive marketplace and focus on meaningful interactions.
 
 ## Problem & Opportunity
-The digital gifting and e-card markets have shown remarkable growth, signaling a shift in consumer behavior towards online means of celebration and appreciation. Despite this, a significant void existed in the market: the lack of personal touch and meaningfulness in digital greetings and gifts. The prevalent offerings failed to capture the essence of what makes a gift truly special - its ability to convey deep personal sentiment and create a lasting emotional impact. This realization paved the way for Tribute Greetings, which aimed to revolutionize the industry by making digital gifting a profoundly personal experience.
+
+The digital gifting and e-card markets have experienced significant growth and changes in how consumers express celebrations and appreciation online. While the market has grown significantly, there still exists a large void regarding the personal and meaningful nature of digital greetings and gifts. Digital gifting companies and applications are currently unable to replicate the meaningfulness and personal expression found in traditional gifting, therefore limiting their ability to create long-term emotional connections with customers. The discovery of this void led to the creation of Tribute Greetings, a company that aims to innovate the digital gifting industry and make digital gifting a deeply personal experience.
 
 ## Solution
-Tribute Greetings distinguishes itself by focusing on meaningful curation and facilitating emotional connections. The app integrates features like:
-* **Curated Gifts:** A selection of thoughtful gift cards, flowers, and artisanal goods, moving beyond conventional e-gift cards.
-* **Prompt Cards:** Designed to inspire heartfelt messages and personalize video greetings, enhancing the emotional value of every tribute.
-* **Group Gifting Experience:** Enabling friends, family, or coworkers to collectively contribute to a greeting, thereby amplifying its significance.
+
+Tribute Greetings provides a unique perspective on digital gifting and greetings by focusing on meaningful curation and fostering emotional connections. The application offers the following features:
+
+* **Curated Gifts**: Curated gift cards, flowers and/or artisanal products to provide a more creative option than standard e-gift cards.
+
+* **Prompt Cards**: A series of prompt statements to help users create heartfelt messages and personalize video greetings, increasing the emotional value of all tributes.
+
+* **Group Gifting Experience**: Allowing multiple people to contribute to a group greeting, ultimately adding to the significance of the greeting.
 
 ## Features and Differentiation
-At its core, Tribute Greetings leverages Tribute's existing brand reputation for creating meaningful experiences. However, it introduces several novel features that set it apart:
 
-* **Brand and Message:** Tribute's emphasis on gratitude and meaningful connections is deeply embedded in every aspect of the app.
-* **Prompt Statements:** These guide users in creating personalized messages, addressing one of the key challenges in digital gifting - conveying genuine emotion.
-* **Reminders Feature:** Ensures users never miss an opportunity to make someone feel special.
-* **Story Player Experience:** A familiar, engaging way to view greetings, drawing inspiration from popular social media platforms.
+While Tribute Greetings utilizes the established brand reputation of Tribute for creating meaningful experiences, it adds many new features that provide differentiation:
+
+* **Brand and Message**: Tribute emphasizes gratitude and meaningful connections throughout the entire application.
+
+* **Prompt Statements**: These assist users in crafting personalized messages, addressing one of the most significant issues associated with digital gifting – conveying genuine emotions.
+
+* **Reminders Feature**: Allows users to never miss an opportunity to make someone feel special.
+
+* **Story Player Experience**: A familiar, engaging method of viewing greetings, inspired by the story player experiences of well-known social media platforms.
 
 ## Target Audience
-The app caters to a diverse audience characterized by their desire to foster connections and celebrate moments in a meaningful way. Key personas include:
 
-* **Grateful Gill:** Active on social media, values mindfulness and looks for opportunities to celebrate achievements.
-* **Leader Lee:** Aims to reinforce corporate values through personalized gestures of appreciation.
-* **Gifter Gray:** Seeks meaningful gifts that convey a deep sense of connection and appreciation.
+Tribute Greetings will be used by a variety of users who seek to establish connections and celebrate milestones in meaningful ways. Some of the primary personas include:
+
+* **Grateful Gill**: Active on social media and values mindfulness; looking for ways to acknowledge and celebrate others' successes.
+
+* **Leader Lee**: Wants to promote the values of his corporation through meaningful expressions of appreciation.
+
+* **Gifter Gray**: Looking for gifts that will represent a deep connection and appreciation.
 
 ## Business Model
-Tribute Greetings introduces a multifaceted revenue model:
 
-* **eGift Card Affiliates:** Capitalizing on popular e-gift cards, with a focus on leveraging breakage and affiliate discounts.
-* **Pro Subscriptions:** Offering enhanced features such as no processing fees, access to exclusive card designs, and priority support.
-* **Diverse Gift Marketplace:** Expanding beyond eGift cards to include a wide range of curated gifts, with higher affiliate percentages.
+Tribute Greetings will generate revenue through a multi-pronged business model:
+
+* **eGift Card Affiliates**: Leverage the popularity of e-gift cards while taking advantage of lower-than-average breakage rates and increased affiliate margins.
+
+* **Pro Subscription**: Offer advanced features at a premium price, including no processing fees, exclusive card designs, and enhanced support.
+
+* **Diverse Gift Marketplace**: Expand beyond e-gift cards to include a broader selection of curated gifts, resulting in higher affiliate margins.
 
 ## User Research
-The Tribute Greetings team embarked on a comprehensive user research journey to ensure the new app would resonate with the target audience's needs and desires. Leveraging a blend of qualitative tools and methodologies, the objective was to gather actionable insights that would inform the app's design and feature set, making sure it provided a valuable and engaging user experience.
 
-### Approach and Methodologies
-Using platforms like Lookback.com and PlaybookUX.com, the team conducted a mix of moderated and unmoderated UX research sessions. Moderated sessions, lasting between 30 to 60 minutes, allowed for deep dives into users' experiences with the Tribute website and their expectations for a new digital gifting product. The focus was on understanding the emotional and functional aspects of digital gifting, gathering feedback on potential features, and assessing the overall appeal of a one-to-one gifting solution.
+To ensure the new application would meet the needs of the intended audience, the Tribute Greetings team conducted a thorough, detailed user research project. The study involved 300 participants from a diverse demographic range, including different age groups, genders, and geographic locations. Utilizing both qualitative and quantitative methodologies, the research aimed to generate actionable insights that would inform the application's design and feature set and create a valuable, enjoyable user experience.
 
-Simultaneously, unmoderated sessions offered insights into how users interacted with prototype features, providing valuable data on usability and user flow preferences. Card sorting and tree testing exercises further helped refine the app's information architecture, ensuring intuitive navigation and a seamless user experience.
+### Methodology
 
-### Tool for Synthesis and Analysis
-The wealth of data collected from these sessions was meticulously organized and analyzed using Dovetail, a platform chosen for its robust capabilities in handling and synthesizing UX research data. This allowed the team to identify common themes, user needs, and preferences, facilitating a data-driven approach to product development. Dovetail's collaborative features ensured that insights were accessible across the team, enabling informed decision-making and prioritization of features and design elements.
+Using moderated and unmoderated UX research tools such as Lookback.com and PlaybookUX.com, the team conducted a combination of moderated and unmoderated UX research sessions. Moderated sessions ranged from 30 to 60 minutes and allowed for a deep dive into users' experiences with the Tribute website and their expectations for a new digital gifting product. The focus of the research was on understanding the emotional and functional aspects of digital gifting, gathering feedback on potential features, and determining whether a one-to-one digital gifting solution would be appealing to users.
 
-### Key Insights
-The user research phase underscored a significant demand for a more personal, one-to-one gifting experience, validating the team's hypothesis about market needs. Insights into preferred card designs, media entry formats (text, video, audio), and the types of gifts users were interested in were particularly influential. Additionally, understanding the contexts in which users would engage with the app informed the integration of features like reminders and the choice of delivery methods (text message or email).
+Unmoderated sessions provided additional insight into how users interacted with various features in the prototype, as well as their preferences for user flow and usability. In addition, users participated in card sorting and tree testing activities, which helped refine the app's information architecture and create an easy-to-navigate, seamless user experience.
+
+### Analysis and Synthesis Tools
+
+The abundance of data generated during these research sessions was carefully organized and analyzed using Dovetail, a tool chosen for its strong capabilities in managing and analyzing UX research data. Before diving into Dovetail's features, here's a quick summary of the top three user needs identified:
+
+1. **Desire for Personalization**: Users expressed a need for more personalized, one-to-one gifting experiences.
+
+2. **Importance of Simplicity**: Users preferred straightforward and uncluttered interfaces to enhance their digital experience.
+
+3. **Preference for Diverse Input Options**: Users showed interest in varied methods of content entry, including text, video, and audio.
+
+Using Dovetail, the team was able to identify common themes, user needs, and user preferences, allowing for a data-driven approach to developing the product. Dovetail's collaborative features enabled the team to share insights and data, promoting informed decision-making and prioritizing design elements and features.
+
+### Findings
+
+Insights from the user research phase supported the team's assumption that a significant number of users were seeking a more personal, one-to-one gifting experience, validating the team's hypothesis about the market's needs. To address this, the design included features such as personalized video greetings and curated gift options that align with user preferences for individualized interactions. Insights revealed that users preferred entering content in diverse formats, including text, video, and audio, which led to the introduction of multiple input options within the app. Additionally, user feedback indicated a preference for the ability to schedule greetings in advance, resulting in the integration of a reminders feature that allows users to plan and personalize their messages more effectively. Furthermore, the research highlighted different delivery method preferences, such as email or SMS, prompting the design to incorporate flexible options for sending greetings.
 
 ### Impact
-This phase of user research was pivotal, not only in confirming the need for a one-to-one digital gifting solution but also in shaping the app's development direction. The insights gathered were instrumental in ensuring that Tribute Greetings would offer a meaningful, user-friendly platform that stands out in the digital gifting space.
 
-## Jammin' in FigJam
-Armed with valuable insights from our user research, we moved to refine our early prototypes using FigJam. This stage was crucial for detailing the app's journey and flows, ensuring they aligned with our users' needs and preferences. As the Director of Product Design, I not only contributed directly to the design efforts but also guided our two designers on the team through the prototyping process. Our focus was on creating intuitive, user-friendly interfaces that would bring the concept of one-to-one digital gifting to life.
+The user research phase had a significant positive impact not only on supporting the need for a one-to-one digital gifting solution but also on guiding the direction of the application's development. The insights obtained during this phase were instrumental in ensuring that Tribute Greetings would be a meaningful and user-friendly platform that would stand out in the digital gifting space.
 
-## Designing the MVP
-With the foundational insights from FigJam, we transitioned to designing the MVP of Tribute Greetings. Operating under a tight timeline, we employed weekly design sprints to rapidly iterate and refine our concepts. Essential to these sprints were "Crazy Eights" and "Solution Sketches," techniques that spurred creativity and quickly surfaced a range of solutions. These methods proved invaluable in focusing our efforts and ensuring that our design decisions were both innovative and user-centered.
+## Jammin' in FigJam
 
-The app was structured around two main user flows: gift giving and gift receiving, each encompassing several smaller, interconnected flows. This approach allowed us to concentrate on optimizing each step of the user journey, ensuring a seamless and engaging experience for both senders and recipients.
+Having identified the necessary insights from our user research, we moved to detail our early prototypes in FigJam. This stage of the project was critical for mapping out the app's user flow and interface and ensuring that our users could easily accomplish their goals. As the Director of Product Design, I not only worked on the application's design but also directed my two designers through the design process. Our objective was to create simple, user-friendly interfaces that would allow users to experience the concept of one-to-one digital gifting.
 
-## User Research (Again)
-After developing high-fidelity designs, our next step was to validate the app's UI with end users. For this, we turned to Maze.co, a platform that specializes in task-oriented, unmoderated design testing. Maze allowed us to quickly gather actionable feedback by simulating real-world use cases and tracking how users interacted with our designs.
+## Designing the MVP
 
-We reached out to our existing base of 2 million Tribute creators through email, inviting them to participate in these tests. This strategy ensured we received feedback from users already familiar with the Tribute brand but potentially new to the Greetings concept.
+Having developed the foundational design concepts in FigJam, we began designing the MVP version of Tribute Greetings. Due to time constraints, we utilized weekly design sprints to rapidly test and refine our ideas. Important to our sprint methodology were the use of "Crazy Eights" and "Solution Sketches." Both of these tools drove creativity and quickly produced a multitude of possible solutions. We utilized these tools to focus our efforts and to create a user-centered experience.
 
-The findings from Maze revealed insightful nuances about our design choices. Contrary to our initial assumptions, the importance of audio features and social connectivity options was overestimated. Feedback indicated a clear user preference for simplicity and directness in sending greetings. Users expressed fatigue with the over-saturation of social networks and desired a more straightforward, focused experience for expressing sentiments.
+The app was built using two primary user flows: gift giving and gift receiving. Each of these flows contained several secondary flows that comprised the overall user experience. By creating a single path for each type of user interaction, we were able to optimize each individual step of the user journey and provide a cohesive and enjoyable experience for both senders and receivers of greetings.
 
-## Building it out with Ionic
-With the design phase behind us and a solid understanding of user preferences, our next challenge was the development of Tribute Greetings. Given a 2-month deadline, we decided to leverage Ionic, coupled with Vue for the frontend logic and Tailwind CSS for styling. Despite my past experience with an earlier version of Ionic, this was a new adventure for the team of six engineers, none of whom had previously worked with Ionic.
+## User Research (Again)
 
-### Strategy and Tools
-Our plan was clear: start with a mobile/responsive web version that could later be expanded to native iOS and Android apps without the need to overhaul the core application. This approach allowed us to utilize web technologies (JavaScript, HTML, CSS) for a quicker deployment and the flexibility to iterate rapidly. Using Vue alongside Ionic enabled us to create a responsive and performant user interface, while Tailwind CSS facilitated the styling with minimal effort. Storybook played a crucial role in testing and documenting the UI components, ensuring consistency and reusability across the app.
+Following the completion of the high-fidelity design, our next step was to validate the application's UI with actual users. To complete this validation, we once again used Maze.co, a platform that lets you conduct unmoderated design testing through tasks. Maze allowed us to quickly collect actionable feedback by simulating real world use cases and tracking how users interacted with our designs.
 
-### Advantages of Our Approach
-* **Speed and Efficiency:** Building with web technologies meant we could deploy quickly and easily adjust based on user feedback.
-* **Leveraging Existing Infrastructure:** Authentication, sign-up, and the marketplace features from the existing Tribute website could be reused, saving significant development time.
-* **Avoiding App Store Hassles:** By focusing first on a web app, we sidestepped delays from app store reviews and avoided the in-app purchase fees imposed by platforms like Apple.
-* **SEO and User Acquisition:** Hosting the app under the Tribute domain benefited from existing SEO, making it easier to drive traffic to the new product.
+We contacted our existing base of 2 million Tribute creators via email and invited them to participate in these tests. This was an effective strategy because it allowed us to gather feedback from users who already knew the Tribute brand and were unfamiliar with the Greetings application.
 
-### Development Phases
-1. **Phase 1 - Web:** We started by creating a new Django app for Greetings, integrating it closely with our existing backend and leveraging Django Rest Framework for the APIs. The front-end app was built using Ionic and Vue, served from a dedicated subdirectory or subdomain to maximize SEO benefits.
-2. **Phase 2 - iOS:** The next step involved rewriting the authentication flow for a native experience, setting up API-based authentication, and re-engineering the marketplace components to fit the mobile UI. Special attention was given to in-app purchasing and exploring ways to minimize app store fees.
-3. **Phase 3 - Android:** While initially planned, the specifics of the Android app development were to be determined based on the learnings from the web and iOS phases.
+Maze uncovered several important details about our design decisions. We initially assumed that the inclusion of audio features and social connectivity options would be a major draw for users. However, the results indicated that users placed a greater value on simplicity and clarity when sending greetings. Users expressed frustration with the overwhelming number of social networks and preferred a more direct and uncomplicated experience for expressing their feelings. This unexpected finding led us to reevaluate our roadmap, simplifying the design to prioritize ease of use. By focusing on what truly resonated with our users, we ensured that Tribute Greetings is perfectly aligned with market needs, highlighting our commitment to flexibility and responsiveness.
 
-Throughout this journey, our focus remained on creating an intuitive and engaging user experience that mirrored the simplicity and emotional resonance discovered during our user research phases. The use of Ionic allowed for a seamless transition from web to mobile platforms, ensuring that Tribute Greetings would be accessible to everyone, everywhere, regardless of the device.
+## Case Study Conclusions
+
+This case study provides a detailed look at the steps that the Tribute team took to develop and launch the Tribute Greetings application. From conducting user research to identifying and solving problems to designing and testing the application, the team followed a systematic, intentional approach to ensure the final product met users' needs and differentiated itself in the competitive digital gifting space.
+
+## Creating it with Ionic
+
+Having completed the design phase and now having a solid base of user-preference knowledge, our challenge was to develop the Tribute Greetings application. With a 2-month development window, we decided to use Ionic as the framework, Vue.js for the front-end logic, and Tailwind CSS for the styling. Although I had used an older version of Ionic before, this was a new experience for the entire team, who had never used it.
+
+### Tools and Strategy
+
+We had a solid strategy: we would develop a responsive/mobile web version, which we could then expand into native iOS and Android applications without changing the application's fundamental architecture. This approach would enable us to use web technologies (HTML/CSS/JavaScript), resulting in a faster development cycle and the ability to make rapid changes. Using Vue.js alongside Ionic enabled us to build a responsive, high-performance user interface, and Tailwind CSS enabled us to style the application quickly and efficiently. StoryBook proved itself a vital tool for testing and documenting the UI components, ensuring consistency and reusability throughout the application.
+
+### Benefits of the Approach
+
+* **Time/Efficiency:** Developing with web technologies allowed us to get to production quickly and also made it easy to make changes based on user feedback.
+
+* **Using Existing Technology:** We were able to reuse the authentication, sign-in, and marketplace feature code from the existing Tribute website, greatly reducing the amount of new code to write.
+
+* **No App Store Issues:** Developing a web application first helped avoid issues with the review process from the app stores and also avoided the in-app purchases fees charged by both Apple and Google.
+
+* **Search Engine Optimization (SEO)/User Acquisition:** Since the app is hosted under the Tribute domain name, the app benefited from the existing SEO efforts of the Tribute website, making it much easier to get users to the new application.
+
+### Application Development Phases
+
+1. **Phase 1 – Web**: We began development by building a new Django application for Greetings, which integrated tightly with the rest of the back end and utilized Django Rest Framework for the APIs. The front-end application was developed with Ionic and Vue.js and deployed from a dedicated subdirectory or subdomain to leverage the existing SEO efforts.
+
+2. **Phase 2 – iOS**: In the second phase, we modified the authentication flow to provide a native experience, implemented API-based authentication, and rewrote the marketplace component code to match the mobile user interface. We gave special consideration to in-app purchasing and the methods to reduce the app store fees.
+
+3. **Phase 3 – Android**: The details of the Android application development were to be determined after the results of the web and iOS development phases.
+
+At every stage of this journey, our goal has been to create a user experience that is simple, intuitive, and emotionally resonant, mirroring the experience we created through our user research phases. The use of Ionic provided a seamless experience when transitioning from a web platform to mobile, enabling access to Tribute Greetings for anyone, anywhere, regardless of device.
 
 ## Conclusion
-Tribute Greetings represents a strategic expansion for Tribute, targeting the digital gifting market with a product that prioritizes meaningfulness over mere transaction. By addressing the gaps in the current market, Tribute Greetings sets a new standard for how we celebrate and appreciate each other in the digital age. As the app evolves, it will continue to focus on deepening connections and enriching lives, one greeting at a time.
+
+Tribute Greetings is a strategic extension of Tribute's footprint into the digital gift space, enabling users to send personalized, meaningful messages to loved ones rather than just gifts. Through its unique positioning in the digital gift space, Tribute Greetings establishes a new standard for how people will celebrate and express appreciation for one another in the digital age. As the application continues to evolve, it will remain focused on establishing deeper connections between people and enhancing lives, one message at a time.
