@@ -165,6 +165,20 @@ declare module 'astro:content' {
   collection: "case-studies";
   data: any
 } & { render(): Render[".md"] };
+"recording-flow.md": {
+	id: "recording-flow.md";
+  slug: "recording-flow";
+  body: string;
+  collection: "case-studies";
+  data: any
+} & { render(): Render[".md"] };
+"tribute-v3.md": {
+	id: "tribute-v3.md";
+  slug: "tribute-v3";
+  body: string;
+  collection: "case-studies";
+  data: any
+} & { render(): Render[".md"] };
 "tribute.md": {
 	id: "tribute.md";
   slug: "tribute";
