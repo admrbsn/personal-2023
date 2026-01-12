@@ -1,17 +1,33 @@
 ---
-title: 'Tribute V3: Re-architecting a 10-year-old product into a modern, creator-first platform'
-description: 'A complete overhaul of the Tribute platform, redesigning how creators and participants use the product, how customization works, and how the platform can grow in the future.'
+title: "Tribute V3: Re-architecting a 10-year-old product into a modern, creator-first platform"
+description: "A full redesign and re-architecture of the Tribute platform, rethinking creation, customization, payments, and scale using modern design systems and AI-assisted workflows."
+---
+
+## At a glance
+
+- **Role:** VP of Product Design (hands-on)
+- **Scope:** End-to-end platform redesign (web-first, mobile-led)
+- **Team:** Design, frontend, backend (tight collaboration)
+- **Timeline:** ~3 months from concept to launch
+- **Impact:**  
+  - Starts: **+29%**  
+  - Start → publish: **+24%**  
+  - Purchases: **+19%**  
+  - CSAT: **+20%**
+
 ---
 
 ## Background
 
 At the start of 2025, it was clear the Tribute platform had reached a breaking point.
 
-What started almost ten years ago as a small side project has grown into a meaningful, emotional product used by millions. However, the foundation did not keep up. We made small improvements to areas such as authentication, recording, and public-viewing pages, but the overall experience—from onboarding to checkout and delivery—felt fragmented, outdated, and increasingly fragile over time.
+What began nearly ten years earlier as a small side project had grown into an emotionally meaningful product used by millions. However, the foundation had not kept pace with that growth. Over time, we made incremental improvements to individual areas—authentication, recording, public viewing—but the overall experience from onboarding to checkout and delivery felt fragmented, outdated, and increasingly fragile.
 
 Band-aids were starting to fall off.
 
-Tribute V3 was a complete overhaul of the platform. It was not just a new look, but a redesign of how creators and participants use the product, how customization works, and how the platform can grow in the future.
+Tribute V3 was not a visual refresh. It was a full re-architecture of how creators and participants experience the product, how customization works, and how the platform could evolve moving forward.
+
+---
 
 ## Problem
 
@@ -21,150 +37,230 @@ We identified three core issues holding the platform back.
 
 Nearly every major surface needed attention:
 
-* Onboarding
-* Publishing
-* Tribute management
-* Guest invitations
-* Video editing and arrangement
-* Checkout
-* The completed Tribute experience
+- Onboarding  
+- Publishing  
+- Tribute management  
+- Guest invitations  
+- Video editing and arrangement  
+- Checkout  
+- The completed Tribute experience  
 
-Each flow was improved separately over the years, which led to an experience that felt inconsistent and became harder to maintain.
+Each flow had been improved independently over the years. While well-intentioned, this resulted in an experience that felt inconsistent to users and increasingly difficult to maintain internally.
+
+> **Image placeholder:** Legacy flow map highlighting disconnected surfaces  
+> `[image: legacy-flow-map.png]`
+
+---
 
 ### 2. Limited creative control
 
-Tribute is an emotional and expressive product, but our customization options did not show that. Users often told us they wanted more control over themes, colors, and personality. The product felt too rigid for something meant to be personal.
+Tribute is inherently emotional and expressive, yet customization felt rigid. Users frequently asked for more control over themes, colors, and overall personality. The product didn’t reflect the emotional weight it carried.
 
-### 3. Creator and participant experiences were artificially separated
+> **Image placeholder:** Screens showing limited theme options pre-V3  
+> `[image: pre-v3-themes.png]`
 
-Creators and participants were basically using different products. This made the experience confusing, the UI inconsistent, and caused a loss of shared context. We looked to platforms like Partiful and Paperless Post, which treat creators and guests as collaborators in the same space, with differences determined by permissions rather than separate interfaces.
+---
+
+### 3. Artificial separation between creators and participants
+
+Creators and participants were effectively using different products. This fractured experience caused confusion, inconsistent UI patterns, and a loss of shared context.
+
+We looked to platforms like Partiful and Paperless Post for inspiration—tools that treat creators and guests as collaborators in the same space, with differences driven by permissions rather than separate interfaces.
+
+> **Image placeholder:** Competitive teardown screenshots  
+> `[image: competitive-analysis.png]`
+
+---
 
 ## Solution
 
-The V3 vision crystallized around a few guiding principles:
+The V3 vision crystallized around four guiding principles:
 
-* **One shared interface, different permissions.** Creators and participants should experience the same product, with editing and management tools revealed only when appropriate.
-* **Customization as a first-class feature.** Themes, colors, and visual expression should not feel like add-ons. They should be part of the main experience.
-* **Delight without complexity.** Onboarding needed to be fun, expressive, and confidence-building without overwhelming users.
-* **Mobile is not a fallback.** Mobile needed to feel intentional, polished, and fast, not like a weaker version of the desktop experience.
+- **One shared interface, different permissions**  
+  Creators and participants experience the same product, with management tools revealed contextually.
+- **Customization as a first-class feature**  
+  Expression should feel core, not bolted on.
+- **Delight without complexity**  
+  Onboarding should build confidence without overwhelming users.
+- **Mobile is not a fallback**  
+  Mobile needed to feel intentional, fast, and polished.
+
+---
 
 ## Implementation
 
 ### Early Exploration & Journey Mapping
 
-I spent an intensive afternoon tearing down Partiful and Paperless Post, mapping their full journeys from creation to completion. I documented decision points, emotional highs and lows, and moments of friction.
+I spent an intensive afternoon tearing down Partiful and Paperless Post, mapping full journeys from creation to completion. I documented decision points, emotional highs and lows, and moments of friction.
 
-From that work, a clear structure emerged.
+A clear pattern emerged: the strongest experiences felt like one continuous space that adapted based on who you were and what you could do.
 
-Instead of moving users between disconnected areas, Tribute V3 would feel like one continuous space that subtly adapts to who you are and what you can do.
+That became the backbone of Tribute V3.
 
-I whiteboarded the entire journey end to end and sketched the first layouts in Figma to get the idea out of my head and into something tangible.
+I whiteboarded the entire journey end to end, then sketched early layouts in Figma to externalize the flow before committing to implementation.
+
+> **Image placeholder:** Journey map + whiteboard photos  
+> `[image: journey-map.png]`
+
+---
+
+### Rethinking the Create Experience (What Didn’t Work)
+
+One of the earliest ideas failed.
+
+Inspired by Partiful, I initially wanted the product page—with placeholder data—to *be* the create experience. It felt slick and modern.
+
+In practice, it didn’t resonate.
+
+False-door testing in Maze and moderated interviews showed users felt disoriented. Instead of feeling empowered, they weren’t sure what to do next or whether they were “doing it right.”
+
+We reverted to a more conventional modal-based start—but with the new experience blurred in the background as a teaser. This preserved clarity while signaling what users were about to unlock.
+
+> **Image placeholder:** Maze false-door test results + rejected concept  
+> `[image: maze-create-test.png]`
+
+---
 
 ### Reimagining Onboarding
 
-Our existing onboarding flow worked, but was not inspiring. It was basically a homemade Typeform copy. While conversion improved over time (from ~15% to ~25%), it did not reflect the product's joy.
+The existing onboarding technically worked, but lacked personality. It was effectively a homemade Typeform. Conversion improved over time (from ~15% to ~25%), but it didn’t reflect the product’s joy.
 
 For V3, onboarding needed to:
 
-* Feel expressive and celebratory.
-* Tease customization early
-* Reduce perceived effort
-* Build confidence immediately
+- Feel expressive and celebratory  
+- Tease customization early  
+- Reduce perceived effort  
+- Build confidence immediately  
 
-This redesign paid off. Post-launch, onboarding conversion increased to 54%, more than doubling our historical baseline.
+Post-launch, onboarding conversion increased to **54%**, more than doubling the historical baseline.
+
+> **Image placeholder:** Old vs new onboarding comparison  
+> `[image: onboarding-comparison.png]`
+
+---
+
+### Payments, Commitment, and Reducing Friction
+
+Historically, payment happened at the very end of the experience. While generous, it caused issues:
+
+- Ad spend included abandoned tributes  
+- Late-stage abandonment was high  
+- **16% of checkouts were accidental**
+
+Users were literally throwing money at us earlier in the flow.
+
+We moved payment to just after the draft stage—keeping the product free to start, but aligning payment with intent. This reduced abandonment, clarified expectations, and respected user behavior.
+
+> **Image placeholder:** Checkout flow before/after  
+> `[image: payment-flow.png]`
+
+---
 
 ### Themes, Identity, and Emotional Expression
 
-From years of user research, one insight stood out clearly: users love emojis.
+Years of research revealed a simple insight: users love emojis.
 
-That became the base for our default theme: occasion-based, animated emoji backgrounds that feel playful and lively. From there, it was easy to add more themes:
+That insight became the foundation of our default theme—animated, occasion-based emoji backgrounds. From there, we expanded into:
 
-* Graduation caps
-* Balloons
-* Fireworks
-* Seasonal motifs
+- Graduation caps  
+- Balloons  
+- Fireworks  
+- Seasonal motifs  
 
-We validated theme directions through lightweight discovery and preference testing, using structured prompts and early visuals to gauge emotional resonance before committing to implementation.
+Themes became a primary way users expressed intent and emotion—not decoration.
 
-Themes were no longer just decoration. They became a key way for users to show intent and emotion.
+> **Image placeholder:** Theme exploration + final theme screens  
+> `[image: themes.png]`
+
+---
 
 ### Design System & Technical Foundations
 
-At the same time, we needed a system that could support rapid iteration.
-
-Our CTO and I had been experimenting with modern 'vibe-coding' tools like Bolt, Lovable, Cursor, and Claude Code. We wanted a design system that worked well with AI-assisted development.
+To support rapid iteration, we needed a system that balanced speed and consistency.
 
 I built a lightweight design system using DaisyUI and design tokens:
 
-* Simple theme creation
-* Strong token structure
-* Built-in theme controller
-* Existing LLM documentation and MCP support
+- Simple theme creation  
+- Clear token structure  
+- Built-in theme controls  
+- Strong compatibility with AI-assisted development  
 
-While we plan to use tools like Tokens Studio and deeper Figma syncing in the future, DaisyUI offered the right mix of flexibility and speed for now.
+While deeper Figma syncing is planned, this foundation allowed us to move quickly without sacrificing cohesion.
+
+> **Image placeholder:** Design tokens + component examples  
+> `[image: design-system.png]`
+
+---
 
 ### Prototyping, Vibe Coding, and Iteration
 
-Once the foundations were in place, we moved quickly.
+Once foundations were in place, we moved quickly.
 
 I bounced between:
 
-* Figma for layout exploration
-* Bolt and Lovable for rapid UI scaffolding
-* Claude Code and Cursor, for deeper engineering work, were surprisingly good at creating strong first drafts. They were not perfect, but they were almost always usable. Being able to go from idea to interactive UI quickly changed how fast we could test and drop ideas.
+- Figma for layout exploration  
+- Rapid UI scaffolding tools  
+- AI-assisted coding environments for deeper implementation  
+
+Vibe coding wasn’t about skipping rigor. It accelerated the first 60–70% of the work so more time could be spent refining, validating, and shipping with confidence.
+
+As complexity grew, quality required discipline. Weak prompts could introduce regressions, so I continuously tightened constraints, updated the design system, and supplemented prompts with Figma screens to remove ambiguity.
+
+> **Image placeholder:** Prompt → UI iterations  
+> `[image: vibe-coding.png]`
+
+---
 
 ### User Testing & Validation
 
-After roughly two months of iteration, we put interactive prototypes in front of users.
+After ~2 months, we tested interactive prototypes with users.
 
 Using Maze, we ran:
 
-* First-click testing
-* Preference testing
-* Fake-door experiments for future features
+- First-click testing  
+- Preference testing  
+- Fake-door experiments  
 
-Users consistently gave the new experience higher ratings for clarity, delight, and ease of use. In tests, users completed key flows 30-40% faster and felt much more confident about what would happen next.
+Users completed key flows **30–40% faster** and reported feeling “guided, not rushed.”
 
-Qualitative feedback emphasized:
+> **Image placeholder:** Maze results + heatmaps  
+> `[image: maze-results.png]`
 
-* Feeling "guided, not rushed."
-* Better understanding of customization options
-* Stronger emotional connection early in the process
-
-### Supporting Tools & Research
-
-To support velocity and alignment, we leaned on several tools:
-
-* Relume for wireframes and sitemap exploration, helping quickly validate IA before committing to visuals.
-* Uizard for rapid ideation and concept exploration
-* OnBeacon for behavioral insights, helping us validate language, framing, and emotional cues
-
-These tools let us test our ideas early and at low cost, helping us avoid costly changes later.
+---
 
 ### Mobile-First by Design
 
-One of the most rewarding aspects of V3 was the mobile experience.
+Mobile became the primary constraint:
 
-Historically, mobile had been an afterthought. In V3, it became the primary design constraint:
+- Type scales tuned for small screens  
+- Thoughtful spacing and tap targets  
+- Touch-first micro-interactions  
 
-* Type scales tuned specifically for mobile
-* Thoughtful spacing and tap targets
-* Micro-interactions designed to work seamlessly on touch
+The result felt closer to a native app than a web product—fast, smooth, and intentional.
 
-The result felt more like a native app than a typical web product. It was fast, smooth, and thoughtfully designed.
+> **Image placeholder:** Mobile screens  
+> `[image: mobile-ui.png]`
+
+---
 
 ## Results
 
-Post-launch, the platform showed meaningful gains across the board:
+Post-launch improvements were consistent and measurable:
 
-* Starts: +29%
-* Start → publish conversion: +24%
-* Purchases: +19%
-* Participant engagement: +10%
-* CSAT: +20%
+- Starts: **+29%**  
+- Start → publish: **+24%**  
+- Purchases: **+19%**  
+- Participant engagement: **+10%**  
+- CSAT: **+20%**
 
-Beyond the numbers, V3 gave the team a modern, scalable foundation. It is easier to improve, faster to update, and better matches users' experience with Tribute.
+More importantly, V3 gave us a scalable foundation. Iteration became safer, experimentation cheaper, and future improvements easier to ship.
+
+---
 
 ## Reflection
 
-Tribute V3 was not about following trends or using the latest tools. It was about honoring what the product had become: emotionally meaningful and deeply personal. We wanted to build a platform that finally matched that reality. It's at the intersection of design, engineering, and emerging workflows, and it fundamentally changed how we build at Tribute going forward.
+Tribute V3 wasn’t about trends or tools. It was about aligning the platform with what the product had already become—emotionally meaningful and deeply personal.
+
+It also changed how we build. Design and engineering now operate around shared systems, experimentation carries less risk, and ideas move from concept to reality faster without sacrificing quality.
+
+V3 set a new baseline for how we work at Tribute going forward.
