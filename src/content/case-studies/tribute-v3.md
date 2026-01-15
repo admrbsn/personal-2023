@@ -23,20 +23,6 @@ liveSiteUrl: "https://tribute.co"
 liveSiteText: "To view the live site and experience the improved platform, visit. See how the redesign has made it easier to create meaningful video tributes, customize experiences, and complete the entire journey from start to finish."
 ---
 
-## At a glance
-
-- **Role:** VP of Product Design (hands-on)
-- **Scope:** End-to-end platform redesign (web-first, mobile-led)
-- **Team:** Design, frontend, backend (tight collaboration)
-- **Timeline:** ~3 months from concept to launch
-- **Impact:**
-  - Starts: **+29%**
-  - Start → publish: **+24%**
-  - Purchases: **+19%**
-  - CSAT: **+20%**
-
----
-
 <!-- PROCESS: START -->
 <!-- PROCESS: DISCOVER -->
 

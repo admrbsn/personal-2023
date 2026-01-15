@@ -19,7 +19,7 @@ type Props = CollectionEntry<'case-studies'>['data']
 
 // Load the current post data
 const post = Astro.props
-const { title, description, role, scope, team, timeline, impact, metrics, liveSiteUrl, liveSiteText } = post.data
+const { title, description, role, scope, team, timeline, metrics, liveSiteUrl, liveSiteText } = post.data
 const { Content } = await post.render()
 const allImageFiles = await Astro.glob(`../../assets/img/**/*`)
 
@@ -67,9 +67,9 @@ const imageFiles = allImageFiles.filter(file => {
         }
       </div>
       <!-- At a glance section -->
-      {(role || scope || team || timeline || impact) && (
+      {(role || scope || team || timeline) && (
         <div class="max-w-6xl mx-auto px-3 md:px-0 mt-8 md:mt-12 mb-12">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6">
             {role && (
               <div>
                 <h3 class="text-sm font-semibold uppercase tracking-wide mb-3 text-center text-gray-600">Role</h3>
@@ -95,16 +95,6 @@ const imageFiles = allImageFiles.filter(file => {
               </div>
             )}
           </div>
-          {impact && impact.length > 0 && (
-            <div class="mt-8 md:col-span-2">
-              <h3 class="text-sm font-semibold uppercase tracking-wide mb-3 text-center text-gray-600">Impact</h3>
-              <ul class="list-none space-y-2">
-                {impact.map((item) => (
-                  <li class="text-base leading-relaxed text-center" set:html={item}></li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       )}
       <!-- Article section -->
