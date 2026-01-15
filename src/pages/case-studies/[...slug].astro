@@ -19,7 +19,7 @@ type Props = CollectionEntry<'case-studies'>['data']
 
 // Load the current post data
 const post = Astro.props
-const { title, description } = post.data
+const { title, description, role, scope, team, timeline, impact, metrics, liveSiteUrl, liveSiteText } = post.data
 const { Content } = await post.render()
 const allImageFiles = await Astro.glob(`../../assets/img/**/*`)
 
@@ -46,9 +46,9 @@ const imageFiles = allImageFiles.filter(file => {
     </script>
   </head>
   <body>
-    <header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-50 flex justify-between w-full max-w-5xl px-3 py-5">
+    <header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-50 flex justify-between w-full max-w-6xl px-3 py-5">
       <div>
-        <h1 class="md:fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
+        <h1 id="adam-logo" class="md:fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
       </div>
       <a href="/" class="relative md:top-6 flex items-center text-black font-semibold">
         <Image class="w-6 mr-1.5 " src={arrowBack} alt="Back icon."/>
@@ -57,19 +57,59 @@ const imageFiles = allImageFiles.filter(file => {
     </header>
     <main>
       <!-- Hero -->
-      <div id="hero" class="relative z-30">
+      <div id="hero" class="relative z-30 max-w-6xl mx-auto px-3 md:px-0">
         {
-          heroImageFile && (
-          <div style={`background-image: url(${heroImageFile.default.src});`} class="w-full max-w-6xl h-96 md:mx-auto md:mt-12 bg-cover bg-center bg-[#E1D6CE] rounded-sm"></div>
+          heroImageFile ? (
+          <div style={`background-image: url(${heroImageFile.default.src});`} class="w-full h-96 md:h-[500px] md:mt-12 bg-cover bg-center bg-[#E1D6CE] rounded-sm"></div>
+          ) : (
+          <div class="w-full h-96 md:h-[500px] md:mt-12 bg-[#f5f5f5] rounded-sm border border-gray-200"></div>
           )
         }
       </div>
+      <!-- At a glance section -->
+      {(role || scope || team || timeline || impact) && (
+        <div class="max-w-6xl mx-auto px-3 md:px-0 mt-8 md:mt-12 mb-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {role && (
+              <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wide mb-3 text-center text-gray-600">Role</h3>
+                <p class="text-base leading-relaxed text-center">{role}</p>
+              </div>
+            )}
+            {scope && (
+              <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wide mb-3 text-center text-gray-600">Scope</h3>
+                <p class="text-base leading-relaxed text-center">{scope}</p>
+              </div>
+            )}
+            {team && (
+              <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wide mb-3 text-center text-gray-600">Team</h3>
+                <p class="text-base leading-relaxed text-center">{team}</p>
+              </div>
+            )}
+            {timeline && (
+              <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wide mb-3 text-center text-gray-600">Timeline</h3>
+                <p class="text-base leading-relaxed text-center">{timeline}</p>
+              </div>
+            )}
+          </div>
+          {impact && impact.length > 0 && (
+            <div class="mt-8 md:col-span-2">
+              <h3 class="text-sm font-semibold uppercase tracking-wide mb-3 text-center text-gray-600">Impact</h3>
+              <ul class="list-none space-y-2">
+                {impact.map((item) => (
+                  <li class="text-base leading-relaxed text-center" set:html={item}></li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
       <!-- Article section -->
       <article class="md:max-w-3xl mt-8 md:mt-12 md:mb-24 md:mx-auto px-4 md:px-0 z-40">
         <div class="prose">
-          <div class="title mb-12">
-            <h1 class="md:text-4xl font-heading text-3xl font-extrabold tracking-tight md:leading-tight">{title}</h1>
-          </div>
           <Content />
         </div>
         <!-- Gallery section -->
@@ -95,6 +135,57 @@ const imageFiles = allImageFiles.filter(file => {
           }
         </div>        
       </article>
+      <!-- Metrics section -->
+      {(metrics && metrics.length > 0) && (
+        <section class="max-w-6xl mx-auto px-3 md:px-0 mt-16 md:mt-24 mb-12">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
+            {metrics.map((metric) => (
+              <div class="text-center">
+                <div class="text-4xl md:text-5xl font-bold mb-2 text-gray-900">{metric.value}</div>
+                {metric.description ? (
+                  <>
+                    <div class="text-sm text-gray-600 mb-1">{metric.description}</div>
+                    <div class="text-base text-gray-900">{metric.label}</div>
+                  </>
+                ) : (
+                  <>
+                    <div class="text-sm text-gray-600 mb-1">Increase In</div>
+                    <div class="text-base text-gray-900">{metric.label}</div>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+          {liveSiteUrl && (
+            <div class="text-center mb-12">
+              <h2 class="text-2xl md:text-3xl font-bold mb-4 text-gray-900">View the Live Site</h2>
+              <p class="text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                {liveSiteText ? (
+                  <>
+                    {liveSiteText.replace(liveSiteUrl, '').trim()}{' '}
+                    <a href={liveSiteUrl} target="_blank" rel="noopener noreferrer" class="underline hover:no-underline">{liveSiteUrl}</a>.
+                  </>
+                ) : (
+                  <>
+                    To view the live site and experience the improved experience, visit{' '}
+                    <a href={liveSiteUrl} target="_blank" rel="noopener noreferrer" class="underline hover:no-underline">{liveSiteUrl}</a>.
+                  </>
+                )}
+              </p>
+            </div>
+          )}
+        </section>
+      )}
+      <!-- Scroll to top button -->
+      <button 
+        id="scroll-to-top" 
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-all opacity-0 pointer-events-none z-50"
+        aria-label="Scroll to top"
+      >
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
     </main>
   </body>
 </html>
@@ -104,10 +195,30 @@ const imageFiles = allImageFiles.filter(file => {
   window.addEventListener('scroll', (event: Event) => {
     const scrollTop = window.pageYOffset as number
     const hero = document.getElementById('hero') as HTMLElement
+    const scrollToTopBtn = document.getElementById('scroll-to-top') as HTMLElement
 
     // Setting hero opacity
     hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
+
+    // Show/hide scroll to top button
+    if (scrollToTopBtn) {
+      if (scrollTop > 300) {
+        scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none')
+        scrollToTopBtn.classList.add('opacity-100', 'pointer-events-auto')
+      } else {
+        scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none')
+        scrollToTopBtn.classList.remove('opacity-100', 'pointer-events-auto')
+      }
+    }
   }, false)
+
+  // Scroll to top functionality
+  const scrollToTopBtn = document.getElementById('scroll-to-top')
+  if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    })
+  }
 </script>
 
 <script type="module">
@@ -132,7 +243,17 @@ const imageFiles = allImageFiles.filter(file => {
     width: 100%;
     height: 100vh;
     z-index: -10;
-    @apply bg-gradient-to-b from-[#EAE4E3] to-[#ffffff];
+    @apply bg-gradient-to-b from-[#f5f5f5] to-[#ffffff];
+  }
+  #adam-logo.inverted {
+    @apply bg-white text-black;
+  }
+  #adam-logo.inverted:before {
+    @apply bg-white;
+  }
+  h1:before {
+    @apply absolute -top-full left-0 w-full h-full bg-black;
+    content: "";
   }
   :global(h2) {
     @apply mb-4  text-xl md:text-2xl font-heading font-extrabold tracking-tight md:leading-tight;

@@ -1,6 +1,30 @@
 ---
-title: 'Peterson’s Test Prep iOS/Android Mobile App Case Study'
+title: 'Peterson's Test Prep iOS/Android Mobile App Case Study'
 description: 'Lorem ipsum dolor sit amet'
+role: "Design Lead"
+scope: "Native iOS and Android app design and development"
+team: "Design, iOS, Android engineering teams"
+timeline: "4 months (ideation to launch)"
+impact:
+  - "4.6-star rating"
+  - "10,000+ downloads in first week"
+  - "App Store feature"
+  - "DTC sales growth: $50k → $1M annually"
+metrics:
+  - value: "4.6"
+    description: "Star"
+    label: "Rating"
+  - value: "10K+"
+    description: "Downloads"
+    label: "First Week"
+  - value: "$1M"
+    description: "Annual"
+    label: "DTC Sales"
+  - value: "4"
+    description: "Months"
+    label: "To Launch"
+liveSiteUrl: "https://www.petersons.com"
+liveSiteText: "To view the live site and experience the improved test prep platform, visit. See how the native mobile apps have transformed the learning experience for students preparing for standardized tests."
 ---
 
 ## Introduction

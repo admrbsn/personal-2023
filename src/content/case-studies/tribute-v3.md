@@ -9,13 +9,16 @@ description: "A full redesign and re-architecture of the Tribute platform, rethi
 - **Scope:** End-to-end platform redesign (web-first, mobile-led)
 - **Team:** Design, frontend, backend (tight collaboration)
 - **Timeline:** ~3 months from concept to launch
-- **Impact:**  
-  - Starts: **+29%**  
-  - Start → publish: **+24%**  
-  - Purchases: **+19%**  
+- **Impact:**
+  - Starts: **+29%**
+  - Start → publish: **+24%**
+  - Purchases: **+19%**
   - CSAT: **+20%**
 
 ---
+
+<!-- PROCESS: START -->
+<!-- PROCESS: DISCOVER -->
 
 ## Background
 
@@ -33,227 +36,159 @@ Tribute V3 was not a visual refresh. It was a full re-architecture of how creato
 
 We identified three core issues holding the platform back.
 
-### 1. Fragmented, aging flows
+### Fragmented, aging flows
 
-Nearly every major surface needed attention:
+Nearly every major surface needed attention—onboarding, publishing, tribute management, guest invitations, editing, checkout, and delivery. Each flow had been improved independently over the years, resulting in an experience that felt inconsistent to users and increasingly difficult to maintain internally.
 
-- Onboarding  
-- Publishing  
-- Tribute management  
-- Guest invitations  
-- Video editing and arrangement  
-- Checkout  
-- The completed Tribute experience  
+### Limited creative control
 
-Each flow had been improved independently over the years. While well-intentioned, this resulted in an experience that felt inconsistent to users and increasingly difficult to maintain internally.
+Tribute is inherently emotional and expressive, yet customization felt rigid. Users frequently asked for more control over themes, colors, and personality. The product didn’t reflect the emotional weight it carried.
 
-> **Image placeholder:** Legacy flow map highlighting disconnected surfaces  
-> `[image: legacy-flow-map.png]`
+### Artificial separation between creators and participants
+
+Creators and participants were effectively using different products. This fractured experience caused confusion, inconsistent UI patterns, and a loss of shared context. We looked to products like Partiful and Paperless Post, which treat creators and guests as collaborators in the same space, differentiated by permissions rather than separate interfaces.
 
 ---
 
-### 2. Limited creative control
+<!-- PROCESS: EXPLORE_DEFINE -->
 
-Tribute is inherently emotional and expressive, yet customization felt rigid. Users frequently asked for more control over themes, colors, and overall personality. The product didn’t reflect the emotional weight it carried.
+## Framing the Direction
 
-> **Image placeholder:** Screens showing limited theme options pre-V3  
-> `[image: pre-v3-themes.png]`
+Before jumping to solutions, I needed to understand how people mentally approached creating a tribute—and what actually mattered to them in the process.
 
----
+### Journey mapping and competitive teardown
 
-### 3. Artificial separation between creators and participants
+I spent an intensive afternoon breaking down products like Partiful and Paperless Post, mapping their journeys from creation to completion. I focused on decision points, emotional highs and lows, and moments of friction.
 
-Creators and participants were effectively using different products. This fractured experience caused confusion, inconsistent UI patterns, and a loss of shared context.
+A clear pattern emerged: the strongest experiences felt like one continuous space that subtly adapted based on who you were and what you could do.
 
-We looked to platforms like Partiful and Paperless Post for inspiration—tools that treat creators and guests as collaborators in the same space, with differences driven by permissions rather than separate interfaces.
+That insight became the backbone of Tribute V3.
 
-> **Image placeholder:** Competitive teardown screenshots  
-> `[image: competitive-analysis.png]`
+### Prioritizing what matters through ranking exercises
 
----
+Rather than relying on assumptions or feature checklists, we ran a contextual feature-ranking exercise using Maze. Participants were asked to imagine creating a tribute for someone important and rank core features by importance during creation.
 
-## Solution
+The features included:
+- Video messages
+- Theme and visual customization
+- Music
+- Ordering and editing content
+- Cover text and messaging
 
-The V3 vision crystallized around four guiding principles:
+This forced tradeoffs and gave us a clearer signal than grouping alone.
 
-- **One shared interface, different permissions**  
-  Creators and participants experience the same product, with management tools revealed contextually.
-- **Customization as a first-class feature**  
-  Expression should feel core, not bolted on.
-- **Delight without complexity**  
-  Onboarding should build confidence without overwhelming users.
-- **Mobile is not a fallback**  
-  Mobile needed to feel intentional, fast, and polished.
+Several patterns stood out:
+- Video messages were consistently the primary driver of value
+- Customization ranked higher than expected, reinforcing emotional expression as core
+- Structural features mattered, but users expected them to stay out of the way
 
----
+These rankings directly informed visual hierarchy, default emphasis, and which controls were surfaced early versus deferred.
 
-## Implementation
-
-### Early Exploration & Journey Mapping
-
-I spent an intensive afternoon tearing down Partiful and Paperless Post, mapping full journeys from creation to completion. I documented decision points, emotional highs and lows, and moments of friction.
-
-A clear pattern emerged: the strongest experiences felt like one continuous space that adapted based on who you were and what you could do.
-
-That became the backbone of Tribute V3.
-
-I whiteboarded the entire journey end to end, then sketched early layouts in Figma to externalize the flow before committing to implementation.
-
-> **Image placeholder:** Journey map + whiteboard photos  
-> `[image: journey-map.png]`
+> **Image placeholder:** Feature ranking results  
+> `[image: maze-feature-ranking.png]`
 
 ---
 
-### Rethinking the Create Experience (What Didn’t Work)
+## Testing early assumptions
 
-One of the earliest ideas failed.
+One early idea didn’t hold up.
 
-Inspired by Partiful, I initially wanted the product page—with placeholder data—to *be* the create experience. It felt slick and modern.
+Inspired by Partiful, I initially wanted the product page—with placeholder data—to *be* the create experience. It looked slick and modern, but false-door testing and moderated interviews revealed confusion. Users weren’t sure what to do next or whether they were “doing it right.”
 
-In practice, it didn’t resonate.
+We pivoted to a more conventional modal-based start, with the new experience blurred behind it as a teaser. This preserved clarity while still signaling what users were about to unlock.
 
-False-door testing in Maze and moderated interviews showed users felt disoriented. Instead of feeling empowered, they weren’t sure what to do next or whether they were “doing it right.”
-
-We reverted to a more conventional modal-based start—but with the new experience blurred in the background as a teaser. This preserved clarity while signaling what users were about to unlock.
-
-> **Image placeholder:** Maze false-door test results + rejected concept  
-> `[image: maze-create-test.png]`
+> **Image placeholder:** False-door survey results  
+> `[image: maze-false-door-create.png]`
 
 ---
 
-### Reimagining Onboarding
+<!-- PROCESS: DEVELOP_TEST -->
 
-The existing onboarding technically worked, but lacked personality. It was effectively a homemade Typeform. Conversion improved over time (from ~15% to ~25%), but it didn’t reflect the product’s joy.
+## Shaping the Experience
+
+With direction validated, the focus shifted to shaping the experience and testing it in increasingly concrete ways.
+
+### Reimagining onboarding
+
+The existing onboarding flow technically worked, but lacked personality. It was essentially a homemade Typeform. Conversion improved over time—from ~15% to ~25%—but it didn’t reflect the product’s joy.
 
 For V3, onboarding needed to:
-
-- Feel expressive and celebratory  
-- Tease customization early  
-- Reduce perceived effort  
-- Build confidence immediately  
+- Feel expressive and celebratory
+- Tease customization early
+- Reduce perceived effort
+- Build confidence immediately
 
 Post-launch, onboarding conversion increased to **54%**, more than doubling the historical baseline.
 
-> **Image placeholder:** Old vs new onboarding comparison  
+> **Image placeholder:** Old vs new onboarding  
 > `[image: onboarding-comparison.png]`
 
 ---
 
-### Payments, Commitment, and Reducing Friction
+### Payments, commitment, and clarity
 
-Historically, payment happened at the very end of the experience. While generous, it caused issues:
-
-- Ad spend included abandoned tributes  
-- Late-stage abandonment was high  
+Historically, payment happened at the very end of the experience. While generous, it caused real issues:
+- Ad spend was attributed to abandoned tributes
+- Late-stage abandonment stayed high
 - **16% of checkouts were accidental**
 
-Users were literally throwing money at us earlier in the flow.
+Users were signaling readiness to pay earlier, but the flow wasn’t designed to support that intent.
 
-We moved payment to just after the draft stage—keeping the product free to start, but aligning payment with intent. This reduced abandonment, clarified expectations, and respected user behavior.
+We moved payment to just after the draft stage—keeping the product free to start while aligning payment with commitment and clarity.
 
-> **Image placeholder:** Checkout flow before/after  
+> **Image placeholder:** Payment flow before/after  
 > `[image: payment-flow.png]`
 
 ---
 
-### Themes, Identity, and Emotional Expression
+### Themes and emotional expression
 
-Years of research revealed a simple insight: users love emojis.
+Years of research pointed to a simple truth: users love emojis.
 
-That insight became the foundation of our default theme—animated, occasion-based emoji backgrounds. From there, we expanded into:
+That insight became the foundation of our default theme—animated, occasion-based emoji backgrounds. From there, we expanded into additional themes like balloons, fireworks, graduation caps, and seasonal motifs.
 
-- Graduation caps  
-- Balloons  
-- Fireworks  
-- Seasonal motifs  
+Themes became a primary way users expressed intent and emotion, not just decoration.
 
-Themes became a primary way users expressed intent and emotion—not decoration.
-
-> **Image placeholder:** Theme exploration + final theme screens  
+> **Image placeholder:** Theme exploration and final screens  
 > `[image: themes.png]`
 
 ---
 
-### Design System & Technical Foundations
+### Prototyping, iteration, and AI-assisted workflows
 
-To support rapid iteration, we needed a system that balanced speed and consistency.
+Once the foundation was in place, we moved quickly.
 
-I built a lightweight design system using DaisyUI and design tokens:
+I bounced between Figma for layout exploration and AI-assisted coding environments for rapid implementation. This approach accelerated the first 60–70% of the work, allowing more time for refinement, validation, and polish.
 
-- Simple theme creation  
-- Clear token structure  
-- Built-in theme controls  
-- Strong compatibility with AI-assisted development  
-
-While deeper Figma syncing is planned, this foundation allowed us to move quickly without sacrificing cohesion.
-
-> **Image placeholder:** Design tokens + component examples  
-> `[image: design-system.png]`
-
----
-
-### Prototyping, Vibe Coding, and Iteration
-
-Once foundations were in place, we moved quickly.
-
-I bounced between:
-
-- Figma for layout exploration  
-- Rapid UI scaffolding tools  
-- AI-assisted coding environments for deeper implementation  
-
-Vibe coding wasn’t about skipping rigor. It accelerated the first 60–70% of the work so more time could be spent refining, validating, and shipping with confidence.
-
-As complexity grew, quality required discipline. Weak prompts could introduce regressions, so I continuously tightened constraints, updated the design system, and supplemented prompts with Figma screens to remove ambiguity.
+Speed alone wasn’t enough. As complexity grew, quality required discipline. Weak prompts could introduce regressions, so I continuously tightened constraints, updated the design system, and supplemented AI workflows with concrete Figma screens to remove ambiguity.
 
 > **Image placeholder:** Prompt → UI iterations  
 > `[image: vibe-coding.png]`
 
 ---
 
-### User Testing & Validation
+### Continuous validation
 
-After ~2 months, we tested interactive prototypes with users.
+Beyond milestone testing, we relied heavily on unmoderated Maze surveys throughout the process. These lightweight tests helped pressure-test copy, validate feature placement, and gauge emotional response—without slowing momentum.
 
-Using Maze, we ran:
-
-- First-click testing  
-- Preference testing  
-- Fake-door experiments  
-
-Users completed key flows **30–40% faster** and reported feeling “guided, not rushed.”
-
-> **Image placeholder:** Maze results + heatmaps  
+> **Image placeholder:** Maze first-click and task success results  
 > `[image: maze-results.png]`
 
 ---
 
-### Mobile-First by Design
+<!-- PROCESS: DELIVERY -->
 
-Mobile became the primary constraint:
+## Launch and Outcomes
 
-- Type scales tuned for small screens  
-- Thoughtful spacing and tap targets  
-- Touch-first micro-interactions  
+The redesigned platform launched with meaningful improvements across the board:
 
-The result felt closer to a native app than a web product—fast, smooth, and intentional.
-
-> **Image placeholder:** Mobile screens  
-> `[image: mobile-ui.png]`
-
----
-
-## Results
-
-Post-launch improvements were consistent and measurable:
-
-- Starts: **+29%**  
-- Start → publish: **+24%**  
-- Purchases: **+19%**  
-- Participant engagement: **+10%**  
+- Starts: **+29%**
+- Start → publish: **+24%**
+- Purchases: **+19%**
+- Participant engagement: **+10%**
 - CSAT: **+20%**
 
-More importantly, V3 gave us a scalable foundation. Iteration became safer, experimentation cheaper, and future improvements easier to ship.
+Beyond the numbers, V3 provided a modern, scalable foundation. Iteration became safer, experimentation cheaper, and future improvements easier to ship.
 
 ---
 

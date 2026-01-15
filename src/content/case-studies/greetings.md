@@ -1,6 +1,28 @@
 ---
 title: 'Tribute Greetings: Innovating the Digital Greetings Space'
 description: 'Lorem ipsum dolor sit amet'
+role: "Director of Product Design"
+scope: "New product launch (web, iOS, Android), end-to-end design and development"
+team: "2 designers, frontend, backend engineering"
+timeline: "~6-8 months (web + iOS launch)"
+impact:
+  - "New product category for Tribute"
+  - "Multi-platform launch (web, iOS)"
+  - "300+ user research participants"
+metrics:
+  - value: "300+"
+    label: "Research Participants"
+  - value: "2M+"
+    description: "Existing"
+    label: "Tribute Users"
+  - value: "3"
+    description: "Platforms"
+    label: "Launched (Web, iOS, Android)"
+  - value: "100%"
+    description: "New"
+    label: "Product Category"
+liveSiteUrl: "https://greetings.tribute.co"
+liveSiteText: "To view the live site and experience Tribute Greetings, visit. See how the new platform enables meaningful one-to-one digital gifting with personalized video greetings and curated gifts."
 ---
 
 ## Overview

@@ -1,6 +1,28 @@
 ---
 title: 'Tribute.co Case Study'
 description: 'Lorem ipsum dolor sit amet'
+role: "Director of Product Design"
+scope: "Full platform redesign and rebuild (web, mobile, checkout, authentication)"
+team: "2 full-time designers, design agency, engineering team"
+timeline: "March 2020 - Ongoing (initial redesign ~6 months)"
+impact:
+  - "User-Generated Tributes: **+24%**"
+  - "AOV increased by **~$30**"
+  - "Invitee participation: **+21%**"
+  - "Record flow completion: **89% → 98%**"
+  - "Checkout conversion: **+16%**"
+metrics:
+  - value: "+24%"
+    label: "User-Generated Tributes"
+  - value: "+21%"
+    label: "Invitee Participation"
+  - value: "98%"
+    description: "Record Flow"
+    label: "Completion Rate"
+  - value: "+16%"
+    label: "Checkout Conversion"
+liveSiteUrl: "https://tribute.co"
+liveSiteText: "To view the live site and experience the improved platform, visit. See how the redesign has transformed the user experience, improved conversion rates, and made it easier for families to create meaningful video tributes."
 ---
 
 ## Background
