@@ -1,6 +1,26 @@
 ---
 title: "Tribute V3: Re-architecting a 10-year-old product into a modern, creator-first platform"
 description: "A full redesign and re-architecture of the Tribute platform, rethinking creation, customization, payments, and scale using modern design systems and AI-assisted workflows."
+role: "VP of Product Design (hands-on)"
+scope: "End-to-end platform redesign (web-first, mobile-led)"
+team: "Design, frontend, backend (tight collaboration)"
+timeline: "~3 months from concept to launch"
+impact:
+  - "Starts: **+29%**"
+  - "Start → publish: **+24%**"
+  - "Purchases: **+19%**"
+  - "CSAT: **+20%**"
+metrics:
+  - value: "+29%"
+    label: "Starts"
+  - value: "+24%"
+    label: "Start → Publish"
+  - value: "+19%"
+    label: "Purchases"
+  - value: "+20%"
+    label: "CSAT"
+liveSiteUrl: "https://tribute.co"
+liveSiteText: "To view the live site and experience the improved platform, visit. See how the redesign has made it easier to create meaningful video tributes, customize experiences, and complete the entire journey from start to finish."
 ---
 
 ## At a glance

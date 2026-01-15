@@ -1,6 +1,6 @@
 ---
-title: 'Peterson's Test Prep iOS/Android Mobile App Case Study'
-description: 'Lorem ipsum dolor sit amet'
+title: "Peterson's Test Prep iOS/Android Mobile App Case Study"
+description: "Lorem ipsum dolor sit amet"
 role: "Design Lead"
 scope: "Native iOS and Android app design and development"
 team: "Design, iOS, Android engineering teams"

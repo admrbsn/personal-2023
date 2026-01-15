@@ -1,6 +1,6 @@
 ---
-title: 'Tribute Greetings: Innovating the Digital Greetings Space'
-description: 'Lorem ipsum dolor sit amet'
+title: "Tribute Greetings: Innovating the Digital Greetings Space"
+description: "Lorem ipsum dolor sit amet"
 role: "Director of Product Design"
 scope: "New product launch (web, iOS, Android), end-to-end design and development"
 team: "2 designers, frontend, backend engineering"

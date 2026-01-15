@@ -1,6 +1,6 @@
 ---
-title: 'Tribute.co Case Study'
-description: 'Lorem ipsum dolor sit amet'
+title: "Tribute.co Case Study"
+description: "Lorem ipsum dolor sit amet"
 role: "Director of Product Design"
 scope: "Full platform redesign and rebuild (web, mobile, checkout, authentication)"
 team: "2 full-time designers, design agency, engineering team"
