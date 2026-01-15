@@ -23,6 +23,17 @@ const { title, description, role, scope, team, timeline, metrics, liveSiteUrl, l
 const { Content } = await post.render()
 const allImageFiles = await Astro.glob(`../../assets/img/**/*`)
 
+// Process markdown to add section IDs based on PROCESS comments
+const processSections = [
+  { id: 'discover', label: 'Research', comment: 'DISCOVER' },
+  { id: 'explore-define', label: 'Ideate', comment: 'EXPLORE_DEFINE' },
+  { id: 'develop-test', label: 'Make', comment: 'DEVELOP_TEST' },
+  { id: 'delivery', label: 'Delivery', comment: 'DELIVERY' }
+]
+
+// Check if this case study has process sections (only tribute-v3 for now)
+const hasProcessSections = post.slug === 'tribute-v3'
+
 console.log("All Image Files:", allImageFiles)
 
 const heroImageFile = allImageFiles.filter(file => {
@@ -97,9 +108,32 @@ const imageFiles = allImageFiles.filter(file => {
           </div>
         </div>
       )}
+      <!-- Process Navigation (sticky) -->
+      {hasProcessSections && (
+        <nav id="process-nav" class="sticky top-0 z-50 bg-white border-b border-gray-200 mb-8 md:mb-12">
+          <div class="max-w-6xl md:max-w-3xl mx-auto px-3 md:px-0 py-6">
+            <h4 class="sr-only">Process</h4>
+            <div aria-hidden="true">
+              <div class="overflow-hidden rounded-full bg-gray-200">
+                <div id="process-progress" class="h-2 rounded-full bg-black transition-all duration-500 ease-out" style="width: 0%"></div>
+              </div>
+              <div class="mt-6 grid grid-cols-4 text-sm font-medium text-gray-600">
+                {processSections.map((section, index) => (
+                  <div 
+                    class={`process-step-label ${index === 0 ? '' : index === processSections.length - 1 ? 'text-right' : 'text-center'} ${index === 0 ? 'opacity-100' : 'opacity-50'}`}
+                    data-section={section.id}
+                  >
+                    {section.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </nav>
+      )}
       <!-- Article section -->
       <article class="md:max-w-3xl mt-8 md:mt-12 md:mb-24 md:mx-auto px-4 md:px-0 z-40">
-        <div class="prose">
+        <div class="prose process-content">
           <Content />
         </div>
         <!-- Gallery section -->
@@ -181,6 +215,219 @@ const imageFiles = allImageFiles.filter(file => {
 </html>
 
 <script>
+  // Process navigation setup
+  const processSections = [
+    { id: 'discover', label: 'Discover', comment: 'DISCOVER' },
+    { id: 'explore-define', label: 'Explore & Define', comment: 'EXPLORE_DEFINE' },
+    { id: 'develop-test', label: 'Develop & Test', comment: 'DEVELOP_TEST' },
+    { id: 'delivery', label: 'Delivery', comment: 'DELIVERY' }
+  ]
+
+  // Add IDs to sections based on PROCESS comments
+  function setupProcessSections() {
+    const processNav = document.getElementById('process-nav')
+    if (!processNav) {
+      console.log('Process nav not found')
+      return
+    }
+
+    const content = document.querySelector('.process-content')
+    if (!content) {
+      console.log('Process content not found')
+      return
+    }
+
+    // Find all h2 headings
+    const headings = Array.from(content.querySelectorAll('h2'))
+    console.log(`Found ${headings.length} headings:`, headings.map(h => h.textContent?.trim()))
+    
+    if (headings.length === 0) {
+      console.warn('No h2 headings found in .process-content')
+      return
+    }
+    
+    // Map PROCESS comments to headings - matches tribute-v3.md structure
+    const sectionMap = {
+      'discover': ['Background'],
+      'explore-define': ['Framing the Direction'],
+      'develop-test': ['Shaping the Experience'],
+      'delivery': ['Launch and Outcomes']
+    }
+
+    // Match headings by exact text and assign our custom IDs
+    // We need to override any auto-generated IDs from the markdown renderer
+    headings.forEach((heading) => {
+      const headingText = heading.textContent?.trim() || ''
+      
+      for (const [sectionId, keywords] of Object.entries(sectionMap)) {
+        if (keywords.some(keyword => headingText === keyword)) {
+          // Remove any existing ID and set our custom one
+          heading.removeAttribute('id')
+          heading.id = sectionId
+          heading.setAttribute('data-process-section', sectionId)
+          console.log(`Matched "${headingText}" to section: ${sectionId}`)
+          break
+        }
+      }
+    })
+
+    // Verify IDs were set
+    const foundSections = processSections.map(s => {
+      const section = document.getElementById(s.id)
+      return { id: s.id, found: !!section, heading: section?.textContent?.trim() }
+    })
+    console.log('Process sections found:', foundSections)
+    
+    // Log all headings with their final IDs
+    headings.forEach((heading, index) => {
+      const isProcessSection = processSections.some(s => s.id === heading.id)
+      if (isProcessSection) {
+        console.log(`Process section ${index}: "${heading.textContent?.trim()}" → ID: ${heading.id}`)
+      }
+    })
+  }
+
+  // Track active section with Intersection Observer
+  function setupSectionTracking() {
+    const processNav = document.getElementById('process-nav')
+    if (!processNav) return
+
+    const progressBar = document.getElementById('process-progress')
+    if (!progressBar) return
+
+    // Find sections by ID
+    const sections = processSections.map(s => {
+      const section = document.getElementById(s.id)
+      if (!section) {
+        console.warn(`Section ${s.id} not found`)
+      }
+      return section
+    }).filter(Boolean)
+    
+    if (sections.length === 0) {
+      console.warn('No process sections found')
+      return
+    }
+
+    const stepLabels = document.querySelectorAll('.process-step-label')
+    const totalSteps = processSections.length
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '-10% 0px -70% 0px',
+      threshold: [0, 0.25, 0.5, 0.75, 1]
+    }
+
+    let currentActiveIndex = 0
+
+    const observer = new IntersectionObserver((entries) => {
+      // Find the section with the highest intersection ratio
+      let maxRatio = 0
+      let activeSectionId = null
+
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > maxRatio) {
+          maxRatio = entry.intersectionRatio
+          activeSectionId = entry.target.id
+        }
+      })
+
+      if (activeSectionId) {
+        const activeIndex = processSections.findIndex(s => s.id === activeSectionId)
+        
+        if (activeIndex !== -1 && activeIndex !== currentActiveIndex) {
+          currentActiveIndex = activeIndex
+          
+          // Calculate progress percentage
+          // For 4 steps: 0% (step 1), 33.33% (step 2), 66.66% (step 3), 100% (step 4)
+          const progress = (activeIndex / (totalSteps - 1)) * 100
+          if (progressBar instanceof HTMLElement) {
+            progressBar.style.width = `${progress}%`
+          }
+          
+            // Update step labels
+            stepLabels.forEach((label, index) => {
+              if (index <= activeIndex) {
+                // Active or completed steps
+                label.classList.remove('text-gray-600', 'opacity-50')
+                label.classList.add('text-black', 'font-semibold', 'opacity-100')
+              } else {
+                // Future steps
+                label.classList.remove('text-black', 'font-semibold', 'opacity-100')
+                label.classList.add('text-gray-600', 'opacity-50')
+              }
+            })
+        }
+      }
+    }, observerOptions)
+
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+  }
+
+  // Set initial active state based on scroll position
+  function setInitialActiveState() {
+    const progressBar = document.getElementById('process-progress')
+    const stepLabels = document.querySelectorAll('.process-step-label')
+    
+    if (!progressBar) return
+    
+    // Find which section is currently in view
+    let activeIndex = 0
+    const viewportTop = window.scrollY + (window.innerHeight * 0.3) // 30% from top
+    
+    processSections.forEach((section, index) => {
+      const sectionEl = document.getElementById(section.id)
+      if (sectionEl) {
+        const rect = sectionEl.getBoundingClientRect()
+        const sectionTop = rect.top + window.scrollY
+        
+        if (sectionTop <= viewportTop) {
+          activeIndex = index
+        }
+      }
+    })
+    
+    // Set progress bar
+    const totalSteps = processSections.length
+    const progress = (activeIndex / (totalSteps - 1)) * 100
+    if (progressBar instanceof HTMLElement) {
+      progressBar.style.width = `${progress}%`
+    }
+    
+    // Set step labels
+    stepLabels.forEach((label, index) => {
+      if (index <= activeIndex) {
+        label.classList.remove('text-gray-600', 'opacity-50')
+        label.classList.add('text-black', 'font-semibold', 'opacity-100')
+      } else {
+        label.classList.remove('text-black', 'font-semibold', 'opacity-100')
+        label.classList.add('text-gray-600', 'opacity-50')
+      }
+    })
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    // Wait for content to be fully rendered
+    setTimeout(() => {
+      setupProcessSections()
+      setInitialActiveState()
+      setupSectionTracking()
+    }, 500)
+  })
+  
+  // Also try after a longer delay in case content loads slowly
+  setTimeout(() => {
+    if (document.getElementById('process-nav') && !document.getElementById('discover')) {
+      console.log('Retrying section setup after delay...')
+      setupProcessSections()
+      setInitialActiveState()
+      setupSectionTracking()
+    }
+  }, 1000)
+
   // Modifying the DOM on scroll
   window.addEventListener('scroll', (event: Event) => {
     const scrollTop = window.pageYOffset as number
@@ -209,6 +456,24 @@ const imageFiles = allImageFiles.filter(file => {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     })
   }
+
+  // Smooth scroll for process step labels
+  document.querySelectorAll('.process-step-label').forEach((label) => {
+    if (label instanceof HTMLElement) {
+      label.style.cursor = 'pointer'
+    }
+    label.addEventListener('click', () => {
+      const sectionId = label.getAttribute('data-section')
+      if (sectionId) {
+        const target = document.getElementById(sectionId)
+        if (target) {
+          const navHeight = document.getElementById('process-nav')?.offsetHeight || 0
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' })
+        }
+      }
+    })
+  })
 </script>
 
 <script type="module">
@@ -304,5 +569,19 @@ const imageFiles = allImageFiles.filter(file => {
   }
   #gallery a:hover img {
     border: 2px solid black;
+  }
+  /* Process Navigation Styles */
+  #process-nav {
+    transition: all 0.3s ease;
+  }
+  #process-progress {
+    transition: width 0.5s ease-out;
+  }
+  .process-step-label {
+    transition: color 0.3s ease;
+  }
+  .process-step-label:hover {
+    color: #000;
+    cursor: pointer;
   }
 </style>
