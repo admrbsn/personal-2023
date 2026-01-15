@@ -56,6 +56,25 @@ Creators and participants were effectively using different products. This fractu
 
 ---
 
+## Early sketches and structural exploration
+
+Before committing to layouts or interaction patterns, I explored multiple structural directions through rough sketches and low-fidelity wireframes.
+
+These early concepts focused on:
+- How creation, customization, and management could live in a single shared space
+- How much context to show upfront versus progressively
+- Where emotional expression (themes, tone, celebration) should appear in the flow
+
+To move quickly and explore more surface area, several of these sketches were digitally enhanced and expanded using AI-assisted tools. This allowed me to iterate on layout variations, spacing, and hierarchy without prematurely locking into a single direction.
+
+Importantly, these were not treated as final designs. They were thinking tools—used to test structure, discuss tradeoffs with engineering, and identify patterns worth validating with users.
+
+The strongest ideas from this phase informed the directions that were later validated through ranking exercises, false-door testing, and interactive prototypes.
+
+> **Image placeholder:** Early sketches and AI-enhanced wireframes (full-width gallery)  
+> `[image-gallery: early-sketches-v3.png]`
+
+
 <!-- PROCESS: EXPLORE_DEFINE -->
 
 ## Framing the Direction
