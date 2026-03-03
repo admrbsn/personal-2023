@@ -1,0 +1,538 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { Image } from 'astro:assets'
+import dribbble from '@icon/dribbble.svg'
+import github from '@icon/github.svg'
+import linkedin from '@icon/linkedin.svg'
+import email from '@icon/email.svg'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Adam Robertson | How I Lead" description="Leadership philosophy and approach to building design teams." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+		<script is:inline>
+			!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+			posthog.init('phc_sBh15Z6BMLUdSGa9qVgoo0HPwsA1cy2RJ1uudLzSdur', {
+				api_host: 'https://us.i.posthog.com',
+				person_profiles: 'identified_only',
+			})
+		</script>
+	</head>
+	<body class="lead-page">
+		<header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-[60] flex flex-col justify-between w-full max-w-6xl px-3 py-5">
+			<div>
+				<a href="/" class="block">
+					<h1 id="adam-logo" class="fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
+				</a>
+			</div>
+			<nav class="md:block md:mt-0 hidden">
+				<ul class="flex flex-row">
+					<li class="mr-3">
+						<a class="highlight flex items-center font-semibold cursor-pointer" href="/how-i-lead">
+							How I Lead
+						</a>
+					</li>
+					<li class="mx-3">
+						<a class="highlight flex items-center font-semibold cursor-pointer" href="https://dribbble.com/adamrobertson" target="_blank">
+							<Image class="w-5 mr-1.5" src={dribbble} alt="Dribbble icon."/>
+							Work
+						</a>
+					</li>
+					<li class="mx-3">
+						<a class="highlight flex items-center font-semibold cursor-pointer" href="https://github.com/admrbsn" target="_blank">
+							<Image class="w-5 mr-1.5" src={github} alt="Github icon."/>
+							Code
+						</a>
+					</li>
+					<li class="mx-3">
+						<a class="highlight flex items-center font-semibold cursor-pointer" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
+							<Image class="w-5 mr-1.5" src={linkedin} alt="LinkedIn icon."/>
+							CV
+						</a>
+					</li>
+					<li class="mx-3">
+						<a class="highlight flex items-center font-semibold cursor-pointer" href="mailto:hi@adam.build">
+							<Image class="w-5 mr-1.5" src={email} alt="Email icon."/>
+							hi@adam.build
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<!-- Hero -->
+			<section class="lead-hero">
+				<p class="lead-hero-label">Leadership Philosophy</p>
+				<h2 class="lead-hero-title">I build teams that ship things <em>I couldn't build alone.</em></h2>
+				<p class="lead-hero-body">
+					Twenty years in, the most important thing I've learned is that the best design leaders aren't the best designers in the room. They're the ones who make the room better. I've done that by staying close to the work, staying honest about what's broken, and being willing to change how we work when the old way stops serving us.
+				</p>
+				<div class="md:hidden mt-8">
+					<a class="lead-link" href="/">← Back to home</a>
+				</div>
+			</section>
+
+			<!-- Philosophy -->
+			<section class="lead-philosophy">
+				<div class="lead-philosophy-left">
+					<h3 class="lead-philosophy-title">Point of view</h3>
+					<p>
+						I came up as a maker. Designer and developer, two disciplines that rarely share a brain. That background shaped everything about how I lead because I've never been able to separate how something looks from how it gets built.
+					</p>
+					<p>
+						The shift toward leadership happened gradually, then all at once. I realized I could have more impact by improving how a team thinks than by improving a single design. <strong>That's the job.</strong> Not executing the vision, but building the conditions where great work is inevitable.
+					</p>
+					<p>
+						AI has made that more interesting than ever. The question isn't which tools to adopt. It's how to help a team evolve its thinking so the tools actually make the work better.
+					</p>
+				</div>
+				<div class="lead-philosophy-right">
+					<div class="lead-pov-item">
+						<h4>Stay close to the work</h4>
+						<p>I don't manage from a distance. I'm in Figma, in the code, in the weeds with the team. That proximity is what makes feedback land and decisions stick.</p>
+					</div>
+					<div class="lead-pov-item">
+						<h4>Challenge the process before the pixels</h4>
+						<p>Most design failures are process failures. If the work isn't good, I look at how we're working before I look at what we shipped.</p>
+					</div>
+					<div class="lead-pov-item">
+						<h4>Make AI a team sport</h4>
+						<p>I don't hand down tools. I experiment alongside the team, share what's working, and build shared fluency together. Adoption sticks when it feels like an upgrade, not a mandate.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Leadership moments -->
+			<div class="lead-moments-header">
+				<h3>Leadership Moments</h3>
+			</div>
+
+			<article class="lead-moment">
+				<div class="lead-moment-image">
+					<div class="lead-moment-image-inner">
+						<svg width="100%" height="100%" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+							<rect width="480" height="360" fill="#f0ede8"/>
+							<rect x="60" y="60" width="160" height="100" rx="6" fill="#ffffff" stroke="#e2e1dc" stroke-width="1.5"/>
+							<rect x="76" y="80" width="60" height="8" rx="3" fill="#c8511b" opacity="0.7"/>
+							<rect x="76" y="96" width="128" height="6" rx="3" fill="#c8511b" opacity="0.2"/>
+							<rect x="76" y="108" width="100" height="6" rx="3" fill="#c8511b" opacity="0.2"/>
+							<rect x="76" y="120" width="116" height="6" rx="3" fill="#c8511b" opacity="0.2"/>
+							<rect x="76" y="132" width="80" height="6" rx="3" fill="#c8511b" opacity="0.2"/>
+							<line x1="228" y1="110" x2="260" y2="110" stroke="#c8511b" stroke-width="2"/>
+							<polygon points="258,104 268,110 258,116" fill="#c8511b"/>
+							<rect x="268" y="60" width="160" height="100" rx="6" fill="#111110"/>
+							<rect x="284" y="80" width="40" height="6" rx="2" fill="#c8511b" opacity="0.9"/>
+							<rect x="284" y="94" width="100" height="5" rx="2" fill="#ffffff" opacity="0.4"/>
+							<rect x="284" y="106" width="80" height="5" rx="2" fill="#ffffff" opacity="0.3"/>
+							<rect x="284" y="118" width="110" height="5" rx="2" fill="#ffffff" opacity="0.4"/>
+							<rect x="284" y="130" width="60" height="5" rx="2" fill="#c8511b" opacity="0.6"/>
+							<rect x="60" y="200" width="70" height="36" rx="4" fill="#111110"/>
+							<text x="95" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="white" font-weight="500">Week 1</text>
+							<rect x="140" y="200" width="70" height="36" rx="4" fill="#c8511b" opacity="0.85"/>
+							<text x="175" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="white" font-weight="500">Ship</text>
+							<rect x="220" y="200" width="70" height="36" rx="4" fill="#111110"/>
+							<text x="255" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="white" font-weight="500">Validate</text>
+							<rect x="300" y="200" width="70" height="36" rx="4" fill="#c8511b" opacity="0.85"/>
+							<text x="335" y="221" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="white" font-weight="500">Iterate</text>
+							<circle cx="95" cy="280" r="5" fill="#c8511b"/>
+							<circle cx="175" cy="280" r="5" fill="#111110" opacity="0.3"/>
+							<circle cx="255" cy="280" r="5" fill="#c8511b"/>
+							<circle cx="335" cy="280" r="5" fill="#111110" opacity="0.3"/>
+							<line x1="100" y1="280" x2="170" y2="280" stroke="#e2e1dc" stroke-width="1.5"/>
+							<line x1="180" y1="280" x2="250" y2="280" stroke="#e2e1dc" stroke-width="1.5"/>
+							<line x1="260" y1="280" x2="330" y2="280" stroke="#e2e1dc" stroke-width="1.5"/>
+						</svg>
+					</div>
+					<span class="lead-moment-tag">Tribute · 2023</span>
+				</div>
+				<div class="lead-moment-content">
+					<p class="lead-moment-meta">Process &amp; Team Transformation</p>
+					<h4 class="lead-moment-title">Rethinking what a design system actually is</h4>
+					<p>
+						Most design systems live in Figma. Ours used to. When we began Tribute's full platform replatform, I made a call that changed how my entire team works: we were cutting Figma out of the critical path and building a design system rooted in AI and rapid prototyping where the deliverable wasn't a static file. It was functioning code.
+					</p>
+					<p>
+						The team of four was skeptical at first. That's a fair reaction when you're asking designers to change the most fundamental part of their workflow. But I stayed close to the work, experimented alongside them, and compressed our sprint cycles down to one week by combining Lean UX and traditional Agile across product, design, and engineering simultaneously.
+					</p>
+					<p>
+						Within a few sprints, something shifted. The feedback loops got tighter. Stakeholders were reacting to real, working product instead of mockups. Decisions that used to take weeks were getting made in days. The reluctance disappeared because the results were undeniable.
+					</p>
+					<div class="lead-moment-outcome">
+						Team of 4 went from skeptical to thriving. One-week sprint cycles became the new normal. The system now ships production-ready components, not handoffs.
+					</div>
+				</div>
+			</article>
+
+			<article class="lead-moment lead-moment-alt">
+				<div class="lead-moment-image">
+					<div class="lead-moment-image-inner">
+						<svg width="100%" height="100%" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+							<rect width="480" height="360" fill="#f0ede8"/>
+							<rect x="170" y="40" width="140" height="240" rx="18" fill="#111110"/>
+							<rect x="178" y="56" width="124" height="208" rx="10" fill="#1e1e1c"/>
+							<rect x="186" y="70" width="108" height="14" rx="3" fill="#c8511b" opacity="0.85"/>
+							<rect x="186" y="92" width="80" height="8" rx="2" fill="#ffffff" opacity="0.5"/>
+							<rect x="186" y="106" width="60" height="8" rx="2" fill="#ffffff" opacity="0.3"/>
+							<circle cx="240" cy="170" r="34" fill="none" stroke="#333330" stroke-width="6"/>
+							<circle cx="240" cy="170" r="34" fill="none" stroke="#c8511b" stroke-width="6" stroke-dasharray="178" stroke-dashoffset="44" transform="rotate(-90 240 170)"/>
+							<text x="240" y="175" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="16" fill="white" font-weight="500">4.6</text>
+							<rect x="186" y="218" width="108" height="8" rx="2" fill="#ffffff" opacity="0.2"/>
+							<rect x="186" y="232" width="80" height="8" rx="2" fill="#ffffff" opacity="0.15"/>
+							<text x="220" y="260" font-size="14" fill="#c8511b">★★★★★</text>
+							<circle cx="100" cy="180" r="50" fill="none" stroke="#e2e1dc" stroke-width="1.5"/>
+							<ellipse cx="100" cy="180" rx="20" ry="50" fill="none" stroke="#e2e1dc" stroke-width="1"/>
+							<line x1="50" y1="180" x2="150" y2="180" stroke="#e2e1dc" stroke-width="1"/>
+							<line x1="55" y1="155" x2="145" y2="155" stroke="#e2e1dc" stroke-width="0.75"/>
+							<line x1="55" y1="205" x2="145" y2="205" stroke="#e2e1dc" stroke-width="0.75"/>
+							<circle cx="80" cy="165" r="4" fill="#c8511b"/>
+							<circle cx="115" cy="192" r="4" fill="#111110"/>
+							<line x1="80" y1="165" x2="115" y2="192" stroke="#c8511b" stroke-width="1" stroke-dasharray="3,2"/>
+							<text x="56" y="157" font-family="DM Sans,sans-serif" font-size="9" fill="#6b6b67">Denver</text>
+							<text x="118" y="200" font-family="DM Sans,sans-serif" font-size="9" fill="#6b6b67">Kyiv</text>
+							<rect x="60" y="290" width="360" height="8" rx="4" fill="#e2e1dc"/>
+							<rect x="60" y="290" width="120" height="8" rx="4" fill="#c8511b"/>
+							<text x="60" y="314" font-family="DM Sans,sans-serif" font-size="9" fill="#6b6b67">Month 1</text>
+							<text x="170" y="314" font-family="DM Sans,sans-serif" font-size="9" fill="#6b6b67">Month 2</text>
+							<text x="280" y="314" font-family="DM Sans,sans-serif" font-size="9" fill="#6b6b67">Month 3 · Shipped</text>
+						</svg>
+					</div>
+					<span class="lead-moment-tag">Peterson's · 2017</span>
+				</div>
+				<div class="lead-moment-content">
+					<p class="lead-moment-meta">Cross-Timezone Execution</p>
+					<h4 class="lead-moment-title">A 4.6-star app, built across two continents in 90 days</h4>
+					<p>
+						When Peterson's decided to build a test prep app, the timeline was aggressive and the team was distributed. I was leading design and frontend in Denver while our engineering team was based in Ukraine. Asynchronous by necessity, high-stakes by design.
+					</p>
+					<p>
+						What could have been a coordination nightmare became one of the most efficient projects I've ever run. We established clear async rituals, kept design decisions documented and visible, and used the timezone gap to our advantage. By the time Denver woke up, Kyiv had already pushed code. By the time Kyiv signed off, we had new designs waiting.
+					</p>
+					<p>
+						I worked directly with the CEO and CTO throughout, which kept decisions fast and alignment tight. There was no middle layer to slow things down. When something needed to change, it changed the same day.
+					</p>
+					<div class="lead-moment-outcome">
+						Shipped in under 3 months. 4.6-star App Store rating, 10,000+ downloads, and featured by Apple in its first week.
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer class="lead-footer">
+			<div class="max-w-6xl mx-auto px-3 text-center">
+				<a class="lead-link" href="/">← Back to home</a>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<script>
+	// Scroll-in animation for moment cards
+	const moments = document.querySelectorAll('.lead-moment');
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('lead-moment-visible');
+			}
+		});
+	}, { threshold: 0.1 });
+	moments.forEach(m => observer.observe(m));
+</script>
+
+<style>
+	:root {
+		--lead-ink: #111110;
+		--lead-muted: #6b6b67;
+		--lead-rule: #e2e1dc;
+		--lead-paper: #f8f7f4;
+		--lead-accent: #c8511b;
+		--lead-white: #ffffff;
+	}
+
+	.lead-page {
+		font-family: 'DM Sans', sans-serif;
+		background: var(--lead-white);
+		color: var(--lead-ink);
+		-webkit-font-smoothing: antialiased;
+	}
+
+	@font-face {
+		font-family: 'Martian Grotesk';
+		src: url('/fonts/MartianGrotesk-VF.woff2') format('woff2');
+		font-weight: 100 1000;
+		font-stretch: 75% 200%;
+	}
+
+	:global(.highlight) {
+		@apply w-fit ease-in-out duration-100 pb-0.5 no-underline bg-no-repeat border-b border-solid border-black;
+		background-image: linear-gradient(transparent 60%, #9CA3AF 0%);
+		background-size: 0 100%;
+	}
+	:global(.highlight:hover) {
+		@apply border-[#9CA3AF];
+		background-size: 100% 100%;
+	}
+
+	.lead-link {
+		color: var(--lead-accent);
+		font-weight: 500;
+		text-decoration: none;
+	}
+	.lead-link:hover {
+		text-decoration: underline;
+	}
+
+	h1:before {
+		content: "";
+		@apply absolute -top-full left-0 w-full h-full bg-black;
+	}
+
+	/* Hero */
+	.lead-hero {
+		padding: 100px 24px 80px;
+		max-width: 960px;
+		margin: 0 auto;
+		border-bottom: 1px solid var(--lead-rule);
+	}
+
+	.lead-hero-label {
+		font-size: 11px;
+		font-weight: 500;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		color: var(--lead-muted);
+		margin-bottom: 28px;
+	}
+
+	.lead-hero-title {
+		font-family: 'Playfair Display', serif;
+		font-size: clamp(38px, 5.5vw, 64px);
+		line-height: 1.1;
+		font-weight: 400;
+		max-width: 700px;
+	}
+
+	.lead-hero-title em {
+		font-style: italic;
+		color: var(--lead-accent);
+	}
+
+	.lead-hero-body {
+		margin-top: 36px;
+		font-size: 17px;
+		line-height: 1.75;
+		color: var(--lead-muted);
+		max-width: 580px;
+		font-weight: 300;
+	}
+
+	/* Philosophy */
+	.lead-philosophy {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 80px 24px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 64px;
+		border-bottom: 1px solid var(--lead-rule);
+	}
+
+	.lead-philosophy-left .lead-philosophy-title,
+	.lead-philosophy-left h3 {
+		font-family: 'Playfair Display', serif;
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 1.3;
+		margin-bottom: 24px;
+	}
+
+	.lead-philosophy-left p {
+		font-size: 15px;
+		line-height: 1.8;
+		color: var(--lead-muted);
+		font-weight: 300;
+	}
+
+	.lead-philosophy-left p + p {
+		margin-top: 16px;
+	}
+
+	.lead-philosophy-left strong {
+		color: var(--lead-ink);
+		font-weight: 500;
+	}
+
+	.lead-philosophy-right {
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+		padding-top: 4px;
+	}
+
+	.lead-pov-item {
+		padding: 24px;
+		background: var(--lead-paper);
+		border-radius: 8px;
+		border: 1px solid var(--lead-rule);
+	}
+
+	.lead-pov-item h4 {
+		font-size: 14px;
+		font-weight: 500;
+		margin-bottom: 8px;
+		color: var(--lead-ink);
+	}
+
+	.lead-pov-item p {
+		font-size: 13.5px;
+		line-height: 1.7;
+		color: var(--lead-muted);
+		font-weight: 300;
+	}
+
+	/* Moments header */
+	.lead-moments-header {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 80px 24px 0;
+	}
+
+	.lead-moments-header h3 {
+		font-family: 'Playfair Display', serif;
+		font-size: 13px;
+		font-weight: 400;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--lead-muted);
+	}
+
+	/* Moment card */
+	.lead-moment {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 64px 24px;
+		border-bottom: 1px solid var(--lead-rule);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 72px;
+		align-items: start;
+		opacity: 0;
+		transform: translateY(24px);
+		transition: opacity 0.6s ease, transform 0.6s ease;
+	}
+
+	.lead-moment-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.lead-moment-alt .lead-moment-image {
+		order: 2;
+	}
+
+	.lead-moment-alt .lead-moment-content {
+		order: 1;
+	}
+
+	.lead-moment-image-inner {
+		width: 100%;
+		aspect-ratio: 4/3;
+		border-radius: 6px;
+		overflow: hidden;
+		background: var(--lead-paper);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.lead-moment-tag {
+		display: inline-block;
+		margin-top: 16px;
+		font-size: 11px;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: var(--lead-accent);
+	}
+
+	.lead-moment-content {
+		padding-top: 8px;
+	}
+
+	.lead-moment-meta {
+		font-size: 11px;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: var(--lead-muted);
+		margin-bottom: 20px;
+	}
+
+	.lead-moment-title {
+		font-family: 'Playfair Display', serif;
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 1.2;
+		margin-bottom: 24px;
+		color: var(--lead-ink);
+	}
+
+	.lead-moment-content p {
+		font-size: 15px;
+		line-height: 1.8;
+		color: var(--lead-muted);
+		font-weight: 300;
+		margin-bottom: 14px;
+	}
+
+	.lead-moment-outcome {
+		margin-top: 32px;
+		padding-top: 24px;
+		border-top: 1px solid var(--lead-rule);
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--lead-ink);
+		line-height: 1.6;
+	}
+
+	.lead-moment-outcome::before {
+		content: '→ ';
+		color: var(--lead-accent);
+	}
+
+	/* Footer */
+	.lead-footer {
+		background: var(--lead-paper);
+		border-top: 1px solid var(--lead-rule);
+		padding: 48px 24px;
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.lead-hero {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		.lead-philosophy {
+			grid-template-columns: 1fr;
+			gap: 40px;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		.lead-moment {
+			grid-template-columns: 1fr;
+			gap: 36px;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		.lead-moment-alt .lead-moment-image,
+		.lead-moment-alt .lead-moment-content {
+			order: unset;
+		}
+	}
+</style>

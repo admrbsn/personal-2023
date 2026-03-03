@@ -56,11 +56,18 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 	<body>
 		<header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-[60] flex flex-col justify-between w-full max-w-6xl px-3 py-5">
 			<div>
-				<h1 id="adam-logo" class=" fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
+				<a href="/" class="block">
+					<h1 id="adam-logo" class=" fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
+				</a>
 			</div>
 			<nav class="md:block md:mt-0 hidden">
 				<ul class="flex flex-row">
 					<li class="mr-3">
+						<a class="highlight flex items-center font-semibold cursor-pointer" href="/how-i-lead">
+							How I Lead
+						</a>
+					</li>
+					<li class="mx-3">
 						<a class="highlight flex items-center font-semibold cursor-pointer" href="https://dribbble.com/adamrobertson" target="_blank">
 							<Image class="w-5 mr-1.5" src={dribbble} alt="Dribbble icon."/>
 							Work
@@ -94,7 +101,10 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 					<div class="md:order-none order-1">
 						<h2 class="md:text-6xl font-heading max-w-3xl mb-6 text-4xl font-extrabold tracking-tight md:leading-tight">Versatile product designer with technical roots and grit.</h2>
 						<h3 class="md:ml-auto md:text-xl max-w-3xl text-lg leading-relaxed opacity-75">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design at a Brooklyn-based startup.</h3>
-						<ul class="md:hidden flex flex-row mt-12">
+						<ul class="md:hidden flex flex-row mt-12 flex-wrap gap-3">
+							<li>
+								<a class="font-semibold" href="/how-i-lead">How I Lead</a>
+							</li>
 							<li class="mr-3">
 								<a class="flex items-center" href="https://dribbble.com/adamrobertson" target="_blank">
 									<Image class="w-8 mr-0.5" src={dribbble} alt="Dribbble icon."/>
