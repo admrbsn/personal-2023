@@ -20,8 +20,8 @@ import email from '@icon/email.svg'
 		</script>
 	</head>
 	<body class="lead-page">
-		<header id="lead-header" role="banner" class="lead-header md:flex-row md:items-center relative z-[60] flex flex-col justify-between w-full px-3 py-5 md:px-6">
-			<div class="max-w-6xl w-full mx-auto flex flex-row items-center justify-between">
+		<header id="lead-header" role="banner" class="lead-header md:flex-row md:items-center relative z-[60] flex flex-col justify-between w-full py-5">
+			<div class="max-w-6xl w-full mx-auto flex flex-row items-center justify-between px-3 md:px-0">
 			<div>
 				<a href="/" class="block">
 					<h1 id="adam-logo" class="fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
@@ -241,7 +241,7 @@ import email from '@icon/email.svg'
 	}, { threshold: 0.1 });
 	moments.forEach(m => observer.observe(m));
 
-	// Navbar inversion when over dark hero
+	// Navbar: transparent + white links over dark hero, light bg + dark links over light content
 	function checkLeadNavInversion() {
 		const hero = document.getElementById('lead-hero') as HTMLElement;
 		const header = document.getElementById('lead-header') as HTMLElement;
@@ -251,11 +251,13 @@ import email from '@icon/email.svg'
 			const navbarHeight = 80;
 			const isOverDarkHero = heroRect.top <= navbarHeight && heroRect.bottom > 0;
 			if (isOverDarkHero) {
-				header.classList.add('lead-header-inverted');
-				logo.classList.add('inverted');
-			} else {
-				header.classList.remove('lead-header-inverted');
+				header.classList.remove('lead-header-over-light');
+				header.classList.add('lead-header-over-hero');
 				logo.classList.remove('inverted');
+			} else {
+				header.classList.remove('lead-header-over-hero');
+				header.classList.add('lead-header-over-light');
+				logo.classList.add('inverted');
 			}
 		}
 	}
@@ -268,29 +270,51 @@ import email from '@icon/email.svg'
 		--lead-ink: #111110;
 		--lead-muted: #6b6b67;
 		--lead-rule: #e2e1dc;
-		--lead-paper: #f8f7f4;
-		--lead-accent: #c8511b;
+		--lead-paper: #f5efe7;
+		--lead-accent: #6b8f85;
+		--lead-beige: #e8d0b2;
+		--lead-dark: #1a1e20;
 		--lead-white: #ffffff;
 	}
 
 	.lead-page {
 		font-family: 'Martian Grotesk', sans-serif;
-		background: var(--lead-white);
+		background: var(--lead-paper);
 		color: var(--lead-ink);
 		-webkit-font-smoothing: antialiased;
 	}
 
-	/* Inverted navbar over dark hero - light bg, dark text */
-	.lead-header-inverted {
-		background: var(--lead-white);
+	/* Nav over dark hero: transparent, white links */
+	.lead-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: transparent;
+	}
+
+	.lead-header-over-hero nav a,
+	.lead-header-over-hero .highlight {
+		color: white !important;
+	}
+	.lead-header-over-hero nav a:hover {
+		color: white;
+	}
+	.lead-header-over-hero .highlight {
+		border-color: rgba(255,255,255,0.3);
+	}
+	.lead-header-over-hero .highlight:hover {
+		border-color: white;
+	}
+
+	/* Nav over light content: dark links */
+	.lead-header-over-light {
+		background: rgba(255,255,255,0.95);
 		box-shadow: 0 1px 0 rgba(0,0,0,0.05);
 	}
-	.lead-header-inverted nav a,
-	.lead-header-inverted .highlight {
+	.lead-header-over-light nav a,
+	.lead-header-over-light .highlight {
 		color: var(--lead-ink) !important;
-	}
-	.lead-header-inverted nav a:hover {
-		color: var(--lead-ink);
 	}
 	#adam-logo.inverted {
 		background: var(--lead-white) !important;
@@ -318,7 +342,7 @@ import email from '@icon/email.svg'
 	}
 
 	.lead-link {
-		color: var(--lead-accent);
+		color: var(--lead-beige);
 		font-weight: 500;
 		text-decoration: none;
 	}
@@ -337,15 +361,21 @@ import email from '@icon/email.svg'
 		min-height: 70vh;
 		display: flex;
 		align-items: center;
-		background: #1a1a1a;
-		border-bottom: 1px solid rgba(255,255,255,0.1);
+		background: var(--lead-dark);
+		border-bottom: 1px solid rgba(255,255,255,0.08);
 	}
 
 	.lead-hero-inner {
 		max-width: 72rem;
 		margin: 0 auto;
-		padding: 100px 24px 80px;
+		padding: 100px 12px 80px;
 		width: 100%;
+	}
+	@media (min-width: 768px) {
+		.lead-hero-inner {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
 	.lead-hero-label {
@@ -353,7 +383,7 @@ import email from '@icon/email.svg'
 		font-weight: 500;
 		letter-spacing: 0.15em;
 		text-transform: uppercase;
-		color: rgba(255,255,255,0.6);
+		color: rgba(255,255,255,0.7);
 		margin-bottom: 28px;
 	}
 
@@ -368,14 +398,14 @@ import email from '@icon/email.svg'
 
 	.lead-hero-title em {
 		font-style: italic;
-		color: var(--lead-accent);
+		color: var(--lead-beige);
 	}
 
 	.lead-hero-body {
 		margin-top: 36px;
 		font-size: 17px;
 		line-height: 1.75;
-		color: rgba(255,255,255,0.75);
+		color: rgba(227,222,218,0.95);
 		max-width: 42rem;
 		font-weight: 400;
 	}
@@ -388,7 +418,7 @@ import email from '@icon/email.svg'
 	.lead-philosophy {
 		max-width: 72rem;
 		margin: 0 auto;
-		padding: 80px 24px;
+		padding: 80px 12px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 64px;
@@ -452,7 +482,7 @@ import email from '@icon/email.svg'
 	.lead-moments-header {
 		max-width: 72rem;
 		margin: 0 auto;
-		padding: 80px 24px 0;
+		padding: 80px 12px 0;
 	}
 
 	.lead-moments-header h3 {
@@ -468,7 +498,7 @@ import email from '@icon/email.svg'
 	.lead-moment {
 		max-width: 72rem;
 		margin: 0 auto;
-		padding: 64px 24px;
+		padding: 64px 12px;
 		border-bottom: 1px solid var(--lead-rule);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -558,32 +588,27 @@ import email from '@icon/email.svg'
 		color: var(--lead-accent);
 	}
 
+	.lead-philosophy {
+		background: var(--lead-paper);
+	}
+
 	/* Footer */
 	.lead-footer {
 		background: var(--lead-paper);
 		border-top: 1px solid var(--lead-rule);
-		padding: 48px 24px;
+		padding: 48px 12px;
 	}
 
 	/* Responsive */
 	@media (max-width: 768px) {
-		.lead-hero {
-			padding-left: 24px;
-			padding-right: 24px;
-		}
-
 		.lead-philosophy {
 			grid-template-columns: 1fr;
 			gap: 40px;
-			padding-left: 24px;
-			padding-right: 24px;
 		}
 
 		.lead-moment {
 			grid-template-columns: 1fr;
 			gap: 36px;
-			padding-left: 24px;
-			padding-right: 24px;
 		}
 
 		.lead-moment-alt .lead-moment-image,
