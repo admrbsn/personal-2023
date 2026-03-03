@@ -20,11 +20,10 @@ import email from '@icon/email.svg'
 		</script>
 	</head>
 	<body class="lead-page">
-		<header id="lead-header" role="banner" class="lead-header md:flex-row md:items-center relative z-[60] flex flex-col justify-between w-full py-5">
-			<div class="max-w-6xl w-full mx-auto flex flex-row items-center justify-between px-3 md:px-0">
+		<header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-[60] flex flex-col justify-between w-full max-w-6xl px-3 py-5">
 			<div>
 				<a href="/" class="block">
-					<h1 id="adam-logo" class="fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
+					<h1 id="adam-logo" class=" fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
 				</a>
 			</div>
 			<nav class="md:block md:mt-0 hidden">
@@ -49,7 +48,7 @@ import email from '@icon/email.svg'
 					<li class="mx-3">
 						<a class="highlight flex items-center font-semibold cursor-pointer" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
 							<Image class="w-5 mr-1.5" src={linkedin} alt="LinkedIn icon."/>
-							CV
+							Profile
 						</a>
 					</li>
 					<li class="mx-3">
@@ -60,7 +59,6 @@ import email from '@icon/email.svg'
 					</li>
 				</ul>
 			</nav>
-			</div>
 		</header>
 		<main>
 			<!-- Hero -->
@@ -108,6 +106,7 @@ import email from '@icon/email.svg'
 			</section>
 
 			<!-- Leadership moments -->
+			<section class="lead-moments-section">
 			<div class="lead-moments-header">
 				<h3>Leadership Moments</h3>
 			</div>
@@ -116,7 +115,7 @@ import email from '@icon/email.svg'
 				<div class="lead-moment-image">
 					<div class="lead-moment-image-inner">
 						<svg width="100%" height="100%" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-							<rect width="480" height="360" fill="#f5efe7"/>
+							<rect width="480" height="360" fill="#eae6e1"/>
 							<rect x="60" y="60" width="160" height="100" rx="6" fill="#ffffff" stroke="#e2e1dc" stroke-width="2"/>
 							<rect x="76" y="80" width="60" height="8" rx="3" fill="#5a8a8a" opacity="0.8"/>
 							<rect x="76" y="96" width="128" height="6" rx="3" fill="#5a8a8a" opacity="0.25"/>
@@ -172,7 +171,7 @@ import email from '@icon/email.svg'
 				<div class="lead-moment-image">
 					<div class="lead-moment-image-inner">
 						<svg width="100%" height="100%" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-							<rect width="480" height="360" fill="#f5efe7"/>
+							<rect width="480" height="360" fill="#eae6e1"/>
 							<rect x="170" y="40" width="140" height="240" rx="18" fill="#111110"/>
 							<rect x="178" y="56" width="124" height="208" rx="10" fill="#1e1e1c"/>
 							<rect x="186" y="70" width="108" height="14" rx="3" fill="#5a8a8a" opacity="0.85"/>
@@ -220,6 +219,7 @@ import email from '@icon/email.svg'
 					</div>
 				</div>
 			</article>
+			</section>
 		</main>
 		<footer class="lead-footer">
 			<div class="max-w-6xl mx-auto px-3 text-center">
@@ -241,28 +241,23 @@ import email from '@icon/email.svg'
 	}, { threshold: 0.1 });
 	moments.forEach(m => observer.observe(m));
 
-	// Navbar: transparent + white links over dark hero, light bg + dark links over light content
-	function checkLeadNavInversion() {
+	// Logo inversion when over dark hero (matches index.astro)
+	function checkLeadLogoInversion() {
 		const hero = document.getElementById('lead-hero') as HTMLElement;
-		const header = document.getElementById('lead-header') as HTMLElement;
 		const logo = document.getElementById('adam-logo') as HTMLElement;
-		if (hero && header && logo) {
+		if (hero && logo) {
 			const heroRect = hero.getBoundingClientRect();
 			const navbarHeight = 80;
 			const isOverDarkHero = heroRect.top <= navbarHeight && heroRect.bottom > 0;
 			if (isOverDarkHero) {
-				header.classList.remove('lead-header-over-light');
-				header.classList.add('lead-header-over-hero');
 				logo.classList.remove('inverted');
 			} else {
-				header.classList.remove('lead-header-over-hero');
-				header.classList.add('lead-header-over-light');
 				logo.classList.add('inverted');
 			}
 		}
 	}
-	checkLeadNavInversion();
-	window.addEventListener('scroll', checkLeadNavInversion);
+	checkLeadLogoInversion();
+	window.addEventListener('scroll', checkLeadLogoInversion);
 </script>
 
 <style>
@@ -284,41 +279,6 @@ import email from '@icon/email.svg'
 		-webkit-font-smoothing: antialiased;
 	}
 
-	/* Nav over dark hero: transparent, white links */
-	.lead-header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: transparent;
-	}
-
-	.lead-header-over-hero nav a,
-	.lead-header-over-hero .highlight {
-		color: white !important;
-	}
-	.lead-header-over-hero nav a:hover {
-		color: white;
-	}
-	.lead-header-over-hero .highlight {
-		border-color: rgba(255,255,255,0.3);
-	}
-	.lead-header-over-hero .highlight:hover {
-		border-color: white;
-	}
-	.lead-header-over-hero nav img {
-		filter: brightness(0) invert(1);
-	}
-
-	/* Nav over light content: dark links */
-	.lead-header-over-light {
-		background: rgba(245,239,231,0.98);
-		box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-	}
-	.lead-header-over-light nav a,
-	.lead-header-over-light .highlight {
-		color: var(--lead-ink) !important;
-	}
 	#adam-logo.inverted {
 		background: var(--lead-paper) !important;
 		color: var(--lead-ink) !important;
@@ -335,13 +295,7 @@ import email from '@icon/email.svg'
 	}
 
 	:global(.highlight) {
-		@apply w-fit ease-in-out duration-100 pb-0.5 no-underline bg-no-repeat border-b border-solid border-black;
-		background-image: linear-gradient(transparent 60%, #9CA3AF 0%);
-		background-size: 0 100%;
-	}
-	:global(.highlight:hover) {
-		@apply border-[#9CA3AF];
-		background-size: 100% 100%;
+		@apply w-fit ease-in-out duration-100 no-underline;
 	}
 
 	.lead-link {
@@ -351,6 +305,9 @@ import email from '@icon/email.svg'
 	}
 	.lead-link:hover {
 		text-decoration: underline;
+	}
+	.lead-footer .lead-link {
+		color: var(--lead-ink);
 	}
 
 	h1:before {
@@ -425,7 +382,6 @@ import email from '@icon/email.svg'
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 64px;
-		border-bottom: 1px solid var(--lead-rule);
 	}
 
 	.lead-philosophy-left .lead-philosophy-title,
@@ -481,11 +437,17 @@ import email from '@icon/email.svg'
 		font-weight: 300;
 	}
 
+	/* Leadership moments section */
+	.lead-moments-section {
+		background: white;
+		padding-top: 80px;
+	}
+
 	/* Moments header */
 	.lead-moments-header {
 		max-width: 72rem;
 		margin: 0 auto;
-		padding: 80px 12px 0;
+		padding: 0 12px 0;
 	}
 
 	.lead-moments-header h3 {
@@ -502,7 +464,6 @@ import email from '@icon/email.svg'
 		max-width: 72rem;
 		margin: 0 auto;
 		padding: 64px 12px;
-		border-bottom: 1px solid var(--lead-rule);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 72px;
@@ -530,7 +491,7 @@ import email from '@icon/email.svg'
 		aspect-ratio: 4/3;
 		border-radius: 6px;
 		overflow: hidden;
-		background: var(--lead-paper);
+		background: #eae6e1;
 		display: flex;
 		align-items: center;
 		justify-content: center;

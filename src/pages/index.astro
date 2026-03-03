@@ -82,7 +82,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 					<li class="mx-3">
 						<a class="highlight flex items-center font-semibold cursor-pointer" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
 							<Image class="w-5 mr-1.5" src={linkedin} alt="LinkedIn icon."/>
-							CV
+							Profile
 						</a>
 					</li>
 					<li class="mx-3">
@@ -415,13 +415,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
   	font-stretch: 75% 200%;
 	}
 	:global(.highlight) {
-		@apply w-fit ease-in-out duration-100 pb-0.5 no-underline bg-no-repeat border-b border-solid border-black;
-    background-image: linear-gradient(transparent 60%, #9CA3AF 0%);
-    background-size: 0 100%;
-	}
-	:global(.highlight:hover) {
-		@apply border-[#9CA3AF];
-		background-size: 100% 100%;
+		@apply w-fit ease-in-out duration-100 no-underline;
 	}
 	.tooltip {
 		@apply invisible;
