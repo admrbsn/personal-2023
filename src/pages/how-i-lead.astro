@@ -8,7 +8,7 @@ import email from '@icon/email.svg'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="lead-root">
 	<head>
 		<BaseHead title="Adam Robertson | How I Lead" description="Leadership philosophy and approach to building design teams." />
 		<script is:inline>
@@ -20,7 +20,7 @@ import email from '@icon/email.svg'
 		</script>
 	</head>
 	<body class="lead-page">
-		<header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-[60] flex flex-col justify-between w-full max-w-6xl px-3 py-5">
+		<header role="banner" class="lead-header md:flex-row md:items-center md:mx-auto md:px-0 relative z-[60] flex flex-col justify-between w-full max-w-6xl px-3 py-5">
 			<div>
 				<a href="/" class="block">
 					<h1 id="adam-logo" class=" fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
@@ -62,7 +62,7 @@ import email from '@icon/email.svg'
 		</header>
 		<main>
 			<!-- Hero -->
-			<section id="lead-hero" class="lead-hero">
+			<section id="lead-hero" class="lead-hero -mt-20 md:-mt-[72px]">
 				<div class="lead-hero-inner">
 					<p class="lead-hero-label">Leadership Philosophy</p>
 					<h2 class="lead-hero-title">I build teams that ship things <em>no one could build alone.</em></h2>
@@ -240,24 +240,6 @@ import email from '@icon/email.svg'
 		});
 	}, { threshold: 0.1 });
 	moments.forEach(m => observer.observe(m));
-
-	// Logo inversion when over dark hero (matches index.astro)
-	function checkLeadLogoInversion() {
-		const hero = document.getElementById('lead-hero') as HTMLElement;
-		const logo = document.getElementById('adam-logo') as HTMLElement;
-		if (hero && logo) {
-			const heroRect = hero.getBoundingClientRect();
-			const navbarHeight = 80;
-			const isOverDarkHero = heroRect.top <= navbarHeight && heroRect.bottom > 0;
-			if (isOverDarkHero) {
-				logo.classList.remove('inverted');
-			} else {
-				logo.classList.add('inverted');
-			}
-		}
-	}
-	checkLeadLogoInversion();
-	window.addEventListener('scroll', checkLeadLogoInversion);
 </script>
 
 <style>
@@ -272,6 +254,10 @@ import email from '@icon/email.svg'
 		--lead-white: #ffffff;
 	}
 
+	.lead-root,
+	.lead-page {
+		margin: 0;
+	}
 	.lead-page {
 		font-family: 'Martian Grotesk', sans-serif;
 		background: var(--lead-paper);
@@ -279,12 +265,19 @@ import email from '@icon/email.svg'
 		-webkit-font-smoothing: antialiased;
 	}
 
-	#adam-logo.inverted {
-		background: var(--lead-paper) !important;
-		color: var(--lead-ink) !important;
+	/* Header over dark hero: transparent, white nav links */
+	.lead-header {
+		background: transparent;
 	}
-	#adam-logo.inverted:before {
-		background: var(--lead-paper) !important;
+	.lead-header nav a,
+	.lead-header .highlight {
+		color: white !important;
+	}
+	.lead-header nav a:hover {
+		color: white;
+	}
+	.lead-header nav img {
+		filter: brightness(0) invert(1);
 	}
 
 	@font-face {
