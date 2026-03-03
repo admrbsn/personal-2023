@@ -172,18 +172,19 @@ import email from '@icon/email.svg'
 							<rect x="330" y="32" width="100" height="56" rx="8" fill="#2a2d30" stroke="#6b6b67" stroke-width="1.5"/>
 							<text x="380" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="white" font-weight="600">Weekly Share-Out</text>
 							<text x="380" y="65" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(255,255,255,0.7)">Team review &amp; alignment</text>
-							<!-- Arrow to Iteration -->
-							<line x1="430" y1="60" x2="430" y2="120" stroke="#6b6b67" stroke-width="1.5"/>
-							<polygon points="424,110 430,122 436,110" fill="#6b6b67"/>
+							<!-- Arrow to Iteration (from right of Weekly Share-Out down) -->
+							<line x1="408" y1="88" x2="408" y2="100" stroke="#6b6b67" stroke-width="1.5"/>
+							<polygon points="403,95 408,105 413,95" fill="#6b6b67"/>
 							<!-- Iteration -->
-							<rect x="370" y="125" width="120" height="56" rx="8" fill="#2a2d30" stroke="#6b6b67" stroke-width="1.5"/>
-							<text x="430" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="white" font-weight="600">Iteration</text>
-							<text x="430" y="158" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(255,255,255,0.7)">Refinement based on feedback</text>
+							<rect x="348" y="100" width="120" height="48" rx="8" fill="#2a2d30" stroke="#6b6b67" stroke-width="1.5"/>
+							<text x="408" y="118" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="white" font-weight="600">Iteration</text>
+							<text x="408" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="rgba(255,255,255,0.7)">Refinement based on feedback</text>
 							<!-- Arrows from Weekly Share-Out and Iteration to Engineering Integration -->
-							<line x1="380" y1="88" x2="380" y2="155" stroke="#6b6b67" stroke-width="1.5"/>
-							<line x1="370" y1="155" x2="240" y2="155" stroke="#6b6b67" stroke-width="1.5"/>
-							<line x1="370" y1="181" x2="240" y2="181" stroke="#6b6b67" stroke-width="1.5"/>
-							<polygon points="248,175 240,185 252,181" fill="#6b6b67"/>
+							<line x1="360" y1="88" x2="360" y2="140" stroke="#6b6b67" stroke-width="1.5"/>
+							<line x1="360" y1="140" x2="240" y2="140" stroke="#6b6b67" stroke-width="1.5"/>
+							<line x1="408" y1="148" x2="408" y2="170" stroke="#6b6b67" stroke-width="1.5"/>
+							<line x1="408" y1="170" x2="240" y2="170" stroke="#6b6b67" stroke-width="1.5"/>
+							<polygon points="248,165 240,175 252,170" fill="#6b6b67"/>
 							<!-- Engineering Integration -->
 							<rect x="80" y="195" width="320" height="56" rx="8" fill="#2a2d30" stroke="#6b6b67" stroke-width="1.5"/>
 							<text x="240" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="white" font-weight="600">Engineering Integration</text>
@@ -542,6 +543,11 @@ import email from '@icon/email.svg'
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+	.lead-moment-flowchart {
+		margin-top: 16px;
+		aspect-ratio: 3/2;
+		background: #1a1e20;
 	}
 
 	.lead-moment-tag {
