@@ -19,6 +19,15 @@ metrics:
     label: "Purchases"
   - value: "+20%"
     label: "CSAT"
+results:
+  stats:
+    - value: "~85%"
+      label: "CSAT RESTORED"
+    - value: "+27%"
+      label: "REVENUE"
+    - value: "+10%"
+      label: "MORE STARTS"
+  quote: "More importantly, users described the experience as fun again."
 liveSiteUrl: "https://tribute.co"
 liveSiteText: "To view the live site and experience the improved platform, visit. See how the redesign has made it easier to create meaningful video tributes, customize experiences, and complete the entire journey from start to finish."
 ---

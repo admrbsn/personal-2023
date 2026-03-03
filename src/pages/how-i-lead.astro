@@ -65,13 +65,15 @@ import email from '@icon/email.svg'
 		<main>
 			<!-- Hero -->
 			<section id="lead-hero" class="lead-hero">
-				<p class="lead-hero-label">Leadership Philosophy</p>
-				<h2 class="lead-hero-title">I build teams that ship things <em>I couldn't build alone.</em></h2>
-				<p class="lead-hero-body">
-					Twenty years in, the most important thing I've learned is that the best design leaders aren't the best designers in the room. They're the ones who make the room better. I've done that by staying close to the work, staying honest about what's broken, and being willing to change how we work when the old way stops serving us.
-				</p>
-				<div class="md:hidden mt-8">
-					<a class="lead-link" href="/">← Back to home</a>
+				<div class="lead-hero-inner">
+					<p class="lead-hero-label">Leadership Philosophy</p>
+					<h2 class="lead-hero-title">I build teams that ship things <em>I couldn't build alone.</em></h2>
+					<p class="lead-hero-body">
+						Twenty years in, the most important thing I've learned is that the best design leaders aren't the best designers in the room. They're the ones who make the room better. I've done that by staying close to the work, staying honest about what's broken, and being willing to change how we work when the old way stops serving us.
+					</p>
+					<div class="md:hidden mt-8">
+						<a class="lead-link" href="/">← Back to home</a>
+					</div>
 				</div>
 			</section>
 
@@ -331,11 +333,19 @@ import email from '@icon/email.svg'
 
 	/* Hero */
 	.lead-hero {
-		padding: 100px 24px 80px;
-		max-width: 72rem;
-		margin: 0 auto;
+		width: 100%;
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
 		background: #1a1a1a;
 		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.lead-hero-inner {
+		max-width: 72rem;
+		margin: 0 auto;
+		padding: 100px 24px 80px;
+		width: 100%;
 	}
 
 	.lead-hero-label {

@@ -20,6 +20,13 @@ const caseStudyCollection = defineCollection({
     })).optional(),
     liveSiteUrl: z.string().optional(),
     liveSiteText: z.string().optional(),
+    results: z.object({
+      stats: z.array(z.object({
+        value: z.string(),
+        label: z.string(),
+      })),
+      quote: z.string().optional(),
+    }).optional(),
   }),
 });
 
