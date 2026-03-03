@@ -1,7 +1,7 @@
 ---
 title: "Tribute V3: Re-architecting a 10-year-old product into a modern, creator-first platform"
 description: "A full redesign and re-architecture of the Tribute platform, rethinking creation, customization, payments, and scale using modern design systems and AI-assisted workflows."
-role: "VP of Product Design (hands-on)"
+role: "VP of Product Design (IC)"
 scope: "End-to-end platform redesign (web-first, mobile-led)"
 team: "Design, frontend, backend (tight collaboration)"
 timeline: "~3 months from concept to launch"
@@ -71,8 +71,19 @@ Importantly, these were not treated as final designs. They were thinking toolsâ€
 
 The strongest ideas from this phase informed the directions that were later validated through ranking exercises, false-door testing, and interactive prototypes.
 
-> **Image placeholder:** Early sketches and AI-enhanced wireframes (full-width gallery)  
-> `[image-gallery: early-sketches-v3.png]`
+![Early sketch exploration.](../../assets/img/tribute-v3-sketch-1.png)
+
+![Early sketch exploration.](../../assets/img/tribute-v3-sketch-2.png)
+
+![Early sketch exploration.](../../assets/img/tribute-v3-sketch-3.png)
+
+![Early sketch exploration.](../../assets/img/tribute-v3-sketch-4.png)
+
+![Early sketch exploration.](../../assets/img/tribute-v3-sketch-5.png)
+
+![Early sketch exploration.](../../assets/img/tribute-v3-sketch-6.png)
+
+![Early sketch exploration.](../../assets/img/tribute-v3-sketch-7.png)
 
 
 <!-- PROCESS: EXPLORE_DEFINE -->
@@ -210,7 +221,6 @@ The redesigned platform launched with meaningful improvements across the board:
 - Starts: **+29%**
 - Start â†’ publish: **+24%**
 - Purchases: **+19%**
-- Participant engagement: **+10%**
 - CSAT: **+20%**
 
 Beyond the numbers, V3 provided a modern, scalable foundation. Iteration became safer, experimentation cheaper, and future improvements easier to ship.

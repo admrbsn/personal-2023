@@ -136,7 +136,7 @@ const imageFiles = allImageFiles.filter(file => {
               <div class="mt-6 grid grid-cols-4 text-sm font-medium text-gray-600">
                 {processSections.map((section, index) => (
                   <div 
-                    class={`process-step-label ${index === 0 ? '' : index === processSections.length - 1 ? 'text-right' : 'text-center'} ${index === 0 ? 'opacity-100' : 'opacity-50'}`}
+                    class={`process-step-label text-center ${index === 0 ? 'opacity-100' : 'opacity-50'}`}
                     data-section={section.id}
                   >
                     {section.label}
@@ -355,8 +355,9 @@ const imageFiles = allImageFiles.filter(file => {
           currentActiveIndex = activeIndex
           
           // Calculate progress percentage
-          // For 4 steps: 0% (step 1), 33.33% (step 2), 66.66% (step 3), 100% (step 4)
-          const progress = (activeIndex / (totalSteps - 1)) * 100
+          // Align with center of each label in the 4-column grid
+          // For 4 steps: 12.5% (step 1), 37.5% (step 2), 62.5% (step 3), 87.5% (step 4)
+          const progress = ((activeIndex + 0.5) / totalSteps) * 100
           if (progressBar instanceof HTMLElement) {
             progressBar.style.width = `${progress}%`
           }
@@ -407,7 +408,8 @@ const imageFiles = allImageFiles.filter(file => {
     
     // Set progress bar
     const totalSteps = processSections.length
-    const progress = (activeIndex / (totalSteps - 1)) * 100
+    // Align with center of each label in the 4-column grid
+    const progress = ((activeIndex + 0.5) / totalSteps) * 100
     if (progressBar instanceof HTMLElement) {
       progressBar.style.width = `${progress}%`
     }
