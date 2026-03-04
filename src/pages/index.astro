@@ -96,8 +96,9 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 		</header>
 		<main>
 			<!-- Hero -->
-			<div id="hero" class="index-hero relative z-50 bg-[#1a1e20] -mt-20 md:-mt-[72px] border-b border-white/10">
-				<div class="w-full max-w-6xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto px-3 md:px-0">
+			<div id="hero" class="index-hero relative z-50 bg-[#1a1e20] -mt-20 md:-mt-[64px] border-b border-white/10 overflow-hidden">
+				<div class="index-hero-bg" aria-hidden="true"></div>
+				<div class="w-full max-w-6xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto px-3 md:px-0 relative z-10">
 					<div class="md:order-none order-1">
 						<h2 class="index-hero-title">Versatile product designer with <em>technical roots and grit.</em></h2>
 						<p class="index-hero-subtitle">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design at a Brooklyn-based startup.</p>
@@ -466,7 +467,25 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 	#hero {
 		min-height: 100dvh;
 	}
-	#hero > div {
+	.index-hero-bg {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		z-index: 0;
+		background:
+			radial-gradient(ellipse 80% 80% at 85% 20%, rgba(90,138,138,0.15) 0%, transparent 50%),
+			radial-gradient(ellipse 60% 60% at 15% 85%, rgba(232,208,178,0.08) 0%, transparent 50%),
+			radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
+	}
+	.index-hero-bg::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+		opacity: 0.03;
+		mix-blend-mode: overlay;
+	}
+	#hero > div:not(.index-hero-bg) {
 		min-height: 100dvh;
 		height: 100dvh;
 	}
