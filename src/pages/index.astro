@@ -42,7 +42,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="index-root">
 	<head>
 		<BaseHead title="Adam Robertson | Prodcut Designer and Developer" description="" />
 		<script is:inline>
@@ -53,8 +53,8 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 			})
 		</script>
 	</head>
-	<body>
-		<header role="banner" class="md:flex-row md:items-center md:mx-auto md:px-0 relative z-[60] flex flex-col justify-between w-full max-w-6xl px-3 py-5">
+	<body class="index-page">
+		<header role="banner" class="index-header md:flex-row md:items-center md:mx-auto md:px-0 relative z-[60] flex flex-col justify-between w-full max-w-6xl px-3 py-5">
 			<div>
 				<a href="/" class="block">
 					<h1 id="adam-logo" class=" fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
@@ -96,38 +96,38 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 		</header>
 		<main>
 			<!-- Hero -->
-			<div id="hero" class="relative z-50 bg-[#f5f5f5]">
-				<div class="w-full max-w-6xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto -mt-10 md:mt-[-68px] px-3 md:px-0">
+			<div id="hero" class="index-hero relative z-50 bg-[#1a1e20] -mt-20 md:-mt-[72px] border-b border-white/10">
+				<div class="w-full max-w-6xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto px-3 md:px-0">
 					<div class="md:order-none order-1">
-						<h2 class="md:text-6xl font-heading max-w-3xl mb-6 text-4xl font-extrabold tracking-tight md:leading-tight">Versatile product designer with technical roots and grit.</h2>
-						<h3 class="md:ml-auto md:text-xl max-w-3xl text-lg leading-relaxed opacity-75">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design at a Brooklyn-based startup.</h3>
-						<ul class="md:hidden flex flex-row mt-12 flex-wrap gap-3">
+						<h2 class="index-hero-title md:text-6xl font-heading max-w-3xl mb-6 text-4xl font-extrabold tracking-tight md:leading-tight text-white">Versatile product designer with technical roots and grit.</h2>
+						<h3 class="index-hero-subtitle md:ml-auto md:text-xl max-w-3xl text-lg leading-relaxed text-white/80">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design at a Brooklyn-based startup.</h3>
+						<ul class="md:hidden flex flex-row mt-12 flex-wrap gap-3 text-white">
 							<li>
-								<a class="font-semibold" href="/how-i-lead">How I Lead</a>
+								<a class="font-semibold text-white hover:text-white/90" href="/how-i-lead">How I Lead</a>
 							</li>
 							<li class="mr-3">
-								<a class="flex items-center" href="https://dribbble.com/adamrobertson" target="_blank">
-									<Image class="w-8 mr-0.5" src={dribbble} alt="Dribbble icon."/>
+								<a class="flex items-center text-white" href="https://dribbble.com/adamrobertson" target="_blank">
+									<Image class="w-8 mr-0.5 brightness-0 invert" src={dribbble} alt="Dribbble icon."/>
 								</a>
 							</li>
 							<li class="mx-3">
-								<a class="flex items-center" href="https://github.com/admrbsn" target="_blank">
-									<Image class="w-8 mr-0.5" src={github} alt="Github icon."/>
+								<a class="flex items-center text-white" href="https://github.com/admrbsn" target="_blank">
+									<Image class="w-8 mr-0.5 brightness-0 invert" src={github} alt="Github icon."/>
 								</a>
 							</li>
 							<li class="mx-3">
-								<a class="flex items-center" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
-									<Image class="w-8 mr-0.5" src={linkedin} alt="LinkedIn icon."/>
+								<a class="flex items-center text-white" href="https://www.linkedin.com/in/admrbsn/" target="_blank">
+									<Image class="w-8 mr-0.5 brightness-0 invert" src={linkedin} alt="LinkedIn icon."/>
 								</a>
 							</li>
 							<li class="mx-3">
-								<a class="flex items-center" href="mailto:hi@adam.build">
-									<Image class="w-8 mr-0.5" src={emailAlt} alt="Email icon."/>
+								<a class="flex items-center text-white" href="mailto:hi@adam.build">
+									<Image class="w-8 mr-0.5 brightness-0 invert" src={emailAlt} alt="Email icon."/>
 								</a>
 							</li>
 						</ul>
 					</div>
-					<Image class="w-[91.45px] md:w-2/5 md:ml-12 mb-6 md:mb-0 rounded-sm md:rounded-xl shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.1)]" src={adamProfessional} alt="Portrait of Adam Robertson."/>
+					<Image class="w-[91.45px] md:w-2/5 md:ml-12 mb-6 md:mb-0 rounded-sm md:rounded-xl ring-2 ring-white/10 shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.4)]" src={adamProfessional} alt="Portrait of Adam Robertson."/>
 				</div>
 			</div>
 			<!-- About section -->
@@ -361,21 +361,20 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 	}
 
 	// Function to check and update ADAM logo inversion
+	// Over dark hero: black bg, white text. Over light sections: inverted (white bg, black text)
 	function checkLogoInversion() {
-		const darkSection = document.getElementById('dark-section') as HTMLElement
+		const hero = document.getElementById('hero') as HTMLElement
 		const adamLogo = document.getElementById('adam-logo') as HTMLElement
 		
-		if (darkSection && adamLogo) {
-			const darkSectionRect = darkSection.getBoundingClientRect()
-			const navbarHeight = 80 // Approximate navbar height
+		if (hero && adamLogo) {
+			const heroRect = hero.getBoundingClientRect()
+			const navbarHeight = 80
 			
-			// Check if the navbar area (top of viewport) is over the dark section
-			// The navbar is fixed, so we check if the top of the viewport is within the dark section
-			// Invert when dark section top has reached navbar area and we haven't scrolled past it
-			if (darkSectionRect.top <= navbarHeight && darkSectionRect.bottom > 0) {
-				adamLogo.classList.add("inverted")
-			} else {
+			// When over dark hero: no invert. When scrolled past hero: invert for light sections
+			if (heroRect.top <= navbarHeight && heroRect.bottom > 0) {
 				adamLogo.classList.remove("inverted")
+			} else {
+				adamLogo.classList.add("inverted")
 			}
 		}
 	}
@@ -407,6 +406,24 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 <style>
 	:root {
 		--doc-height: 100%;
+	}
+	.index-root,
+	.index-page {
+		margin: 0;
+	}
+	/* Header over dark hero: transparent, white nav links */
+	.index-header {
+		background: transparent;
+	}
+	.index-header nav a,
+	.index-header .highlight {
+		color: white !important;
+	}
+	.index-header nav a:hover {
+		color: white;
+	}
+	.index-header nav img {
+		filter: brightness(0) invert(1);
 	}
 	@font-face {
 		font-family: 'Martian Grotesk';
