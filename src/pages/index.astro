@@ -99,8 +99,8 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 			<div id="hero" class="index-hero relative z-50 bg-[#1a1e20] -mt-20 md:-mt-[72px] border-b border-white/10">
 				<div class="w-full max-w-6xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto px-3 md:px-0">
 					<div class="md:order-none order-1">
-						<h2 class="index-hero-title md:text-6xl font-heading max-w-3xl mb-6 text-4xl font-extrabold tracking-tight md:leading-tight text-white">Versatile product designer with technical roots and grit.</h2>
-						<h3 class="index-hero-subtitle md:ml-auto md:text-xl max-w-3xl text-lg leading-relaxed text-white/80">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design at a Brooklyn-based startup.</h3>
+						<h2 class="index-hero-title">Versatile product designer with <em>technical roots and grit.</em></h2>
+						<p class="index-hero-subtitle">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm a VP of Product Design at a Brooklyn-based startup.</p>
 						<ul class="md:hidden flex flex-row mt-12 flex-wrap gap-3 text-white">
 							<li>
 								<a class="font-semibold text-white hover:text-white/90" href="/how-i-lead">How I Lead</a>
@@ -127,7 +127,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 							</li>
 						</ul>
 					</div>
-					<Image class="w-[91.45px] md:w-2/5 md:ml-12 mb-6 md:mb-0 rounded-sm md:rounded-xl ring-2 ring-white/10 shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.4)]" src={adamProfessional} alt="Portrait of Adam Robertson."/>
+					<Image class="w-[91.45px] md:w-2/5 md:ml-12 mb-6 md:mb-0 rounded-sm md:rounded-xl shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.4)]" src={adamProfessional} alt="Portrait of Adam Robertson."/>
 				</div>
 			</div>
 			<!-- About section -->
@@ -425,6 +425,28 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 	.index-header nav img {
 		filter: brightness(0) invert(1);
 	}
+	/* Index hero: match How I Lead typography */
+	.index-hero-title {
+		font-family: 'Martian Grotesk', sans-serif;
+		font-size: clamp(32px, 4.5vw, 52px);
+		line-height: 1.2;
+		font-weight: 400;
+		max-width: 48rem;
+		color: white;
+	}
+	.index-hero-title em {
+		font-style: italic;
+		font-weight: 700;
+		color: #e8d0b2;
+	}
+	.index-hero-subtitle {
+		margin-top: 36px;
+		font-size: 17px;
+		line-height: 1.75;
+		color: rgba(227,222,218,0.95);
+		max-width: 48rem;
+		font-weight: 400;
+	}
 	@font-face {
 		font-family: 'Martian Grotesk';
 		src: url('/fonts/MartianGrotesk-VF.woff2') format('woff2');
@@ -441,8 +463,12 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 	.has-tooltip:hover .tooltip {
 		@apply visible z-50;
 	}
+	#hero {
+		min-height: 100dvh;
+	}
 	#hero > div {
-		height: var(--doc-height);
+		min-height: 100dvh;
+		height: 100dvh;
 	}
 	h1:before {
 		@apply absolute -top-full left-0 w-full h-full bg-black;
