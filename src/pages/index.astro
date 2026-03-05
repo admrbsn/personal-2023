@@ -96,8 +96,9 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 		</header>
 		<main>
 			<!-- Hero -->
-			<div id="hero" class="index-hero relative z-50 bg-[#1a1e20] -mt-20 md:-mt-[64px] border-b border-white/10 overflow-hidden">
+			<div id="hero" class="index-hero relative z-50 bg-[#141414] -mt-20 md:-mt-[64px] border-b border-white/10 overflow-hidden">
 				<div class="index-hero-bg" aria-hidden="true"></div>
+				<div class="index-hero-triangles" aria-hidden="true"></div>
 				<div class="w-full max-w-6xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto px-3 md:px-0 relative z-10">
 					<div class="md:order-none order-1">
 						<h2 class="index-hero-title">Versatile product designer with <em>technical roots and grit.</em></h2>
@@ -212,8 +213,9 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 				</div>
 			</div>
 			<!-- Design process section -->
-			<div id="dark-section" class="relative z-20 dark-section">
-				<div id="process" class="md:max-w-6xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">
+			<div id="dark-section" class="relative z-20 dark-section overflow-hidden">
+				<div class="dark-section-triangles" aria-hidden="true"></div>
+				<div id="process" class="relative z-10 md:max-w-6xl md:flex-row md:py-24 md:mx-auto md:px-0 flex flex-col px-3 py-12">
 					<div class="md:order-none md:max-w-2xl md:mr-auto order-1 dark-section-body">
 						<div class="mb-4">I take a pragmatic, adaptable approach to design informed by design thinking and Lean UX. I don’t believe in a single “right” process—effective design depends on the problem, the team, and the constraints.</div>
 						<div class="mb-12">For small teams, I favor a fast “Think, Make, Check” loop that prioritizes speed and collaboration. In larger organizations, I’m comfortable working within more structured processes that support deeper research, validation, and alignment, always with the goal of shipping meaningful work efficiently.</div>
@@ -483,11 +485,11 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 		pointer-events: none;
 		z-index: 0;
 		background:
-			radial-gradient(ellipse 70% 70% at 10% 10%, rgba(0,0,0,0.25) 0%, transparent 50%),
-			radial-gradient(ellipse 60% 60% at 90% 90%, rgba(0,0,0,0.2) 0%, transparent 50%),
-			radial-gradient(ellipse 80% 80% at 85% 20%, rgba(90,138,138,0.12) 0%, transparent 50%),
-			radial-gradient(ellipse 60% 60% at 15% 85%, rgba(232,208,178,0.06) 0%, transparent 50%),
-			radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.02) 0%, transparent 50%);
+			radial-gradient(ellipse 70% 70% at 10% 10%, rgba(0,0,0,0.35) 0%, transparent 50%),
+			radial-gradient(ellipse 60% 60% at 90% 90%, rgba(0,0,0,0.3) 0%, transparent 50%),
+			radial-gradient(ellipse 80% 80% at 85% 20%, rgba(255,255,255,0.02) 0%, transparent 50%),
+			radial-gradient(ellipse 60% 60% at 15% 85%, rgba(255,255,255,0.01) 0%, transparent 50%),
+			radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.01) 0%, transparent 50%);
 	}
 	.index-hero-bg::before {
 		content: "";
@@ -496,6 +498,51 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 		opacity: 0.03;
 		mix-blend-mode: overlay;
+	}
+	/* Triangle tessellation - Beowolve technique (codepen.io/Beowolve/pen/JjLxgWK) */
+	.index-hero-triangles {
+		--w: 358q;
+		--h: 150q;
+		--x1: 119q;
+		--y1: 50q;
+		--x2: -28q;
+		--y2: 102q;
+		--x3: 91q;
+		--y3: 152q;
+		--x4: 238q;
+		--y4: 100q;
+		--x5: 210q;
+		--y5: 202q;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 75%;
+		height: 75%;
+		pointer-events: none;
+		z-index: 0;
+		opacity: 0.12;
+		background:
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) 0 0/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) 0 0/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) 57.5q -2.5q/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x1) var(--y1)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x1) var(--y1)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(57.5q + var(--x1)) calc(-2.5q + var(--y1))/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x4) var(--y4)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x4) var(--y4)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(57.5q + var(--x4)) calc(-2.5q + var(--y4))/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x2) var(--y2)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) calc(var(--x2) + 117.5q) var(--y2)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(116q + var(--x2)) calc(-104q + var(--y2))/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x3) var(--y3)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) calc(var(--x3) + 117.5q) var(--y3)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(116q + var(--x3)) calc(-104q + var(--y3))/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x5) var(--y5)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) calc(var(--x5) + 117.5q) var(--y5)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(116q + var(--x5)) calc(-104q + var(--y5))/var(--w) var(--h),
+			transparent;
+		mask-image: linear-gradient(to bottom left, rgba(0,0,0,0.6) 0%, transparent 55%);
+		-webkit-mask-image: linear-gradient(to bottom left, rgba(0,0,0,0.6) 0%, transparent 55%);
 	}
 	#hero > div:not(.index-hero-bg) {
 		min-height: 100dvh;
@@ -521,26 +568,72 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 	.experience-title {
 		background: linear-gradient(to bottom, #f5efe7, transparent);
 	}
-	/* Dark section: match hero (#1a1e20) grays, slightly darker */
+	/* Dark section: match hero (#141414) grays */
 	.dark-section {
-		background: #161a1e;
+		background: #141414;
 	}
 	.dark-section-body {
 		color: #c8c4c0;
 	}
 	.dark-section-card {
-		background: #1e2226;
-		border: 1px solid #2a2e32;
+		background: #1a1a1a;
+		border: 1px solid #252525;
 	}
 	.dark-section-card-body {
 		color: #a8a4a0;
 	}
 	.dark-section-title {
-		background: linear-gradient(to bottom, #161a1e, transparent);
+		background: linear-gradient(to bottom, #141414, transparent);
 		color: #f0eeea;
 	}
 	.dark-section-subtitle {
 		color: #a8a4a0;
+	}
+	/* Triangle pattern - bottom left, faded to center */
+	.dark-section-triangles {
+		background-attachment: fixed;
+		--w: 358q;
+		--h: 150q;
+		--x1: 119q;
+		--y1: 50q;
+		--x2: -28q;
+		--y2: 102q;
+		--x3: 91q;
+		--y3: 152q;
+		--x4: 238q;
+		--y4: 100q;
+		--x5: 210q;
+		--y5: 202q;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 75%;
+		height: 75%;
+		pointer-events: none;
+		z-index: 0;
+		opacity: 0.12;
+		background:
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) 0 0/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) 0 0/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) 57.5q -2.5q/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x1) var(--y1)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x1) var(--y1)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(57.5q + var(--x1)) calc(-2.5q + var(--y1))/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x4) var(--y4)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x4) var(--y4)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(57.5q + var(--x4)) calc(-2.5q + var(--y4))/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x2) var(--y2)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) calc(var(--x2) + 117.5q) var(--y2)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(116q + var(--x2)) calc(-104q + var(--y2))/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x3) var(--y3)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) calc(var(--x3) + 117.5q) var(--y3)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(116q + var(--x3)) calc(-104q + var(--y3))/var(--w) var(--h),
+			linear-gradient(60deg, #0000 50q, #FFF 50q 53q, #0000 0) var(--x5) var(--y5)/var(--w) var(--h),
+			linear-gradient(-60deg, #0000 50q, #FFF 50q 53q, #0000 0) calc(var(--x5) + 117.5q) var(--y5)/var(--w) var(--h),
+			conic-gradient(at calc(var(--w) - 115q) 2.5q, #fff 25%, #0000 0) calc(116q + var(--x5)) calc(-104q + var(--y5))/var(--w) var(--h),
+			transparent;
+		mask-image: linear-gradient(to top right, rgba(0,0,0,0.6) 0%, transparent 55%);
+		-webkit-mask-image: linear-gradient(to top right, rgba(0,0,0,0.6) 0%, transparent 55%);
 	}
 	@media(max-width: 767px) {
 		.title:before {
@@ -556,7 +649,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 			@apply bg-[#f5f5f5];
 		}
 		.title.black:before {
-			background: #161a1e;
+			background: #141414;
 		}
 		.title.yellow:before {
 			@apply bg-[#fffacd];

@@ -64,8 +64,9 @@ import email from '@icon/email.svg'
 		</header>
 		<main>
 			<!-- Hero -->
-			<section id="lead-hero" class="lead-hero -mt-20 md:-mt-[64px]">
-				<div class="lead-hero-inner">
+			<section id="lead-hero" class="lead-hero -mt-20 md:-mt-[64px] relative overflow-hidden">
+				<div class="lead-hero-bg" aria-hidden="true"></div>
+				<div class="lead-hero-inner relative z-10">
 					<p class="lead-hero-label">Leadership Philosophy</p>
 					<h2 class="lead-hero-title">I build teams that ship things <em>no one could build alone.</em></h2>
 					<p class="lead-hero-body">
@@ -193,7 +194,7 @@ import email from '@icon/email.svg'
 		--lead-paper: #f5efe7;
 		--lead-accent: #5a8a8a;
 		--lead-beige: #e8d0b2;
-		--lead-dark: #1a1e20;
+		--lead-dark: #141414;
 		--lead-white: #ffffff;
 	}
 
@@ -259,6 +260,26 @@ import email from '@icon/email.svg'
 		align-items: center;
 		background: var(--lead-dark);
 		border-bottom: 1px solid rgba(255,255,255,0.08);
+	}
+	.lead-hero-bg {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		z-index: 0;
+		background:
+			radial-gradient(ellipse 70% 70% at 10% 10%, rgba(0,0,0,0.35) 0%, transparent 50%),
+			radial-gradient(ellipse 60% 60% at 90% 90%, rgba(0,0,0,0.3) 0%, transparent 50%),
+			radial-gradient(ellipse 80% 80% at 85% 20%, rgba(255,255,255,0.02) 0%, transparent 50%),
+			radial-gradient(ellipse 60% 60% at 15% 85%, rgba(255,255,255,0.01) 0%, transparent 50%),
+			radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.01) 0%, transparent 50%);
+	}
+	.lead-hero-bg::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+		opacity: 0.03;
+		mix-blend-mode: overlay;
 	}
 
 	.lead-hero-inner {
