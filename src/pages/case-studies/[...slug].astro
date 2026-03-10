@@ -61,24 +61,24 @@ const imageFiles = allImageFiles.filter(file => {
       <div>
         <h1 id="adam-logo" class="md:fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
       </div>
-      <a href="/" class="case-study-back-link relative md:top-6 flex items-center text-white font-semibold">
-        <Image class="w-6 mr-1.5 brightness-0 invert" src={arrowBack} alt="Back icon."/>
+      <a href="/" class="case-study-back-link relative md:top-6 flex items-center text-black font-semibold">
+        <Image class="w-6 mr-1.5" src={arrowBack} alt="Back icon."/>
         Back<span class="hidden md:inline">&nbsp;home</span>
       </a>
     </header>
     <main>
       <!-- Hero -->
-      <div id="hero" class="case-study-hero relative z-30 bg-[#141414] -mt-20 md:-mt-[64px] overflow-hidden border-b border-white/10">
+      <div id="hero" class="case-study-hero relative z-30 bg-[#f5efe7] -mt-20 md:-mt-[64px] overflow-hidden border-b border-black/5">
         <div class="case-study-hero-bg" aria-hidden="true"></div>
         <div class="relative z-10 max-w-6xl mx-auto px-3 md:px-0 pt-20 md:pt-24 pb-8 md:pb-12">
           <div class="flex flex-col md:flex-row h-96 md:h-[500px]">
             <!-- Left side - Title -->
             <div class="w-full md:w-2/5 flex flex-col justify-center pl-4 pr-6 md:pl-4 md:pr-12">
-              <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3 text-white">
+              <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3 text-black">
                 {title.includes(':') ? title.split(':')[0] : title}
               </h1>
               {title.includes(':') && (
-                <p class="text-base md:text-lg text-white/80">{title.split(':').slice(1).join(':').trim()}</p>
+                <p class="text-base md:text-lg text-gray-600">{title.split(':').slice(1).join(':').trim()}</p>
               )}
             </div>
             <!-- Right side - Image -->
@@ -539,11 +539,11 @@ const imageFiles = allImageFiles.filter(file => {
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 70% 70% at 10% 10%, rgba(0,0,0,0.35) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 60% at 90% 90%, rgba(0,0,0,0.3) 0%, transparent 50%),
-      radial-gradient(ellipse 80% 80% at 85% 20%, rgba(255,255,255,0.02) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 60% at 15% 85%, rgba(255,255,255,0.01) 0%, transparent 50%),
-      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.01) 0%, transparent 50%);
+      radial-gradient(ellipse 70% 70% at 10% 10%, rgba(0,0,0,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 60% at 90% 90%, rgba(0,0,0,0.06) 0%, transparent 50%),
+      radial-gradient(ellipse 80% 80% at 85% 20%, rgba(255,255,255,0.4) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 60% at 15% 85%, rgba(255,255,255,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 50%);
   }
   .case-study-hero-bg::before {
     content: "";
