@@ -89,6 +89,7 @@ It also made handoff cleaner. Because Relume outputs directly to Figma, the tran
 
 ![Early sketch exploration.](../../assets/img/tribute-v3-sketch.png)
 
+
 <!-- PROCESS: EXPLORE_DEFINE -->
 
 ## Framing the Direction
