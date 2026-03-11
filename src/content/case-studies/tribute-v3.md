@@ -3,7 +3,7 @@ title: "Tribute V3: Re-architecting a 10-year-old product into a modern, creator
 description: "A full redesign and re-architecture of the Tribute platform, rethinking creation, customization, payments, and scale using modern design systems and AI-assisted workflows."
 role: "VP of Product Design (IC)"
 scope: "End-to-end platform redesign (web-first, mobile-led)"
-team: "Design, frontend, backend (tight collaboration)"
+team: "Design, frontend, backend — team of four, one-week sprint cycles"
 timeline: "~3 months from concept to launch"
 impact:
   - "Starts: **+29%**"
@@ -19,15 +19,6 @@ metrics:
     label: "Purchases"
   - value: "+20%"
     label: "CSAT"
-results:
-  stats:
-    - value: "~85%"
-      label: "CSAT RESTORED"
-    - value: "+27%"
-      label: "REVENUE"
-    - value: "+10%"
-      label: "MORE STARTS"
-  quote: "More importantly, users described the experience as fun again."
 liveSiteUrl: "https://tribute.co"
 liveSiteText: "To view the live site and experience the improved platform, visit. See how the redesign has made it easier to create meaningful video tributes, customize experiences, and complete the entire journey from start to finish."
 ---
@@ -80,19 +71,27 @@ Importantly, these were not treated as final designs. They were thinking tools�
 
 The strongest ideas from this phase informed the directions that were later validated through ranking exercises, false-door testing, and interactive prototypes.
 
+### Sitemaps and wireframes with Relume
+
+Mapping the full information architecture of a platform this large could easily eat a week. We used Relume to compress that into hours.
+
+Relume's AI sitemap generator let me describe the product in plain language and get back a structured, editable site map almost instantly. Rather than starting from a blank FigJam canvas and manually placing every node, I could prompt my way to a solid first draft and spend my time editing and making decisions rather than building scaffolding.
+
+The same was true for wireframes. Relume's component library is built around real UI patterns, not abstract boxes, so the wireframes we generated actually communicated intent. Engineers could read them. Stakeholders could react to them. That's a meaningful difference from Balsamiq sketches, which often require explanation before they can spark a useful conversation.
+
+Old-school tools like FigJam and Balsamiq are fine for whiteboarding, but they don't generate anything -- you're still doing all the structural thinking from scratch. Relume shifted the starting point. The AI gave us a defensible first draft, and we refined from there. That meant more time pressure-testing the architecture and less time constructing it.
+
+It also made handoff cleaner. Because Relume outputs directly to Figma, the transition from sitemap to wireframe to high-fidelity was one continuous file rather than a series of format conversions.
+
+![Relume sitemap generator interface showing Tribute product description and generated marketing website structure.](../../assets/img/tribute-v3-relume-1.png)
+
+![Relume sitemap showing the full site structure with How It Works, Pricing, Blog, and Occasions sections.](../../assets/img/tribute-v3-relume-2.png)
+
 ![Early sketch exploration.](../../assets/img/tribute-v3-sketch-1.png)
 
 ![Early sketch exploration.](../../assets/img/tribute-v3-sketch-2.png)
 
 ![Early sketch exploration.](../../assets/img/tribute-v3-sketch-3.png)
-
-![Early sketch exploration.](../../assets/img/tribute-v3-sketch-4.png)
-
-![Early sketch exploration.](../../assets/img/tribute-v3-sketch-5.png)
-
-![Early sketch exploration.](../../assets/img/tribute-v3-sketch-6.png)
-
-![Early sketch exploration.](../../assets/img/tribute-v3-sketch-7.png)
 
 
 <!-- PROCESS: EXPLORE_DEFINE -->
@@ -203,9 +202,11 @@ Themes became a primary way users expressed intent and emotion, not just decorat
 
 Once the foundation was in place, we moved quickly.
 
-I bounced between Figma for layout exploration and AI-assisted coding environments for rapid implementation. This approach accelerated the first 60–70% of the work, allowing more time for refinement, validation, and polish.
+I made an early call to cut Figma out of the critical path. Rather than designing in static files and handing them off, the deliverable was functioning code. I still used Figma for targeted layout exploration, but it was never the source of truth. This approach accelerated the first 60–70% of the work, allowing more time for refinement, validation, and polish.
 
-Speed alone wasn’t enough. As complexity grew, quality required discipline. Weak prompts could introduce regressions, so I continuously tightened constraints, updated the design system, and supplemented AI workflows with concrete Figma screens to remove ambiguity.
+Speed alone wasn’t enough. As complexity grew, quality required discipline. Weak prompts could introduce regressions, so I continuously tightened constraints and kept the design system grounded in production components rather than static specs.
+
+The team of four was skeptical at first — that's a fair reaction when you're changing the most fundamental part of a design workflow. I stayed close to the work, experimented alongside them, and ran one-week sprint cycles combining Lean UX and Agile across product, design, and engineering simultaneously. Within a few sprints, something shifted. Stakeholders were reacting to working product instead of mockups. Decisions that used to take weeks were getting made in days. The reluctance disappeared because the results were undeniable.
 
 > **Image placeholder:** Prompt → UI iterations  
 > `[image: vibe-coding.png]`
@@ -240,6 +241,6 @@ Beyond the numbers, V3 provided a modern, scalable foundation. Iteration became 
 
 Tribute V3 wasn’t about trends or tools. It was about aligning the platform with what the product had already become—emotionally meaningful and deeply personal.
 
-It also changed how we build. Design and engineering now operate around shared systems, experimentation carries less risk, and ideas move from concept to reality faster without sacrificing quality.
+It also fundamentally changed how we build. We rethought what a design system actually is — not a Figma library, but a living system rooted in AI-assisted prototyping where the deliverable is functioning code. Design and engineering now operate around shared production components, experimentation carries less risk, and one-week sprint cycles became the new normal. Ideas move from concept to reality faster without sacrificing quality.
 
 V3 set a new baseline for how we work at Tribute going forward.
