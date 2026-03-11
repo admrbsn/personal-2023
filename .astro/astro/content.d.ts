@@ -172,13 +172,13 @@ declare module 'astro:content' {
   collection: "case-studies";
   data: any
 } & { render(): Render[".md"] };
-"tribute-v3.md": {
-	id: "tribute-v3.md";
+"tribute-v3.mdx": {
+	id: "tribute-v3.mdx";
   slug: "tribute-v3";
   body: string;
   collection: "case-studies";
   data: any
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "tribute.md": {
 	id: "tribute.md";
   slug: "tribute";

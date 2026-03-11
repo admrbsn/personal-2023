@@ -1,0 +1,221 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  before: ImageMetadata
+  after: ImageMetadata
+  beforeLabel?: string
+  afterLabel?: string
+}
+
+const { before, after, beforeLabel = 'Before', afterLabel = 'After' } = Astro.props
+---
+
+<div class="before-after-slider my-8" data-before-after-slider>
+  <div class="before-after-slider__container">
+    <!-- Before image (background, full width) -->
+    <div class="before-after-slider__before">
+      <Image
+        src={before}
+        alt={beforeLabel}
+        class="before-after-slider__img"
+        loading="lazy"
+      />
+      <span class="before-after-slider__label before-after-slider__label--before" aria-hidden="true">{beforeLabel}</span>
+    </div>
+    <!-- After image (clipped overlay) -->
+    <div class="before-after-slider__after" data-after>
+      <Image
+        src={after}
+        alt={afterLabel}
+        class="before-after-slider__img"
+        loading="lazy"
+      />
+      <span class="before-after-slider__label before-after-slider__label--after" aria-hidden="true">{afterLabel}</span>
+    </div>
+    <!-- Slider handle -->
+    <div class="before-after-slider__handle" data-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+      <div class="before-after-slider__handle-line"></div>
+      <div class="before-after-slider__handle-grip">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M8 5v14M16 5v14" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initBeforeAfterSlider(container: HTMLElement) {
+    const afterEl = container.querySelector('[data-after]') as HTMLElement
+    const handleEl = container.querySelector('[data-handle]') as HTMLElement
+    if (!afterEl || !handleEl) return
+
+    let isDragging = false
+    const updatePosition = (clientX: number) => {
+      const rect = container.getBoundingClientRect()
+      const x = Math.max(0, Math.min(clientX - rect.left, rect.width))
+      const percent = (x / rect.width) * 100
+      afterEl.style.clipPath = `inset(0 0 0 ${percent}%)`
+      handleEl.style.left = `${percent}%`
+      handleEl.setAttribute('aria-valuenow', Math.round(percent).toString())
+    }
+
+    const onPointerDown = (e: PointerEvent) => {
+      e.preventDefault()
+      isDragging = true
+      ;(handleEl as HTMLElement).setPointerCapture(e.pointerId)
+      updatePosition(e.clientX)
+    }
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!isDragging) return
+      updatePosition(e.clientX)
+    }
+
+    const onPointerUp = () => {
+      isDragging = false
+      ;(handleEl as HTMLElement).releasePointerCapture?.(-1)
+    }
+
+    handleEl.addEventListener('pointerdown', onPointerDown)
+    window.addEventListener('pointermove', onPointerMove)
+    window.addEventListener('pointerup', onPointerUp)
+    window.addEventListener('pointercancel', onPointerUp)
+
+    // Keyboard support
+    handleEl.addEventListener('keydown', (e: KeyboardEvent) => {
+      const rect = container.getBoundingClientRect()
+      const handleRect = handleEl.getBoundingClientRect()
+      const currentX = handleRect.left - rect.left + handleRect.width / 2
+      const step = rect.width / 50
+      let newX = currentX
+      if (e.key === 'ArrowLeft') newX = currentX - step
+      else if (e.key === 'ArrowRight') newX = currentX + step
+      if (newX !== currentX) {
+        e.preventDefault()
+        updatePosition(rect.left + newX)
+      }
+    })
+
+    // Initial position 50% (defer until layout is ready)
+    const setInitial = () => {
+      const rect = container.getBoundingClientRect()
+      if (rect.width > 0) {
+        updatePosition(rect.left + rect.width / 2)
+      } else {
+        requestAnimationFrame(setInitial)
+      }
+    }
+    requestAnimationFrame(setInitial)
+  }
+
+  document.querySelectorAll('[data-before-after-slider]').forEach((el) => initBeforeAfterSlider(el as HTMLElement))
+</script>
+
+<style>
+  .before-after-slider {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .before-after-slider__container {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    min-height: 200px;
+  }
+
+  .before-after-slider__before,
+  .before-after-slider__after {
+    position: absolute;
+    inset: 0;
+  }
+
+  .before-after-slider__before {
+    z-index: 0;
+  }
+
+  .before-after-slider__after {
+    z-index: 1;
+    clip-path: inset(0 0 0 50%);
+    pointer-events: none;
+  }
+
+  .before-after-slider__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .before-after-slider__label {
+    position: absolute;
+    bottom: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 0.25rem;
+  }
+
+  .before-after-slider__label--before {
+    left: 0.75rem;
+  }
+
+  .before-after-slider__label--after {
+    right: 0.75rem;
+    left: auto;
+  }
+
+  .before-after-slider__handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    transform: translateX(-50%);
+    z-index: 2;
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+  }
+
+  .before-after-slider__handle-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: white;
+    transform: translateX(-50%);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .before-after-slider__handle-grip {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: #374151;
+  }
+
+  .before-after-slider__handle:focus {
+    outline: none;
+  }
+
+  .before-after-slider__handle:focus-visible .before-after-slider__handle-grip {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+</style>
