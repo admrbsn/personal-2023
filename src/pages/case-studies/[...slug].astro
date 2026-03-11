@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets"
 import arrowBack from '@icon/arrow-back.svg'
+import tributeV3Hero from '../../assets/img/tribute-v3-hero.png'
 import { type CollectionEntry, getCollection } from 'astro:content'
 import BaseHead from '../../components/BaseHead.astro'
 import 'photoswipe/style.css'
@@ -34,11 +35,12 @@ const processSections = [
 // Check if this case study has process sections (only tribute-v3 for now)
 const hasProcessSections = post.slug === 'tribute-v3'
 
-console.log("All Image Files:", allImageFiles)
-
-const heroImageFile = allImageFiles.filter(file => {
-  return file.default.src.includes(`${post.slug}-hero`)
-})[0] // Ensure only the first match is used
+// Hero image: use explicit import for tribute-v3, else match by slug-hero pattern
+const heroImageFile = post.slug === 'tribute-v3'
+  ? { default: tributeV3Hero }
+  : allImageFiles.filter((file: { default: { src: string } }) =>
+      file.default.src.includes(`${post.slug}-hero`)
+    )[0]
 
 const imageFiles = allImageFiles.filter(file => {
   return file.default.src.includes(`${post.slug}-gallery`)
