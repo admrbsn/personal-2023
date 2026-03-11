@@ -23,12 +23,8 @@ liveSiteUrl: "https://tribute.co"
 liveSiteText: "To view the live site and experience the improved platform, visit. See how the redesign has made it easier to create meaningful video tributes, customize experiences, and complete the entire journey from start to finish."
 ---
 
-import BeforeAfterSlider from '../../components/BeforeAfterSlider.astro'
-import onboardingOld from '../../assets/img/tribute-v3-onboarding-old.png'
-import onboardingNew from '../../assets/img/tribute-v3-onboarding-new.png'
-
-{/* PROCESS: START */}
-{/* PROCESS: DISCOVER */}
+<!-- PROCESS: START -->
+<!-- PROCESS: DISCOVER -->
 
 ## Background
 
@@ -52,7 +48,7 @@ Nearly every major surface needed attention—onboarding, publishing, tribute ma
 
 ### Limited creative control
 
-Tribute is inherently emotional and expressive, yet customization felt rigid. Users frequently asked for more control over themes, colors, and personality. The product didn't reflect the emotional weight it carried.
+Tribute is inherently emotional and expressive, yet customization felt rigid. Users frequently asked for more control over themes, colors, and personality. The product didn’t reflect the emotional weight it carried.
 
 ### Artificial separation between creators and participants
 
@@ -91,14 +87,9 @@ It also made handoff cleaner. Because Relume outputs directly to Figma, the tran
 
 ![Relume sitemap showing the full site structure with How It Works, Pricing, Blog, and Occasions sections.](../../assets/img/tribute-v3-relume-2.png)
 
-![Early sketch exploration.](../../assets/img/tribute-v3-sketch-1.png)
+![Early sketch exploration.](../../assets/img/tribute-v3-sketch.png)
 
-![Early sketch exploration.](../../assets/img/tribute-v3-sketch-2.png)
-
-![Early sketch exploration.](../../assets/img/tribute-v3-sketch-3.png)
-
-
-{/* PROCESS: EXPLORE_DEFINE */}
+<!-- PROCESS: EXPLORE_DEFINE -->
 
 ## Framing the Direction
 
@@ -139,9 +130,9 @@ These rankings directly informed visual hierarchy, default emphasis, and which c
 
 ## Testing early assumptions
 
-One early idea didn't hold up.
+One early idea didn’t hold up.
 
-Inspired by Partiful, I initially wanted the product page—with placeholder data—to *be* the create experience. It looked slick and modern, but false-door testing and moderated interviews revealed confusion. Users weren't sure what to do next or whether they were "doing it right."
+Inspired by Partiful, I initially wanted the product page—with placeholder data—to *be* the create experience. It looked slick and modern, but false-door testing and moderated interviews revealed confusion. Users weren’t sure what to do next or whether they were “doing it right.”
 
 We pivoted to a more conventional modal-based start, with the new experience blurred behind it as a teaser. This preserved clarity while still signaling what users were about to unlock.
 
@@ -150,7 +141,7 @@ We pivoted to a more conventional modal-based start, with the new experience blu
 
 ---
 
-{/* PROCESS: DEVELOP_TEST */}
+<!-- PROCESS: DEVELOP_TEST -->
 
 ## Shaping the Experience
 
@@ -158,7 +149,7 @@ With direction validated, the focus shifted to shaping the experience and testin
 
 ### Reimagining onboarding
 
-The existing onboarding flow technically worked, but lacked personality. It was essentially a homemade Typeform. Conversion improved over time—from ~15% to ~25%—but it didn't reflect the product's joy.
+The existing onboarding flow technically worked, but lacked personality. It was essentially a homemade Typeform. Conversion improved over time—from ~15% to ~25%—but it didn’t reflect the product’s joy.
 
 For V3, onboarding needed to:
 - Feel expressive and celebratory
@@ -168,7 +159,8 @@ For V3, onboarding needed to:
 
 Post-launch, onboarding conversion increased to **54%**, more than doubling the historical baseline.
 
-<BeforeAfterSlider before={onboardingOld} after={onboardingNew} beforeLabel="Old" afterLabel="New" />
+> **Image placeholder:** Old vs new onboarding  
+> `[image: onboarding-comparison.png]`
 
 ---
 
@@ -179,7 +171,7 @@ Historically, payment happened at the very end of the experience. While generous
 - Late-stage abandonment stayed high
 - **16% of checkouts were accidental**
 
-Users were signaling readiness to pay earlier, but the flow wasn't designed to support that intent.
+Users were signaling readiness to pay earlier, but the flow wasn’t designed to support that intent.
 
 We moved payment to just after the draft stage—keeping the product free to start while aligning payment with commitment and clarity.
 
@@ -206,7 +198,7 @@ Once the foundation was in place, we moved quickly.
 
 I made an early call to cut Figma out of the critical path. Rather than designing in static files and handing them off, the deliverable was functioning code. I still used Figma for targeted layout exploration, but it was never the source of truth. This approach accelerated the first 60–70% of the work, allowing more time for refinement, validation, and polish.
 
-Speed alone wasn't enough. As complexity grew, quality required discipline. Weak prompts could introduce regressions, so I continuously tightened constraints and kept the design system grounded in production components rather than static specs.
+Speed alone wasn’t enough. As complexity grew, quality required discipline. Weak prompts could introduce regressions, so I continuously tightened constraints and kept the design system grounded in production components rather than static specs.
 
 The team of four was skeptical at first — that's a fair reaction when you're changing the most fundamental part of a design workflow. I stayed close to the work, experimented alongside them, and ran one-week sprint cycles combining Lean UX and Agile across product, design, and engineering simultaneously. Within a few sprints, something shifted. Stakeholders were reacting to working product instead of mockups. Decisions that used to take weeks were getting made in days. The reluctance disappeared because the results were undeniable.
 
@@ -224,7 +216,7 @@ Beyond milestone testing, we relied heavily on unmoderated Maze surveys througho
 
 ---
 
-{/* PROCESS: DELIVERY */}
+<!-- PROCESS: DELIVERY -->
 
 ## Launch and Outcomes
 
@@ -241,7 +233,7 @@ Beyond the numbers, V3 provided a modern, scalable foundation. Iteration became 
 
 ## Reflection
 
-Tribute V3 wasn't about trends or tools. It was about aligning the platform with what the product had already become—emotionally meaningful and deeply personal.
+Tribute V3 wasn’t about trends or tools. It was about aligning the platform with what the product had already become—emotionally meaningful and deeply personal.
 
 It also fundamentally changed how we build. We rethought what a design system actually is — not a Figma library, but a living system rooted in AI-assisted prototyping where the deliverable is functioning code. Design and engineering now operate around shared production components, experimentation carries less risk, and one-week sprint cycles became the new normal. Ideas move from concept to reality faster without sacrificing quality.
 
