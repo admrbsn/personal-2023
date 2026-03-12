@@ -75,7 +75,7 @@ const imageFiles = allImageFiles.filter(file => {
         <div class="relative z-10 max-w-6xl mx-auto px-3 md:px-0 pt-20 md:pt-24 pb-8 md:pb-12">
           <div class="flex flex-col md:flex-row h-96 md:h-[500px]">
             <!-- Left side - Title -->
-            <div class="w-full md:w-2/5 flex flex-col justify-center pl-4 pr-6 md:pl-4 md:pr-12">
+            <div class="w-full md:w-2/5 flex flex-col justify-center pl-0 pr-4 md:pl-4 md:pr-12">
               <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3 text-black">
                 {title.includes(':') ? title.split(':')[0] : title}
               </h1>
@@ -180,7 +180,7 @@ const imageFiles = allImageFiles.filter(file => {
       </article>
       <!-- Results section (dark) -->
       {results && (
-        <section class="bg-[#1a1a1a] py-16 md:py-24 mt-16 md:mt-24">
+        <section id="results-section" class="bg-[#1a1a1a] py-16 md:py-24 mt-16 md:mt-24">
           <div class="max-w-6xl mx-auto px-3 md:px-0">
             <h2 class="text-3xl md:text-4xl font-heading font-extrabold tracking-tight text-white mb-12">Results</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
@@ -470,6 +470,25 @@ const imageFiles = allImageFiles.filter(file => {
     }
   }, 1000)
 
+  // Logo inversion: match homepage—invert (white bg) when over hero or dark Results section
+  function checkLogoInversion() {
+    const adamLogo = document.getElementById('adam-logo') as HTMLElement
+    const hero = document.getElementById('hero') as HTMLElement
+    const resultsSection = document.getElementById('results-section')
+    if (!adamLogo || !hero) return
+    const navbarHeight = 80
+    const heroRect = hero.getBoundingClientRect()
+    const resultsRect = resultsSection?.getBoundingClientRect() ?? { top: Infinity, bottom: -Infinity }
+    const isOverHero = heroRect.top <= navbarHeight && heroRect.bottom > 0
+    const isOverResults = resultsRect.top <= navbarHeight && resultsRect.bottom > 0
+    if (isOverHero || isOverResults) {
+      adamLogo.classList.add('inverted')
+    } else {
+      adamLogo.classList.remove('inverted')
+    }
+  }
+  checkLogoInversion()
+
   // Modifying the DOM on scroll
   window.addEventListener('scroll', (event: Event) => {
     const scrollTop = window.pageYOffset as number
@@ -478,6 +497,8 @@ const imageFiles = allImageFiles.filter(file => {
 
     // Setting hero opacity
     hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
+
+    checkLogoInversion()
 
     // Show/hide scroll to top button
     if (scrollToTopBtn) {
