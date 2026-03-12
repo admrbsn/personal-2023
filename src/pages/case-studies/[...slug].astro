@@ -59,9 +59,9 @@ const imageFiles = allImageFiles.filter(file => {
     </script>
   </head>
   <body class="case-study-page">
-    <header role="banner" class="case-study-header md:flex-row md:items-center md:mx-auto md:px-0 relative z-50 flex justify-between w-full max-w-6xl px-3 py-5">
+    <header role="banner" class="case-study-header md:flex-row md:items-center md:mx-auto md:px-0 relative z-50 flex justify-between w-full max-w-6xl px-3 pt-0 pb-5">
       <div>
-        <h1 id="adam-logo" class="md:fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
+        <h1 id="adam-logo" class="md:fixed inline-flex items-center justify-center aspect-square p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
       </div>
       <a href="/" class="case-study-back-link relative md:top-6 flex items-center text-black font-semibold">
         <Image class="w-6 mr-1.5" src={arrowBack} alt="Back icon."/>
@@ -470,25 +470,6 @@ const imageFiles = allImageFiles.filter(file => {
     }
   }, 1000)
 
-  // Logo inversion: match homepage—invert (white bg) when over hero or dark Results section
-  function checkLogoInversion() {
-    const adamLogo = document.getElementById('adam-logo') as HTMLElement
-    const hero = document.getElementById('hero') as HTMLElement
-    const resultsSection = document.getElementById('results-section')
-    if (!adamLogo || !hero) return
-    const navbarHeight = 80
-    const heroRect = hero.getBoundingClientRect()
-    const resultsRect = resultsSection?.getBoundingClientRect() ?? { top: Infinity, bottom: -Infinity }
-    const isOverHero = heroRect.top <= navbarHeight && heroRect.bottom > 0
-    const isOverResults = resultsRect.top <= navbarHeight && resultsRect.bottom > 0
-    if (isOverHero || isOverResults) {
-      adamLogo.classList.add('inverted')
-    } else {
-      adamLogo.classList.remove('inverted')
-    }
-  }
-  checkLogoInversion()
-
   // Modifying the DOM on scroll
   window.addEventListener('scroll', (event: Event) => {
     const scrollTop = window.pageYOffset as number
@@ -497,8 +478,6 @@ const imageFiles = allImageFiles.filter(file => {
 
     // Setting hero opacity
     hero.style.opacity = `${0 + (hero.offsetHeight - scrollTop) / hero.offsetHeight}`
-
-    checkLogoInversion()
 
     // Show/hide scroll to top button
     if (scrollToTopBtn) {
