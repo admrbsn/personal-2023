@@ -59,7 +59,7 @@ const imageFiles = allImageFiles.filter(file => {
     </script>
   </head>
   <body class="case-study-page">
-    <header role="banner" class="case-study-header md:flex-row md:items-center md:mx-auto md:px-0 relative z-50 flex justify-between w-full max-w-6xl px-3 pt-0 pb-5">
+    <header role="banner" class="case-study-header md:flex-row md:items-center md:mx-auto md:px-0 relative z-50 flex justify-between w-full max-w-6xl px-3 pt-0 pb-5 min-h-16">
       <div>
         <h1 id="adam-logo" class="md:fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
       </div>
@@ -597,13 +597,13 @@ const imageFiles = allImageFiles.filter(file => {
     @apply text-black font-bold;
   }
   :global(ul) {
-    @apply list-disc mt-4 mr-8 md:mr-12 ml-8 md:ml-12;
+    @apply list-disc mt-2 mr-8 md:mr-12 ml-8 md:ml-12;
   }
   :global(ul li) {
     @apply mb-4 text-[#404040] text-base leading-relaxed;
   }
   :global(ol) {
-    @apply list-decimal mt-4 mr-8 md:mr-12 ml-8 md:ml-12;
+    @apply list-decimal mt-2 mr-8 md:mr-12 ml-8 md:ml-12;
   }
   :global(ol li) {
     @apply mb-4 text-[#404040]  text-base leading-relaxed;
