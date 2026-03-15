@@ -97,14 +97,6 @@ import email from '@icon/email.svg'
 				</div>
 				<div class="lead-philosophy-right">
 					<div class="lead-pov-item">
-						<h4>Lead with compassion</h4>
-						<p>Skip the performance reviews and box-checking. Have real human connections and conversations instead. AI has data-ized enough of our lives—let's not let it muck with our relationships with employees. At the end of the day, 99% of people want to be successful at their jobs and happy. Lean into that.</p>
-					</div>
-					<div class="lead-pov-item">
-						<h4>Lead with intent</h4>
-						<p>Be intentional. Ambiguity is dishonest. If a designer presents something and the layout or typography isn't working, don't say "it's okay"—call it out, respectfully. "It's okay" creates uncertainty and isn't fair to them. This applies everywhere: work, life, relationships. Clarity is a gift.</p>
-					</div>
-					<div class="lead-pov-item">
 						<h4>Stay close to the work</h4>
 						<p>I don't manage from a distance. I'm in Figma, in the code, in the weeds with the team. That proximity is what makes feedback land and decisions stick.</p>
 					</div>
@@ -115,6 +107,16 @@ import email from '@icon/email.svg'
 					<div class="lead-pov-item">
 						<h4>Make AI a team sport</h4>
 						<p>I don't hand down tools. I experiment alongside the team, share what's working, and build shared fluency together. Adoption sticks when it feels like an upgrade, not a mandate.</p>
+					</div>
+				</div>
+				<div class="lead-pillars">
+					<div class="lead-pillar-box">
+						<h4>Lead with compassion</h4>
+						<p>Skip the performance reviews and box-checking. Have real human connections and conversations instead. AI has data-ized enough of our lives—let's not let it muck with our relationships with employees. At the end of the day, 99% of people want to be successful at their jobs and happy. Lean into that.</p>
+					</div>
+					<div class="lead-pillar-box">
+						<h4>Lead with intent</h4>
+						<p>Be intentional. Ambiguity is dishonest. If a designer presents something and the layout or typography isn't working, don't say "it's okay"—call it out, respectfully. "It's okay" creates uncertainty and isn't fair to them. This applies everywhere: work, life, relationships. Clarity is a gift.</p>
 					</div>
 				</div>
 			</section>
@@ -406,6 +408,39 @@ import email from '@icon/email.svg'
 		font-weight: 300;
 	}
 
+	/* Pillars: compassion + intent */
+	.lead-pillars {
+		grid-column: 1 / -1;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+		margin-top: 48px;
+		padding-top: 48px;
+		border-top: 1px solid var(--lead-rule);
+	}
+
+	.lead-pillar-box {
+		padding: 28px 28px;
+		background: var(--lead-dark);
+		color: white;
+		border-radius: 8px;
+		border-left: 4px solid var(--lead-accent);
+	}
+
+	.lead-pillar-box h4 {
+		font-size: 15px;
+		font-weight: 600;
+		margin-bottom: 12px;
+		color: var(--lead-beige);
+	}
+
+	.lead-pillar-box p {
+		font-size: 14px;
+		line-height: 1.75;
+		color: rgba(255,255,255,0.9);
+		font-weight: 300;
+	}
+
 	/* Leadership moments section */
 	.lead-moments-section {
 		background: white;
@@ -532,6 +567,12 @@ import email from '@icon/email.svg'
 		.lead-philosophy {
 			grid-template-columns: 1fr;
 			gap: 40px;
+		}
+
+		.lead-pillars {
+			grid-template-columns: 1fr;
+			margin-top: 40px;
+			padding-top: 40px;
 		}
 
 		.lead-moment {
