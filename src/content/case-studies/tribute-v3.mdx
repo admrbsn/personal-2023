@@ -34,9 +34,7 @@ import onboardingNew from '../../assets/img/tribute-v3-onboarding-new.png'
 
 At the start of 2025, it was clear the Tribute platform had reached a breaking point.
 
-What began nearly ten years earlier as a small side project had grown into an emotionally meaningful product used by millions. However, the foundation had not kept pace with that growth. Over time, we made incremental improvements to individual areas—authentication, recording, public viewing—but the overall experience from onboarding to checkout and delivery felt fragmented, outdated, and increasingly fragile.
-
-Band-aids were starting to fall off.
+What began nearly ten years earlier as a small side project had grown into an emotionally meaningful product used by millions. However, the foundation had not kept pace with that growth. Over time, we made incremental improvements to individual areas—authentication, recording, public viewing—but the overall experience from onboarding to checkout and delivery felt fragmented, outdated, and increasingly fragile. Band-aids were starting to fall off.
 
 Tribute V3 was not a visual refresh. It was a full re-architecture of how creators and participants experience the product, how customization works, and how the platform could evolve moving forward.
 
@@ -52,7 +50,7 @@ Nearly every major surface needed attention—onboarding, publishing, tribute ma
 
 ### Limited creative control
 
-Tribute is inherently emotional and expressive, yet customization felt rigid. Users frequently asked for more control over themes, colors, and personality. The product didn't reflect the emotional weight it carried.
+People use Tribute for retirements, memorials, birthdays—moments that carry real weight. Yet customization felt rigid. Users frequently asked for more control over themes, colors, and personality. The product didn't reflect the emotional weight it carried.
 
 ### Artificial separation between creators and participants
 
@@ -77,15 +75,11 @@ The strongest ideas from this phase informed the directions that were later vali
 
 ### Sitemaps and wireframes with Relume
 
-Mapping the full information architecture of a platform this large could easily eat a week. We used Relume to compress that into hours.
+Mapping the full information architecture of a platform this large could easily eat a week. Relume's AI sitemap generator let me describe the product in plain language and get back a structured, editable site map almost instantly—which meant I could decide on the marketing site structure, Occasions taxonomy, and How It Works flow in a single afternoon instead of iterating across multiple sessions.
 
-Relume's AI sitemap generator let me describe the product in plain language and get back a structured, editable site map almost instantly. Rather than starting from a blank FigJam canvas and manually placing every node, I could prompt my way to a solid first draft and spend my time editing and making decisions rather than building scaffolding.
+The same was true for wireframes. Relume's component library is built around real UI patterns, not abstract boxes, so the wireframes we generated actually communicated intent. Engineers could read them. Stakeholders could react to them.
 
-The same was true for wireframes. Relume's component library is built around real UI patterns, not abstract boxes, so the wireframes we generated actually communicated intent. Engineers could read them. Stakeholders could react to them. That's a meaningful difference from Balsamiq sketches, which often require explanation before they can spark a useful conversation.
-
-Old-school tools like FigJam and Balsamiq are fine for whiteboarding, but they don't generate anything -- you're still doing all the structural thinking from scratch. Relume shifted the starting point. The AI gave us a defensible first draft, and we refined from there. That meant more time pressure-testing the architecture and less time constructing it.
-
-It also made handoff cleaner. Because Relume outputs directly to Figma, the transition from sitemap to wireframe to high-fidelity was one continuous file rather than a series of format conversions.
+Because Relume outputs directly to Figma, the transition from sitemap to wireframe to high-fidelity was one continuous file rather than a series of format conversions.
 
 ![Relume sitemap generator interface showing Tribute product description and generated marketing website structure.](../../assets/img/tribute-v3-relume-1.png)
 
@@ -106,7 +100,7 @@ I spent an intensive afternoon breaking down products like Partiful and Paperles
 
 A clear pattern emerged: the strongest experiences felt like one continuous space that subtly adapted based on who you were and what you could do.
 
-That insight became the backbone of Tribute V3.
+That insight drove our core decisions: a unified space for creators and participants, differentiated by permissions rather than separate interfaces.
 
 ### Prioritizing what matters through ranking exercises
 
@@ -189,7 +183,7 @@ Years of research pointed to a simple truth: users love emojis.
 
 That insight became the foundation of our default theme—animated, occasion-based emoji backgrounds. From there, we expanded into additional themes like balloons, fireworks, graduation caps, and seasonal motifs.
 
-Themes became a primary way users expressed intent and emotion, not just decoration.
+Themes became a primary way users expressed intent and emotion.
 
 ![Theme exploration and final screens showing emoji, balloons, fireworks, and other theme options.](../../assets/img/tribute-v3-themes.png)
 
@@ -201,9 +195,9 @@ Once the foundation was in place, we moved quickly.
 
 I made an early call to cut Figma out of the critical path. Rather than designing in static files and handing them off, the deliverable was functioning code. I still used Figma for targeted layout exploration, but it was never the source of truth. This approach accelerated the first 60–70% of the work, allowing more time for refinement, validation, and polish.
 
-Speed alone wasn't enough. As complexity grew, quality required discipline. Weak prompts could introduce regressions, so I continuously tightened constraints and kept the design system grounded in production components rather than static specs.
+As complexity grew, weak prompts could introduce regressions—so I continuously tightened constraints and kept the design system grounded in production components rather than static specs.
 
-The team of four was skeptical at first — that's a fair reaction when you're changing the most fundamental part of a design workflow. I stayed close to the work, experimented alongside them, and ran one-week sprint cycles combining Lean UX and Agile across product, design, and engineering simultaneously. Within a few sprints, something shifted. Stakeholders were reacting to working product instead of mockups. Decisions that used to take weeks were getting made in days. The reluctance disappeared because the results were undeniable.
+The team of four was skeptical at first — that's a fair reaction when you're changing the most fundamental part of a design workflow. I stayed close to the work, experimented alongside them, and ran one-week sprint cycles combining Lean UX and Agile across product, design, and engineering simultaneously. Within a few sprints, something shifted. When we showed a working prototype of the new checkout flow, stakeholders could actually click through and react to the real experience instead of debating a static mockup—a decision that would have taken two weeks in the old process landed in a single session. The reluctance disappeared because the results were undeniable.
 
 ![Tribute v3 vibe coding diagram comparing the old way vs new way with prompt evolution.](../../assets/img/tribute-v3-vibe-coding.png)
 
@@ -235,8 +229,8 @@ Beyond the numbers, V3 provided a modern, scalable foundation. Iteration became 
 
 ## Reflection
 
-Tribute V3 wasn't about trends or tools. It was about aligning the platform with what the product had already become—emotionally meaningful and deeply personal.
+Tribute V3 wasn't about trends or tools. It was about aligning the platform with what the product had already become—millions of users creating video tributes for retirements, memorials, birthdays, and milestones, with expectations that the experience would match the weight of those moments.
 
 It also fundamentally changed how we build. We rethought what a design system actually is — not a Figma library, but a living system rooted in AI-assisted prototyping where the deliverable is functioning code. Design and engineering now operate around shared production components, experimentation carries less risk, and one-week sprint cycles became the new normal. Ideas move from concept to reality faster without sacrificing quality.
 
-V3 set a new baseline for how we work at Tribute going forward.
+V3 set a new baseline for how we work at Tribute going forward. If I were to revisit it, I'd invest earlier in documenting the prompt patterns that worked—we learned them on the fly, and that knowledge lived mostly in my head.
