@@ -27,71 +27,74 @@ liveSiteText: "To view the live site and experience the improved platform, visit
 
 ## Background
 
-In late March 2020, I joined Tribute as Director of Product Design, amidst a world gripped by the COVID-19 pandemic. Families were finding it difficult to connect in person, and this longing for connection was something we witnessed clearly at Tribute. For instance, a grandmother in Seattle, separated from her grandchildren in New York, turned to Tribute to compile a heartfelt video montage for her granddaughter's birthday. Moments like these were not unique; they were the essence of what propelled Tribute to surpass the milestone of one million videos created by that time. The company's revenue reflected this growth, climbing from approximately $250,000 in 2019 to $700,000 by May 2020.
+I joined Tribute as Director of Product Design in late March 2020, right as the pandemic was accelerating. Tribute lets people organize group video montages for birthdays, retirements, farewells -- occasions where showing up matters. With in-person gatherings suddenly off the table, demand surged. Revenue went from roughly $250K in 2019 to $700K by May 2020, and the platform had crossed one million videos created.
 
-Tribute is a video-based platform that enables users to create video montages to celebrate specific occasions and send those created videos directly to recipients. The aim and achievement of this project was to transform Tribute into a seamless and user-centric platform that effectively met user needs, ultimately strengthening its market presence. Due to a lack of staff and resources at the time of my hiring, the design team consisted of only a handful of freelance designers. I was asked to hire additional designers and rebuild the product from the ground up to capitalize on the massive growth. Below, I have included a case study detailing how I led the design team to rebuild the product, significantly improving the user experience and contributing to the company's continued success.
+The product couldn't keep up with that growth. When I arrived, the design team was a handful of freelancers with no system or shared process. I was brought in to hire a real team and rebuild the product from the ground up.
 
 <span class="ipad"><span class="screen">![Old Tribute.co.](../../assets/img/old-tribute.webp)</span></span><span class="caption block -mt-12">The old Tribute.co</span>
 
 ## Problem
 
-Before beginning the redesign project, I held a brainstorming session with the design team to discuss and define the individual pain points users were experiencing with the product. I then followed the brainstorming session with user experience research (UXR). The purpose of conducting UXR was to determine which aspects of the product were most appealing to users and which were not. The UXR results showed three major issues with the product that needed to be resolved. First, users did not understand what Tribute was about based on the website's front page. Second, the product's pricing structure was confusing. Third, the video recording process was difficult, and the record UI was unreliable and poorly designed. Although the product's backend was functional and generally well-designed, the rest of the product needed redesign. The challenge was to redesign the three main issue areas without disrupting the original product too much.
+I started with a brainstorming session with the design team to map out pain points, then ran user research to validate what we were hearing. Three issues came back consistently:
+
+1. **The homepage didn't explain the product.** New visitors couldn't tell what Tribute was or how it worked.
+2. **Pricing was confusing.** Users didn't understand what they were paying for or when.
+3. **The recording flow was broken.** The UI was dated, the recorder was unreliable, and mobile was barely functional.
+
+The backend was solid. Everything user-facing needed work. The challenge was rebuilding those three areas without disrupting what was already working underneath.
 
 ## Solution
 
-My product vision for solving the three main issues identified during the UXR was to create a simple, seamless user experience that clearly conveys what Tribute is all about, simplify the product's pricing structure, and enhance the video recording process. I wanted to ensure we had clear analytics and funnel tracking to measure our progress and identify areas for continued improvement, so we used GA and PostHog to achieve this. Prior to the redesign, we also cleaned up our Figma files and began to develop a design system to help us create consistent user interfaces throughout the application. We used Webflow, a Sass-based tool, to build and modify the new web pages of the application.
+The approach was straightforward: make the product clear, make pricing simple, and make recording reliable.
 
-To further improve the product, I wanted to establish a culture of continuous A/B testing. I chose to use Google Optimize to conduct A/B testing on the product. I also chose to include a mechanism to gather customer feedback regularly, allowing us to continually improve the product and ensure we were meeting users' needs and resolving their pain points. I also decided to develop a process for brainstorming, documenting, and scheduling future product feature work and PLG initiatives to ensure that we were continually working toward achieving the product vision and goals. By implementing these strategies, we were able to significantly improve the user experience, increase user engagement and retention, and ultimately contribute to the company's continued growth.
+Before touching any UI, we cleaned up our Figma files and started building a design system so the team could work from shared components instead of one-off screens. We set up GA and PostHog for funnel tracking -- prior to this, there was limited visibility into where users were dropping off.
+
+We also established two practices that shaped everything going forward. First, continuous A/B testing through Google Optimize so design decisions were validated with data, not just instinct. Second, a regular cadence for collecting customer feedback so we could catch emerging pain points early rather than waiting for them to become systemic.
 
 ## Implementation
 
-To implement my product vision, I rapidly hired two full-time designers from Venezuela and a small design agency from New York City to assist with some of the heavier concept work. I held weekly design sprints that used exercises such as "How might we?", Affinity Mapping, Crazy Eights, and Spicy Debates to generate and iterate on ideas. To get our design system started, I used the Pegasus design system, and I had the small design agency conceptualize the next iteration of our home page. We iterated endlessly on prototypes and concepts, refining and testing our designs until we had a few that we felt were ready for testing. To conduct these tests, we used Maze to test a number of different prototypes.
+I hired two full-time designers from Venezuela and brought on a small NYC design agency for heavier concept work. We ran weekly design sprints using exercises like Crazy Eights, Affinity Mapping, and what we called Spicy Debates -- structured arguments over competing directions that forced the team to articulate tradeoffs rather than default to consensus.
+
+We bootstrapped the design system off of Pegasus and had the agency lead the homepage concept work. From there, we iterated on prototypes and tested them through Maze. The results confirmed most of our direction and flagged a few areas that needed refinement before handoff.
+
+The designers worked directly alongside engineering during implementation. After launch, we ran A/B tests on the live product through Google Optimize to continue tuning. The redesign shipped end-to-end without breaking the core functionality users already relied on.
 
 <span class="inline-img">![Spicy Debates.](../../assets/img/spicy-debates.webp)</span><span class="caption block mt-3">Spicy Debates</span>
 
-After conducting the Maze tests and reviewing the results, we made a few minor adjustments and refinements to the designs before proceeding to implementation. The designers we hired worked very closely with our development team to ensure that the new designs were implemented correctly. We also used Google Optimize to perform A/B testing on our designs after they were implemented to further refine them. We also established a regular cadence for gathering customer feedback to ensure we were on track with our product vision and addressing emerging pain points. Through this iterative process, we successfully redesigned Tribute from end to end while preserving the core functionality users liked. The new design significantly improved user engagement and retention, and the company continued to experience strong growth.
-
 <span class="ipad"><span class="screen">![New Tribute.co.](../../assets/img/new-tribute.webp)</span></span><span class="caption block -mt-12">The new Tribute.co</span>
 
-## Leveraging Vue 3 & Composition API
+## Moving to Vue 3
 
-As the redesign progressed, it became increasingly apparent that a significant technical pivot was necessary to further improve the product and meet our users' evolving requirements. We recognized that to maximize the potential of the improvements we made to our front-end design, and to provide a seamless user experience, we would need to make a significant change to our technology stack. Although Django was a solid, reliable technology stack, it primarily used server-side rendering, which could introduce delays in UI interactions, particularly with dynamic content such as videos. Therefore, we deliberately chose to move to Vue 3, a progressive JavaScript framework, for its flexibility, efficiency, and support for SPA (Single Page Application) design. This change means that pages now load faster and interactions with the platform feel instantaneous for users, especially during video-related activities.
+As the redesign progressed, it became clear that Django's server-side rendering was holding back the UI improvements we were making. Video-heavy interactions -- uploading, editing, compiling -- felt sluggish because every action required a round trip. We needed a client-side framework.
 
-* **Using Vue 3 and Composition API:** The Composition API, introduced in Vue 3, enabled the creation of a more logical and reusable code base for the logic in Tribute. Given that Tribute relies heavily on user interaction, such as uploading, editing, and compiling videos, this was a huge advantage. The Composition API enabled our developers to build and evolve Tribute's features more efficiently and effectively than ever before. Additionally, the reactive system in Vue 3 enabled us to bind Tribute data to the UI in real time, providing immediate, relevant feedback to users regarding their interactions with the product, including the video editing process.
+We chose Vue 3 for its flexibility and the Composition API's support for reusable, modular logic. The migration strategy was critical: rather than a risky full rewrite, I planned an iterative rollout using Vite to build small Vue apps that could be embedded directly into the existing Django structure. Each piece could be prototyped, tested, and deployed independently. The transition was nearly invisible to users.
 
-* **Decoupled Structured API Calls and Architecture:** Since we moved to a client-side framework such as Vue, we were able to separate the frontend of the product from the backend of the product, which enabled us to decouple the frontend from the backend, and thus improve both the scalability and the maintainability of the product. This enabled us to more effectively optimize the product's performance and provide a more flexible development environment, allowing the frontend and backend teams to operate independently.
+Decoupling the frontend from the backend also gave our teams more independence. Frontend and backend could ship on their own schedules, and the codebase became significantly easier to maintain and extend.
 
-* **Iterative Development and Integration Using Vite and Mini Vue Apps:** One of the greatest risks associated with transitioning to a new technology is that the transition will result in a significant amount of disruption to the user and/or the product. However, I recognized this and implemented an iterative integration plan to ensure a smooth, low-risk transition to Vue. I leveraged Vite's fast build capability to develop 'mini Vue apps,' smaller versions of the full Vue app designed to be embedded within our existing Django structure. Utilizing this modular approach enabled us to prototype, test, and deploy Vue and realize its benefits without disrupting the existing architecture. Overall, the transition was nearly imperceptible to the user, and it introduced a level of sophistication to the user experience.
-
-* **Best Practices for Developing with Vue:** Just as with any technology, the ability to utilize the full capabilities of Vue is dependent on developing according to best practices. Therefore, I ensured that the team regularly reviewed the codebase, used modular components, and leveraged Vue's lifecycle hooks. These practices not only resulted in a cleaner codebase but also greatly improved Tribute's overall performance.
-
-* **Improved User Experience:** With the asynchronous nature of Vue, pages in Tribute loaded faster, and users no longer had to wait for the entire page to reload when interacting with the product. This, combined with Vue 3's dynamic capabilities, greatly improved the user experience and made interactions with the product more responsive and intuitive, particularly during the video compilation process.
+The result was a noticeably faster product. Pages loaded without full reloads, video interactions felt responsive, and we had a modern foundation that could support everything we wanted to build next.
 
 <span class="inline-img">![Feature matrix.](../../assets/img/feature-matrix.webp)</span><span class="caption block mt-3">Feature matrix</span>
 
-Overall, the transition to Vue 3 and the Composition API was not simply a matter of changing the product's underlying technology. Rather, it represented an evolutionary step that has empowered us to further amplify the impact of our design changes and position Tribute as the leader in providing a seamless, immersive experience for users who want to create video tributes to commemorate the special moments of their lives.
+## Outcomes
 
-## Acknowledging What We've Accomplished
+The redesign moved every metric we were tracking:
 
-The ultimate measure of success in Product Development and Design is in what you can tangibly see. The Redesign of Tribute was much more than just an aesthetic upgrade or a simple update to how things looked. It was an opportunity to optimize how users interact with the website, streamline the process, and create a better overall experience. While we encountered many obstacles and innovative solutions throughout the process, the data we collected told us a clear story of success. Beyond the numbers, these improvements translated into families experiencing more meaningful and seamless connections. For a grandmother compiling a video tribute, it meant less time fussing with technology and more moments cherishing the heartfelt messages from loved ones. Below are a few key statistics highlighting the successes we achieved as a result of this redesign.
+1. **User-generated tributes up 24%**, partly driven by a Typeform integration that lowered the barrier to starting.
+2. **AOV increased by ~$30** after multiple rounds of pricing tests, with no negative impact on conversion.
+3. **Invitee participation up 21%** following the record flow redesign.
+4. **Record flow completion went from 89% to 98%.** The biggest driver was a simplified UI with a progress indicator -- users could see where they were and what was next, which cut down on confusion and drop-off.
+5. **Checkout conversion up 16%.**
 
-1. User-Generated Tributes Increased by 24%. Partly due to Typeform.
-2. We have successfully raised AOV by approximately $30 after multiple rounds of pricing tests, without negatively impacting conversions.
-3. Invitee participation in Tributes has been increased by 21% with the redesign of the record flow.
+These gave us a strong baseline and clear signal on where to push next.
 
-The rate at which invited participants completed the record flow has improved from 89% to 98%. A crucial factor in this improvement was the introduction of a simplified user interface that provided clearer instructions and feedback during the recording process. Specifically, we added a progress indicator to guide users through each step, reducing confusion and uncertainty. This actionable change has enhanced the user experience, demonstrating the impact of small yet strategic tweaks on user engagement.
+## What came next
 
-5. The Conversion Rate at Checkout has increased by 16%.
+The initial redesign focused on the homepage, marketing pages, and core flows. From there, we continued into authentication, the tribute management dashboard, public tribute pages, the record flow (covered in a separate case study), checkout, and the gift claim experience.
 
-These numbers not only support our Strategic and Design decisions but also provide a strong base for the next chapter of Growth and Innovation for Tribute.
+---
 
-## Future Design Initiatives
+## Reflection
 
-While we redesigned many of the user-facing areas of the website, such as the Home Page, Marketing Page, etc., there are several additional areas of the site that we also redesigned, including:
+This was the project that set the foundation for everything Tribute has shipped since. When I joined, there was no design system, no analytics infrastructure, no structured testing process, and no full-time design team. Building all of that while simultaneously redesigning the product was the real challenge -- not any individual UI decision.
 
-1. Authentication
-2. Manage
-3. Public Tribute Page
-4. Record Flow
-5. Checkout
-6. Claim Gift
+The biggest thing I'd do differently is push the Vue migration earlier. We spent months improving the frontend experience within Django's constraints before accepting that client-side rendering was a prerequisite for the kind of responsiveness users expected. Starting that conversation sooner would have saved time.
