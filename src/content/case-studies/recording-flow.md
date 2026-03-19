@@ -6,23 +6,18 @@ scope: "Recording flow redesign (web and mobile), technical infrastructure overh
 team: "Design, frontend, backend engineering"
 timeline: "~4-6 months"
 impact:
-  - "Submission rates: **40% → 65%+**"
+  - "Submission rates: **33% → 65%+**"
   - "Technical reliability significantly improved"
   - "Added photo uploads and gift card integration"
 metrics:
   - value: "65%+"
     description: "Submission Rate"
-    label: "(up from 40%)"
-  - value: "79%"
+    label: "(up from 33%)"
+  - value: "88%"
     label: "Users Continue Beyond First Screen"
-  - value: "42%"
+  - value: "72%"
     description: "Successful"
     label: "Video Submissions"
-  - value: "30-40%"
-    description: "Faster"
-    label: "Task Completion"
-liveSiteUrl: "https://tribute.co"
-liveSiteText: "To view the live site and experience the improved recording flow, visit. See how the redesign has made it easier to record and submit video messages, with improved reliability and new features like photo uploads."
 ---
 
 ## Background & Challenges
