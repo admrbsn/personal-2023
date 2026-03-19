@@ -26,19 +26,12 @@ The recording flow is the most important interaction in the Tribute platform. It
 
 However, the current recording flow has significant problems:
 
-•The user interface and the flow feel very dated
-
-•The technical reliability of the recording flow is weak due to its reliance on the older CDN integration and Ziggeo
-
-•The conversion rates are low - approximately 40% of users who begin the recording process ultimately submit a video
-
-•Bugs are frustrating users
-
-•The mobile experience is very subpar
-
-•Currently, the only option is to record videos, and there is no option to upload videos
-
-These problems are resulting in considerable friction for users and affecting our performance metrics.
+• Dated UI and flow
+• Unreliable recording — Ziggeo and the CDN were the root cause
+• ~40% submission rate
+• Persistent bugs
+• Barely functional on mobile
+• No option to upload, only record
 
 ## Project Objectives
 
