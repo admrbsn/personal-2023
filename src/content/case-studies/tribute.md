@@ -21,8 +21,6 @@ metrics:
     label: "Completion Rate"
   - value: "+16%"
     label: "Checkout Conversion"
-liveSiteUrl: "https://tribute.co"
-liveSiteText: "To view the live site and experience the improved platform, visit. See how the redesign has transformed the user experience, improved conversion rates, and made it easier for families to create meaningful video tributes."
 ---
 
 ## Background

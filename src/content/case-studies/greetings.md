@@ -9,18 +9,6 @@ impact:
   - "New product category for Tribute"
   - "Multi-platform launch (web, iOS)"
   - "300 user research participants across two rounds"
-metrics:
-  - value: "300"
-    description: "Research"
-    label: "Participants across two rounds of testing"
-  - value: "3"
-    description: "Platforms"
-    label: "Web, iOS, Android from a single codebase"
-  - value: "2M+"
-    description: "Launch audience"
-    label: "Existing Tribute creators as the initial user base"
-liveSiteUrl: "https://greetings.tribute.co"
-liveSiteText: "To view the live site and experience Tribute Greetings, visit. See how the new platform enables meaningful one-to-one digital gifting with personalized video greetings and curated gifts."
 ---
 
 ## Overview
