@@ -2,6 +2,7 @@
 import { Image } from "astro:assets"
 import arrowBack from '@icon/arrow-back.svg'
 import tributeV3Hero from '../../assets/img/tribute-v3-hero.png'
+import recordingFlowHero from '../../assets/img/recording-flow-hero.png'
 import tributeV3Gallery1 from '../../assets/img/tribute-v3-gallery-1.png'
 import tributeV3Gallery2 from '../../assets/img/tribute-v3-gallery-2.png'
 import tributeV3Gallery3 from '../../assets/img/tribute-v3-gallery-3.png'
@@ -46,12 +47,14 @@ const processSections = [
 // Check if this case study has process sections (only tribute-v3 for now)
 const hasProcessSections = post.slug === 'tribute-v3'
 
-// Hero image: use explicit import for tribute-v3, else match by slug-hero pattern
+// Hero image: use explicit import for tribute-v3 and recording-flow, else match by slug-hero pattern
 const heroImageFile = post.slug === 'tribute-v3'
   ? { default: tributeV3Hero }
-  : allImageFiles.filter((file: { default: { src: string } }) =>
-      file.default.src.includes(`${post.slug}-hero`)
-    )[0]
+  : post.slug === 'recording-flow'
+    ? { default: recordingFlowHero }
+    : allImageFiles.filter((file: { default: { src: string } }) =>
+        file.default.src.includes(`${post.slug}-hero`)
+      )[0]
 
 // Gallery images: explicit for tribute-v3, else match by slug-gallery pattern
 const tributeV3GalleryImages = [
