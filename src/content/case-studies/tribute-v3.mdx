@@ -212,6 +212,48 @@ Beyond milestone testing, we relied heavily on unmoderated Maze surveys througho
 
 ---
 
+## Understanding Who We're Building For
+
+Design decisions are only as good as the data behind them. Early in V3, I realized we were making targeting and prioritization calls based on gut instinct and anecdotal support tickets. We had Quantcast running on the site, but the default dashboard wasn't built for the questions we needed to answer: who exactly is using Tribute, where are they, what do they do for work, and which segments should we optimize for?
+
+So I built a custom audience insights dashboard.
+
+### Pulling real data, not just reports
+
+The dashboard connects directly to Quantcast's GraphQL API, pulling demographic, geographic, and business data dynamically rather than relying on static exports or screenshots. Every view reflects live audience intelligence: gender splits, age distribution, income bands, education levels, and parental status.
+
+![Tribute audience insights dashboard, Demographics tab showing gender, children, income, education, age, and summary insights.](../../assets/img/tribute-v3-audience-dashboard-1.png)
+
+A full state-by-state location breakdown with index scores and composition percentages.
+
+![Tribute audience insights dashboard, Location tab with US states index bars, composition percentages, and sessions.](../../assets/img/tribute-v3-audience-dashboard-2.png)
+
+On the business side, the dashboard surfaces industry, occupation, and seniority data sourced through Dun & Bradstreet's audience intelligence layer. This gave us a clear picture of not just who our users are personally, but what they do professionally and where purchasing power sits.
+
+![Tribute audience insights dashboard, Business & Occupation tab with industry index and composition from Dun & Bradstreet.](../../assets/img/tribute-v3-audience-dashboard-3.png)
+
+The whole thing is password-protected and built for internal use, designed so the team and stakeholders could explore the data themselves without needing me to pull a report.
+
+![Audience insights access gate: private dashboard with access phrase entry.](../../assets/img/tribute-v3-audience-dashboard-5.png)
+
+### From data to archetypes
+
+The most actionable output was synthesizing all of this into four audience personas, each grounded in statistically significant index values rather than assumptions.
+
+The Celebration Planner is our primary archetype and core acquisition target: women 55-65+, college-educated, household income $100k-$150k+, working in health, government, or education. She's the one organizing retirements and milestone birthdays in the family group chat. Tribute fits naturally into how she already thinks about gifting.
+
+The Executive Organizer represents our highest-LTV segment: senior leaders (CEOs, directors, VPs, founders) aged 45-59 in software, finance, and business services. They're time-poor but emotionally invested in recognizing their teams. They want a polished result with minimal effort and have high willingness to pay.
+
+The Creative Connector is a growth archetype: marketing and creative professionals in their 30s-40s who discover Tribute through workplace use and have high referral potential. They care deeply about how the final product looks and feels.
+
+The Legacy Keeper is a retention archetype: someone 65+ creating a tribute for a memorial, a 50th anniversary, or a retirement after 30 years. They move more deliberately, often need support, and are the most likely to purchase the Video Book add-on. Once they experience Tribute, they become loyal repeat customers and strong word-of-mouth drivers.
+
+![Tribute audience insights dashboard, Personas tab with four archetypes and methodology.](../../assets/img/tribute-v3-audience-dashboard-4.png)
+
+These personas directly informed ad targeting, copy decisions, onboarding tone, and which features we surfaced early versus kept secondary. When we wrote headlines for the creation modal or chose default theme options, we weren't guessing. We knew who was on the other end.
+
+---
+
 {/* PROCESS: DELIVERY */}
 
 ## Launch and Outcomes
