@@ -554,7 +554,17 @@ const imageFiles = post.slug === 'tribute-v3'
     pswpModule: () => import('https://unpkg.com/photoswipe'),
   });
 
-  lightbox.init();
+  lightbox.init()
+
+  const audienceThumbs = document.getElementById('audience-insights-thumbs')
+  if (audienceThumbs?.querySelector('a')) {
+    const audienceLightbox = new PhotoSwipeLightbox({
+      gallery: '#audience-insights-thumbs',
+      children: 'a',
+      pswpModule: () => import('https://unpkg.com/photoswipe'),
+    })
+    audienceLightbox.init()
+  }
 </script>
 
 <style>
