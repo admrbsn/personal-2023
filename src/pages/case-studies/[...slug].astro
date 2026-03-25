@@ -103,7 +103,7 @@ const imageFiles = post.slug === 'tribute-v3'
                 {title.includes(':') ? title.split(':')[0] : title}
               </h1>
               {title.includes(':') && (
-                <p class="text-base md:text-lg text-[#6b5b52]">{title.split(':').slice(1).join(':').trim()}</p>
+                <p class="text-base md:text-lg text-[#5f5d58]">{title.split(':').slice(1).join(':').trim()}</p>
               )}
             </div>
             <!-- Right side - Image -->
@@ -126,25 +126,25 @@ const imageFiles = post.slug === 'tribute-v3'
             {role && (
               <div>
                 <h3 class="text-sm font-heading font-semibold uppercase tracking-wide mb-3 text-center text-black">Role</h3>
-                <p class="text-base leading-relaxed text-center text-[#6b5b52]">{role}</p>
+                <p class="text-base leading-relaxed text-center text-[#5f5d58]">{role}</p>
               </div>
             )}
             {scope && (
               <div>
                 <h3 class="text-sm font-heading font-semibold uppercase tracking-wide mb-3 text-center text-black">Scope</h3>
-                <p class="text-base leading-relaxed text-center text-[#6b5b52]">{scope}</p>
+                <p class="text-base leading-relaxed text-center text-[#5f5d58]">{scope}</p>
               </div>
             )}
             {team && (
               <div>
                 <h3 class="text-sm font-heading font-semibold uppercase tracking-wide mb-3 text-center text-black">Team</h3>
-                <p class="text-base leading-relaxed text-center text-[#6b5b52]">{team}</p>
+                <p class="text-base leading-relaxed text-center text-[#5f5d58]">{team}</p>
               </div>
             )}
             {timeline && (
               <div>
                 <h3 class="text-sm font-heading font-semibold uppercase tracking-wide mb-3 text-center text-black">Timeline</h3>
-                <p class="text-base leading-relaxed text-center text-[#6b5b52]">{timeline}</p>
+                <p class="text-base leading-relaxed text-center text-[#5f5d58]">{timeline}</p>
               </div>
             )}
           </div>
@@ -152,11 +152,11 @@ const imageFiles = post.slug === 'tribute-v3'
       )}
       <!-- Process Navigation (sticky) -->
       {hasProcessSections && (
-        <nav id="process-nav" class="sticky top-0 z-50 bg-white border-b border-[#e8dfd4] mb-8 md:mb-12">
+        <nav id="process-nav" class="sticky top-0 z-50 bg-white border-b border-[#e0ddd8] mb-8 md:mb-12">
           <div class="max-w-6xl md:max-w-3xl mx-auto px-3 md:px-0 py-6">
             <h4 class="sr-only">Process</h4>
             <div aria-hidden="true">
-              <div class="overflow-hidden rounded-full bg-[#ebe4db]">
+              <div class="overflow-hidden rounded-full bg-[#e6e4df]">
                 <div id="process-progress" class="h-2 rounded-full bg-black transition-all duration-500 ease-out" style="width: 0%"></div>
               </div>
               <div class="mt-6 grid grid-cols-4 text-sm font-medium">
@@ -269,7 +269,7 @@ const imageFiles = post.slug === 'tribute-v3'
       <!-- Scroll to top button -->
       <button 
         id="scroll-to-top" 
-        class="fixed bottom-8 right-8 w-12 h-12 bg-[#ebe4db] rounded-full flex items-center justify-center hover:bg-[#dfd5c9] transition-all opacity-0 pointer-events-none z-50"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-[#e4e2dd] rounded-full flex items-center justify-center hover:bg-[#d6d4cf] transition-all opacity-0 pointer-events-none z-50"
         aria-label="Scroll to top"
       >
         <svg class="w-6 h-6 text-[#2a2622]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -685,7 +685,7 @@ const imageFiles = post.slug === 'tribute-v3'
     transition: width 0.5s ease-out;
   }
   .process-step-label {
-    color: #6b5b52;
+    color: #5f5d58;
     transition: color 0.3s ease;
   }
   .process-step-label:hover {
