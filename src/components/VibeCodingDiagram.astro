@@ -83,7 +83,6 @@
     <div class="vcd-cycle-section">
       <div class="vcd-evolution-header">
         <span class="vcd-evolution-label">One-week sprint cycle</span>
-        <span class="vcd-evolution-line"></span>
       </div>
 
       <div class="vcd-cycle-scroll">
@@ -184,7 +183,6 @@
           </svg>
         </span>
         <span class="vcd-cycle-footer-label">Repeat weekly</span>
-        <span class="vcd-cycle-footer-rule"></span>
       </div>
     </div>
   </div>
@@ -197,13 +195,7 @@
 
   .vcd-root {
     font-family: 'Martian Grotesk', ui-sans-serif, system-ui, sans-serif;
-    background: linear-gradient(
-      120deg,
-      #f2eff8 0%,
-      #ece8f4 28%,
-      #e8edf5 55%,
-      #e5eaf0 100%
-    );
+    background: transparent;
     color: #475569;
     padding: 1rem 0 1.25rem;
     border-radius: 0;
@@ -249,8 +241,16 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 0.625rem;
-    padding-bottom: 0.375rem;
-    border-bottom: 1px solid;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .vcd-col-header::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin: 0.375rem auto 0;
   }
 
   @media (min-width: 640px) {
@@ -261,11 +261,15 @@
 
   .vcd-old .vcd-col-header {
     color: #94a3b8;
-    border-color: #cbd5e1;
+  }
+  .vcd-old .vcd-col-header::after {
+    background: #cbd5e1;
   }
   .vcd-new .vcd-col-header {
     color: #636288;
-    border-color: rgb(122 123 168 / 0.35);
+  }
+  .vcd-new .vcd-col-header::after {
+    background: rgb(122 123 168 / 0.45);
   }
 
   .vcd-steps {
@@ -372,7 +376,7 @@
   .vcd-evolution-header {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     margin-bottom: 0.875rem;
   }
   .vcd-evolution-label {
@@ -388,17 +392,6 @@
     .vcd-evolution-label {
       font-size: 11.5px;
     }
-  }
-
-  .vcd-evolution-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      rgb(196 191 220 / 0.65),
-      rgb(184 194 212 / 0.9),
-      rgb(168 180 206 / 0.55)
-    );
   }
 
   .vcd-cycle-scroll {
@@ -433,7 +426,7 @@
     min-width: 7.5rem;
     display: flex;
     flex-direction: column;
-    background: rgb(255 255 255 / 0.72);
+    background: #fff;
     border-radius: 6px;
     padding: 0.65rem 0.5rem 0.65rem;
     position: relative;
@@ -469,19 +462,24 @@
     background: linear-gradient(90deg, #c5c9dd, #beb8d4);
   }
   .vcd-cycle-card--bar-6::before {
-    background: linear-gradient(90deg, #d4cfe8, #b8bfd4);
+    background: linear-gradient(90deg, #c4b5fd, #8b5cf6, #5b21b6);
+    opacity: 0.9;
   }
 
   .vcd-cycle-card--ship {
-    background: rgb(71 85 105 / 0.09);
-    border-color: rgb(148 163 184 / 0.45);
+    background: linear-gradient(165deg, #1e293b 0%, #0f172a 45%, #0c0820 100%);
+    border-color: rgb(139 92 246 / 0.28);
+    box-shadow:
+      0 0 0 1px rgb(100 116 139 / 0.22),
+      0 10px 28px rgb(0 0 0 / 0.32),
+      inset 0 1px 0 0 rgb(196 181 253 / 0.07);
   }
 
   .vcd-cycle-card--ship .vcd-cycle-title {
-    color: #3d4456;
+    color: #f8fafc;
   }
   .vcd-cycle-card--ship .vcd-cycle-desc {
-    color: #5c6478;
+    color: #cbd5e1;
   }
 
   .vcd-cycle-card-inner {
@@ -522,8 +520,8 @@
   }
 
   .vcd-cycle-card--ship .vcd-cycle-icon--emphasis {
-    background: #75749a;
-    border: 1px solid rgb(148 163 184 / 0.35);
+    background: linear-gradient(145deg, #6d28d9, #5b21b6);
+    border: 1px solid rgb(196 181 253 / 0.35);
   }
 
   .vcd-cycle-svg {
@@ -566,6 +564,7 @@
   .vcd-cycle-footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.45rem;
     margin-top: 0.875rem;
     padding-top: 0.1rem;
@@ -598,12 +597,4 @@
     }
   }
 
-  .vcd-cycle-footer-rule {
-    flex: 1;
-    height: 0;
-    border: none;
-    border-top: 1px dashed #cbd5e1;
-    margin: 0;
-    min-width: 1.5rem;
-  }
 </style>
