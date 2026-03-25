@@ -93,7 +93,7 @@ const imageFiles = post.slug === 'tribute-v3'
     </header>
     <main>
       <!-- Hero -->
-      <div id="hero" class="case-study-hero relative z-30 bg-[#f5efe7] -mt-20 md:-mt-[64px] overflow-hidden border-b border-black/5">
+      <div id="hero" class="case-study-hero relative z-30 bg-[#F4EEE6] -mt-20 md:-mt-[64px] overflow-hidden border-b border-black/5">
         <div class="case-study-hero-bg" aria-hidden="true"></div>
         <div class="relative z-10 max-w-6xl mx-auto px-3 md:px-0 pt-28 md:pt-24 pb-8 md:pb-12">
           <div class="flex flex-col md:flex-row h-96 md:h-[500px]">
@@ -103,7 +103,7 @@ const imageFiles = post.slug === 'tribute-v3'
                 {title.includes(':') ? title.split(':')[0] : title}
               </h1>
               {title.includes(':') && (
-                <p class="text-base md:text-lg text-gray-600">{title.split(':').slice(1).join(':').trim()}</p>
+                <p class="text-base md:text-lg text-[#6b5b52]">{title.split(':').slice(1).join(':').trim()}</p>
               )}
             </div>
             <!-- Right side - Image -->
@@ -152,14 +152,14 @@ const imageFiles = post.slug === 'tribute-v3'
       )}
       <!-- Process Navigation (sticky) -->
       {hasProcessSections && (
-        <nav id="process-nav" class="sticky top-0 z-50 bg-white border-b border-gray-200 mb-8 md:mb-12">
+        <nav id="process-nav" class="sticky top-0 z-50 bg-white border-b border-[#e8dfd4] mb-8 md:mb-12">
           <div class="max-w-6xl md:max-w-3xl mx-auto px-3 md:px-0 py-6">
             <h4 class="sr-only">Process</h4>
             <div aria-hidden="true">
-              <div class="overflow-hidden rounded-full bg-gray-200">
+              <div class="overflow-hidden rounded-full bg-[#ebe4db]">
                 <div id="process-progress" class="h-2 rounded-full bg-black transition-all duration-500 ease-out" style="width: 0%"></div>
               </div>
-              <div class="mt-6 grid grid-cols-4 text-sm font-medium text-gray-600">
+              <div class="mt-6 grid grid-cols-4 text-sm font-medium">
                 {processSections.map((section, index) => (
                   <div 
                     class={`process-step-label text-center ${index === 0 ? 'opacity-100' : 'opacity-50'}`}
@@ -269,10 +269,10 @@ const imageFiles = post.slug === 'tribute-v3'
       <!-- Scroll to top button -->
       <button 
         id="scroll-to-top" 
-        class="fixed bottom-8 right-8 w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-all opacity-0 pointer-events-none z-50"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-[#ebe4db] rounded-full flex items-center justify-center hover:bg-[#dfd5c9] transition-all opacity-0 pointer-events-none z-50"
         aria-label="Scroll to top"
       >
-        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 text-[#2a2622]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
       </button>
@@ -416,12 +416,12 @@ const imageFiles = post.slug === 'tribute-v3'
             stepLabels.forEach((label, index) => {
               if (index <= activeIndex) {
                 // Active or completed steps
-                label.classList.remove('text-gray-600', 'opacity-50')
+                label.classList.remove('opacity-50')
                 label.classList.add('text-black', 'font-semibold', 'opacity-100')
               } else {
                 // Future steps
                 label.classList.remove('text-black', 'font-semibold', 'opacity-100')
-                label.classList.add('text-gray-600', 'opacity-50')
+                label.classList.add('opacity-50')
               }
             })
         }
@@ -467,11 +467,11 @@ const imageFiles = post.slug === 'tribute-v3'
     // Set step labels
     stepLabels.forEach((label, index) => {
       if (index <= activeIndex) {
-        label.classList.remove('text-gray-600', 'opacity-50')
+        label.classList.remove('opacity-50')
         label.classList.add('text-black', 'font-semibold', 'opacity-100')
       } else {
         label.classList.remove('text-black', 'font-semibold', 'opacity-100')
-        label.classList.add('text-gray-600', 'opacity-50')
+        label.classList.add('opacity-50')
       }
     })
   }
@@ -685,6 +685,7 @@ const imageFiles = post.slug === 'tribute-v3'
     transition: width 0.5s ease-out;
   }
   .process-step-label {
+    color: #6b5b52;
     transition: color 0.3s ease;
   }
   .process-step-label:hover {
