@@ -14,7 +14,7 @@
   }
 </style>
 
-<div class="vcd-root not-prose my-6" aria-label="Diagram comparing old design workflow vs constrained prompt workflow and sprint evolution">
+<div class="vcd-root not-prose my-6" aria-label="Diagram comparing old vs new workflow and one-week sprint cycle">
   <div class="vcd-container">
     <div class="vcd-comparison-wrapper">
       <div class="vcd-comparison">
@@ -80,52 +80,148 @@
       </div>
     </div>
 
-    <div class="vcd-evolution-section">
+    <div class="vcd-cycle-section">
       <div class="vcd-evolution-header">
-        <span class="vcd-evolution-label">How constraints tightened each sprint</span>
+        <span class="vcd-evolution-label">One-week sprint cycle</span>
         <span class="vcd-evolution-line"></span>
       </div>
-      <div class="vcd-evolution-grid">
-        <div class="vcd-evolution-card">
-          <div class="vcd-card-top">
-            <div class="vcd-sprint-badge">Sprint 1</div>
-            <p class="vcd-prompt-text">"Build a tribute creation page with cover image, title, and invite flow."</p>
+
+      <div class="vcd-cycle-scroll">
+        <div class="vcd-cycle-row">
+          <div class="vcd-cycle-unit">
+            <article class="vcd-cycle-card vcd-cycle-card--bar-1">
+              <div class="vcd-cycle-card-inner">
+                <div class="vcd-cycle-icon vcd-cycle-icon--square vcd-cycle-icon--emphasis" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-svg">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                  </svg>
+                </div>
+                <div class="vcd-cycle-body">
+                  <h3 class="vcd-cycle-title">Sprint Kickoff</h3>
+                  <p class="vcd-cycle-desc">Define focus area and ownership</p>
+                </div>
+              </div>
+            </article>
+            <span class="vcd-cycle-connector" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-arrow">
+                <path d="M5 12h14m-4-4 4 4-4 4"></path>
+              </svg>
+            </span>
           </div>
-          <div class="vcd-card-bottom">
-            <div class="vcd-constraint-label">Constraint level</div>
-            <div class="vcd-constraint-bar"><div class="vcd-constraint-fill"></div></div>
+          <div class="vcd-cycle-unit">
+            <article class="vcd-cycle-card vcd-cycle-card--bar-2">
+              <div class="vcd-cycle-card-inner">
+                <div class="vcd-cycle-icon vcd-cycle-icon--square vcd-cycle-icon--muted" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-svg">
+                    <path d="M12 20h9 M16.5 3.5l2.121 2.121a2.5 2.5 0 0 1 0 3.536L8.5 17.143 4 18l.857-4.5 11.121-10.986a2.5 2.5 0 0 1 3.536 0z"></path>
+                  </svg>
+                </div>
+                <div class="vcd-cycle-body">
+                  <h3 class="vcd-cycle-title">Design &amp; Prototype</h3>
+                  <p class="vcd-cycle-desc">Build with Lovable, Bolt, V0</p>
+                </div>
+              </div>
+            </article>
+            <span class="vcd-cycle-connector" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-arrow">
+                <path d="M5 12h14m-4-4 4 4-4 4"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="vcd-cycle-unit">
+            <article class="vcd-cycle-card vcd-cycle-card--bar-3">
+              <div class="vcd-cycle-card-inner">
+                <div class="vcd-cycle-icon vcd-cycle-icon--square vcd-cycle-icon--muted" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-svg">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="vcd-cycle-body">
+                  <h3 class="vcd-cycle-title">Weekly Share-Out</h3>
+                  <p class="vcd-cycle-desc">Team review and alignment</p>
+                </div>
+              </div>
+            </article>
+            <span class="vcd-cycle-connector" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-arrow">
+                <path d="M5 12h14m-4-4 4 4-4 4"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="vcd-cycle-unit">
+            <article class="vcd-cycle-card vcd-cycle-card--bar-4">
+              <div class="vcd-cycle-card-inner">
+                <div class="vcd-cycle-icon vcd-cycle-icon--square vcd-cycle-icon--muted" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-svg">
+                    <path d="M21 12a9 9 0 1 1-2.64-6.36"></path>
+                    <path d="M21 3v6h-6"></path>
+                  </svg>
+                </div>
+                <div class="vcd-cycle-body">
+                  <h3 class="vcd-cycle-title">Iteration</h3>
+                  <p class="vcd-cycle-desc">Refinement from feedback</p>
+                </div>
+              </div>
+            </article>
+            <span class="vcd-cycle-connector" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-arrow">
+                <path d="M5 12h14m-4-4 4 4-4 4"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="vcd-cycle-unit">
+            <article class="vcd-cycle-card vcd-cycle-card--bar-5">
+              <div class="vcd-cycle-card-inner">
+                <div class="vcd-cycle-icon vcd-cycle-icon--square vcd-cycle-icon--muted" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-svg">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="vcd-cycle-body">
+                  <h3 class="vcd-cycle-title">Integration</h3>
+                  <p class="vcd-cycle-desc">CTO + Adam merge to production</p>
+                </div>
+              </div>
+            </article>
+            <span class="vcd-cycle-connector" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-arrow">
+                <path d="M5 12h14m-4-4 4 4-4 4"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="vcd-cycle-unit vcd-cycle-unit--last">
+            <article class="vcd-cycle-card vcd-cycle-card--bar-6 vcd-cycle-card--ship">
+              <div class="vcd-cycle-card-inner">
+                <div class="vcd-cycle-icon vcd-cycle-icon--circle vcd-cycle-icon--emphasis" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-svg">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div class="vcd-cycle-body">
+                  <h3 class="vcd-cycle-title">Ship</h3>
+                  <p class="vcd-cycle-desc">Live product, next sprint</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-        <div class="vcd-evolution-card">
-          <div class="vcd-card-top">
-            <div class="vcd-sprint-badge">Sprint 2</div>
-            <p class="vcd-prompt-text">"Refactor using existing components. Match design tokens. No regressions."</p>
-          </div>
-          <div class="vcd-card-bottom">
-            <div class="vcd-constraint-label">Constraint level</div>
-            <div class="vcd-constraint-bar"><div class="vcd-constraint-fill"></div></div>
-          </div>
-        </div>
-        <div class="vcd-evolution-card">
-          <div class="vcd-card-top">
-            <div class="vcd-sprint-badge">Sprint 3</div>
-            <p class="vcd-prompt-text">"Polish end-to-end. Validate against production only. Stakeholder demo Friday."</p>
-          </div>
-          <div class="vcd-card-bottom">
-            <div class="vcd-constraint-label">Constraint level</div>
-            <div class="vcd-constraint-bar"><div class="vcd-constraint-fill"></div></div>
-          </div>
-        </div>
-        <div class="vcd-evolution-card">
-          <div class="vcd-card-top">
-            <div class="vcd-sprint-badge">Sprint 4+</div>
-            <p class="vcd-prompt-text">"No static specs. Stakeholder demo Friday. Working code only -- not a Figma file."</p>
-          </div>
-          <div class="vcd-card-bottom">
-            <div class="vcd-constraint-label">Constraint level</div>
-            <div class="vcd-constraint-bar"><div class="vcd-constraint-fill"></div></div>
-          </div>
-        </div>
+      </div>
+
+      <div class="vcd-cycle-footer">
+        <span class="vcd-cycle-footer-left" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vcd-cycle-repeat-icon">
+            <path d="M17 1l4 4-4 4"></path>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+            <path d="M7 23l-4-4 4-4"></path>
+            <path d="M21 15v2a4 4 0 0 1-4 4H3"></path>
+          </svg>
+        </span>
+        <span class="vcd-cycle-footer-label">Repeat weekly</span>
+        <span class="vcd-cycle-footer-rule"></span>
       </div>
     </div>
   </div>
@@ -138,14 +234,22 @@
 
   .vcd-root {
     font-family: 'Martian Grotesk', ui-sans-serif, system-ui, sans-serif;
-    background: linear-gradient(165deg, #faf8ff 0%, #f3effb 48%, #f5f3ff 100%);
-    color: #404040;
+    background: linear-gradient(
+      145deg,
+      #fefce8 0%,
+      #fef9c3 12%,
+      #eef2ff 42%,
+      #f0eefe 68%,
+      #ede9fe 100%
+    );
+    color: #334155;
     padding: 1.125rem 0.875rem;
     border-radius: 0.5rem;
     box-shadow:
-      0 1px 3px rgb(76 29 149 / 0.07),
-      0 0 0 1px rgb(139 92 246 / 0.06);
-    border: 1px solid rgb(139 92 246 / 0.12);
+      0 1px 3px rgb(51 65 85 / 0.08),
+      0 0 0 1px rgb(139 92 246 / 0.07),
+      0 0 40px -12px rgb(253 224 71 / 0.15);
+    border: 1px solid rgb(148 163 184 / 0.22);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -197,19 +301,19 @@
   }
 
   .vcd-old .vcd-col-header {
-    color: #a8a29e;
-    border-color: #d6d3d1;
+    color: #94a3b8;
+    border-color: #cbd5e1;
   }
   .vcd-new .vcd-col-header {
     color: #5b21b6;
-    border-color: rgb(124 58 237 / 0.45);
+    border-color: rgb(124 58 237 / 0.4);
   }
 
   .vcd-steps {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    gap: 0.5rem;
   }
 
   .vcd-step {
@@ -217,7 +321,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 3px 0;
+    padding: 0;
     position: relative;
   }
 
@@ -260,45 +364,28 @@
     }
   }
 
-  .vcd-step:not(:last-child)::after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 6px;
-    margin-top: 4px;
-  }
-
   .vcd-old .vcd-step-number {
-    background: #e7e5e4;
-    color: #a8a29e;
-    border: 1px solid #d6d3d1;
-  }
-  .vcd-old .vcd-step:not(:last-child)::after {
-    border-left: 1px dashed #d6d3d1;
+    background: #e2e8f0;
+    color: #64748b;
   }
   .vcd-old .vcd-step-title {
-    color: #a8a29e;
+    color: #94a3b8;
     text-decoration: line-through;
-    text-decoration-color: #d6d3d1;
+    text-decoration-color: #cbd5e1;
   }
   .vcd-old .vcd-step-sub {
-    color: #c4c2c0;
+    color: #b8c3d1;
   }
 
   .vcd-new .vcd-step-number {
-    background: linear-gradient(145deg, #8b5cf6 0%, #6d28d9 50%, #5b21b6 100%);
+    background: #5b21b6;
     color: #fff;
-    border: 1px solid rgb(167 139 250 / 0.5);
-    box-shadow: 0 0 0 1px rgb(196 181 253 / 0.35);
-  }
-  .vcd-new .vcd-step:not(:last-child)::after {
-    background: linear-gradient(180deg, #c4b5fd, #a78bfa);
   }
   .vcd-new .vcd-step-title {
     color: #312e81;
   }
   .vcd-new .vcd-step-sub {
-    color: #5b5f8a;
+    color: #475569;
   }
 
   .vcd-center-col {
@@ -309,7 +396,8 @@
   .vcd-center-arrow svg {
     width: 26px;
     height: 26px;
-    color: #c4b5fd;
+    color: #64748b;
+    filter: drop-shadow(0 0 10px rgb(196 181 253 / 0.5));
   }
 
   @media (min-width: 640px) {
@@ -319,7 +407,7 @@
     }
   }
 
-  .vcd-evolution-section {
+  .vcd-cycle-section {
     position: relative;
   }
 
@@ -334,7 +422,9 @@
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #4c1d95;
+    color: #171717;
+    text-shadow: 0 0 24px rgb(253 224 71 / 0.35);
+    white-space: nowrap;
   }
 
   @media (min-width: 640px) {
@@ -346,44 +436,104 @@
   .vcd-evolution-line {
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, rgb(196 181 253 / 0.35), rgb(139 92 246 / 0.2));
+    background: linear-gradient(
+      90deg,
+      rgb(253 224 71 / 0.65) 0%,
+      rgb(148 163 184 / 0.85) 38%,
+      rgb(129 140 248 / 0.55) 72%,
+      rgb(167 139 250 / 0.35) 100%
+    );
   }
 
-  .vcd-evolution-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
+  .vcd-cycle-scroll {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0.35rem;
+    -webkit-overflow-scrolling: touch;
   }
 
-  @media (min-width: 768px) {
-    .vcd-evolution-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .vcd-evolution-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
-  .vcd-evolution-card {
-    background: #fff;
-    border-radius: 8px;
-    padding: 14px 12px 11px;
+  .vcd-cycle-row {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 132px;
+    align-items: stretch;
+    gap: 0;
+    width: max-content;
+    min-width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    .vcd-cycle-scroll {
+      overflow: visible;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .vcd-cycle-row {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  .vcd-cycle-unit {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.2rem;
+  }
+
+  @media (min-width: 1200px) {
+    .vcd-cycle-unit {
+      flex: 1 1 0;
+      min-width: 0;
+      gap: 0.15rem;
+    }
+  }
+
+  .vcd-cycle-unit .vcd-cycle-card {
+    width: 152px;
+  }
+
+  @media (min-width: 1200px) {
+    .vcd-cycle-unit .vcd-cycle-card {
+      width: auto;
+      flex: 1 1 0;
+      min-width: 0;
+    }
+  }
+
+  .vcd-cycle-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #cbd5e1;
+    padding: 0 0.1rem;
+  }
+
+  .vcd-cycle-arrow {
+    width: 1.125rem;
+    height: 1.125rem;
+    display: block;
+  }
+
+  .vcd-cycle-card {
+    background: linear-gradient(180deg, #fff 0%, #fafaf9 100%);
+    border-radius: 8px;
+    padding: 13px 11px 12px;
     position: relative;
     overflow: hidden;
     box-shadow:
-      0 1px 2px rgb(76 29 149 / 0.06),
-      0 8px 24px rgb(49 46 129 / 0.06);
-    border: 1px solid rgb(139 92 246 / 0.12);
+      0 1px 2px rgb(51 65 85 / 0.06),
+      0 8px 24px rgb(49 46 129 / 0.05);
+    border: 1px solid rgb(148 163 184 / 0.22);
+    margin: 0;
   }
 
-  .vcd-evolution-card::before {
+  .vcd-cycle-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -391,110 +541,157 @@
     right: 0;
     height: 3px;
   }
-  .vcd-evolution-card:nth-child(1)::before {
-    background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+
+  .vcd-cycle-card--bar-1::before {
+    background: linear-gradient(90deg, #fde047, #facc15, #d8b4fe, #8b5cf6);
   }
-  .vcd-evolution-card:nth-child(2)::before {
-    background: linear-gradient(90deg, #e879f9, #c026d3);
+  .vcd-cycle-card--bar-2::before {
+    background: linear-gradient(90deg, #94a3b8, #64748b, #475569, #6366f1);
   }
-  .vcd-evolution-card:nth-child(3)::before {
-    background: linear-gradient(90deg, #818cf8, #4f46e5);
+  .vcd-cycle-card--bar-3::before {
+    background: linear-gradient(90deg, #7dd3fc, #a5b4fc, #6366f1, #4338ca);
   }
-  .vcd-evolution-card:nth-child(4)::before {
-    background: linear-gradient(90deg, #c084fc, #7c3aed, #4c1d95);
+  .vcd-cycle-card--bar-4::before {
+    background: linear-gradient(90deg, #c4b8a8, #94a3b8, #818cf8);
+  }
+  .vcd-cycle-card--bar-5::before {
+    background: linear-gradient(90deg, #64748b, #6366f1, #7c3aed);
+  }
+  .vcd-cycle-card--bar-6::before {
+    background: linear-gradient(90deg, #fcd34d, #fde047, #c084fc, #7c3aed, #312e81);
   }
 
-  .vcd-card-top {
-    flex: 1;
+  .vcd-cycle-card--ship {
+    background: linear-gradient(165deg, #1e293b 0%, #0f172a 45%, #0c0820 100%);
+    border-color: rgb(148 48 255 / 0.3);
+    box-shadow:
+      0 0 0 1px rgb(100 116 139 / 0.25),
+      0 12px 32px rgb(0 0 0 / 0.4),
+      inset 0 1px 0 0 rgb(253 224 71 / 0.08);
   }
 
-  .vcd-sprint-badge {
-    font-size: 11px;
+  .vcd-cycle-card--ship .vcd-cycle-title {
+    color: #f8fafc;
+  }
+  .vcd-cycle-card--ship .vcd-cycle-desc {
+    color: #cbd5e1;
+  }
+
+  .vcd-cycle-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vcd-cycle-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .vcd-cycle-icon--square {
+    border-radius: 8px;
+  }
+
+  .vcd-cycle-icon--circle {
+    border-radius: 50%;
+  }
+
+  .vcd-cycle-icon--emphasis {
+    background: #5b21b6;
+    color: #fff;
+  }
+
+  .vcd-cycle-icon--muted {
+    background: #f1f5f9;
+    color: #94a3b8;
+    border: 1px solid #e2e8f0;
+  }
+
+  .vcd-cycle-card--ship .vcd-cycle-icon--emphasis {
+    background: linear-gradient(145deg, #6d28d9, #5b21b6);
+    border: 1px solid rgb(196 181 253 / 0.35);
+  }
+
+  .vcd-cycle-svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+
+  .vcd-cycle-body {
+    margin-top: 0.65rem;
+    width: 100%;
+  }
+
+  .vcd-cycle-title {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: #171717;
+  }
+
+  @media (min-width: 640px) {
+    .vcd-cycle-title {
+      font-size: 13.5px;
+    }
+  }
+
+  .vcd-cycle-desc {
+    margin: 0.35rem 0 0;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #64748b;
+    font-weight: 400;
+  }
+
+  .vcd-cycle-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.875rem;
+    padding-top: 0.1rem;
+  }
+
+  .vcd-cycle-footer-left {
+    display: flex;
+    color: #94a3b8;
+    flex-shrink: 0;
+  }
+
+  .vcd-cycle-repeat-icon {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+  }
+
+  .vcd-cycle-footer-label {
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .vcd-evolution-card:nth-child(1) .vcd-sprint-badge {
-    color: #6d28d9;
-  }
-  .vcd-evolution-card:nth-child(2) .vcd-sprint-badge {
-    color: #a21caf;
-  }
-  .vcd-evolution-card:nth-child(3) .vcd-sprint-badge {
-    color: #4338ca;
-  }
-  .vcd-evolution-card:nth-child(4) .vcd-sprint-badge {
-    color: #e9d5ff;
+    color: #94a3b8;
+    flex-shrink: 0;
   }
 
-  .vcd-prompt-text {
-    font-size: 15px;
-    line-height: 1.55;
-    color: #404040;
+  @media (min-width: 640px) {
+    .vcd-cycle-footer-label {
+      font-size: 10.5px;
+    }
+  }
+
+  .vcd-cycle-footer-rule {
+    flex: 1;
+    height: 0;
+    border: none;
+    border-top: 1px dashed #cbd5e1;
     margin: 0;
-  }
-
-  /* Final sprint: theme-drawer–style dark panel */
-  .vcd-evolution-card:nth-child(4) {
-    background: linear-gradient(165deg, #1a1528 0%, #0f0a18 100%);
-    border-color: rgb(168 85 247 / 0.35);
-    box-shadow:
-      0 0 0 1px rgb(139 92 246 / 0.12),
-      0 12px 32px rgb(0 0 0 / 0.35);
-  }
-  .vcd-evolution-card:nth-child(4) .vcd-prompt-text {
-    color: #e9e4f5;
-  }
-  .vcd-evolution-card:nth-child(4) .vcd-constraint-label {
-    color: #c4b5fd;
-  }
-  .vcd-evolution-card:nth-child(4) .vcd-constraint-bar {
-    background: rgb(46 36 74 / 0.9);
-  }
-
-  .vcd-card-bottom {
-    margin-top: 10px;
-  }
-
-  .vcd-constraint-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #a8a29e;
-    margin-bottom: 4px;
-  }
-
-  .vcd-constraint-bar {
-    height: 4px;
-    border-radius: 2px;
-    background: #e7e5e4;
-    overflow: hidden;
-  }
-  .vcd-constraint-fill {
-    height: 100%;
-    border-radius: 2px;
-  }
-
-  .vcd-evolution-card:nth-child(1) .vcd-constraint-fill {
-    width: 25%;
-    background: linear-gradient(90deg, #a78bfa, #8b5cf6);
-    box-shadow: 0 0 12px rgb(167 139 250 / 0.45);
-  }
-  .vcd-evolution-card:nth-child(2) .vcd-constraint-fill {
-    width: 50%;
-    background: linear-gradient(90deg, #e879f9, #c026d3);
-    box-shadow: 0 0 12px rgb(232 121 249 / 0.4);
-  }
-  .vcd-evolution-card:nth-child(3) .vcd-constraint-fill {
-    width: 75%;
-    background: linear-gradient(90deg, #818cf8, #4f46e5);
-    box-shadow: 0 0 12px rgb(129 140 248 / 0.4);
-  }
-  .vcd-evolution-card:nth-child(4) .vcd-constraint-fill {
-    width: 100%;
-    background: linear-gradient(90deg, #f0abfc, #c084fc, #a855f7);
-    box-shadow: 0 0 16px rgb(192 132 252 / 0.55);
+    min-width: 1.5rem;
   }
 </style>
