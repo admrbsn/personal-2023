@@ -1,0 +1,455 @@
+---
+/**
+ * Inline diagram (replaces tribute-v3-vibe-coding.png). Content from vibe-coding-diagram.html.
+ */
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Mono:wght@300;400;500&display=swap"
+/>
+
+<div class="vcd-root not-prose my-8" aria-label="Diagram comparing old design workflow vs constrained prompt workflow and sprint evolution">
+  <div class="vcd-container">
+    <div class="vcd-comparison-wrapper">
+      <div class="vcd-comparison">
+        <div class="vcd-comparison-col vcd-old">
+          <div class="vcd-col-header">The old way</div>
+          <div class="vcd-steps">
+            <div class="vcd-step">
+              <div class="vcd-step-number">1</div>
+              <div class="vcd-step-title">Figma as source of truth</div>
+              <div class="vcd-step-sub">Static specs only</div>
+            </div>
+            <div class="vcd-step">
+              <div class="vcd-step-number">2</div>
+              <div class="vcd-step-title">Handoff to engineers</div>
+              <div class="vcd-step-sub">Specs lose fidelity</div>
+            </div>
+            <div class="vcd-step">
+              <div class="vcd-step-number">3</div>
+              <div class="vcd-step-title">React to mockups</div>
+              <div class="vcd-step-sub">Weeks to decide</div>
+            </div>
+            <div class="vcd-step">
+              <div class="vcd-step-number">4</div>
+              <div class="vcd-step-title">Weeks of revision</div>
+              <div class="vcd-step-sub">Momentum lost</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vcd-center-col">
+          <div class="vcd-center-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14m-4-4l4 4-4 4"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="vcd-comparison-col vcd-new">
+          <div class="vcd-col-header">The new way</div>
+          <div class="vcd-steps">
+            <div class="vcd-step">
+              <div class="vcd-step-number">1</div>
+              <div class="vcd-step-title">Constrained prompt</div>
+              <div class="vcd-step-sub">No vague asks</div>
+            </div>
+            <div class="vcd-step">
+              <div class="vcd-step-number">2</div>
+              <div class="vcd-step-title">Production components only</div>
+              <div class="vcd-step-sub">No static specs</div>
+            </div>
+            <div class="vcd-step">
+              <div class="vcd-step-number">3</div>
+              <div class="vcd-step-title">One-week sprint cycles</div>
+              <div class="vcd-step-sub">Lean UX + Agile</div>
+            </div>
+            <div class="vcd-step">
+              <div class="vcd-step-number">4</div>
+              <div class="vcd-step-title">Working code delivered</div>
+              <div class="vcd-step-sub">Decisions in days, not weeks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vcd-evolution-section">
+      <div class="vcd-evolution-header">
+        <span class="vcd-evolution-label">How constraints tightened each sprint</span>
+        <span class="vcd-evolution-line"></span>
+      </div>
+      <div class="vcd-evolution-grid">
+        <div class="vcd-evolution-card">
+          <div class="vcd-card-top">
+            <div class="vcd-sprint-badge">Sprint 1</div>
+            <p class="vcd-prompt-text">"Build a tribute creation page with cover image, title, and invite flow."</p>
+          </div>
+          <div class="vcd-card-bottom">
+            <div class="vcd-constraint-label">Constraint level</div>
+            <div class="vcd-constraint-bar"><div class="vcd-constraint-fill"></div></div>
+          </div>
+        </div>
+        <div class="vcd-evolution-card">
+          <div class="vcd-card-top">
+            <div class="vcd-sprint-badge">Sprint 2</div>
+            <p class="vcd-prompt-text">"Refactor using existing components. Match design tokens. No regressions."</p>
+          </div>
+          <div class="vcd-card-bottom">
+            <div class="vcd-constraint-label">Constraint level</div>
+            <div class="vcd-constraint-bar"><div class="vcd-constraint-fill"></div></div>
+          </div>
+        </div>
+        <div class="vcd-evolution-card">
+          <div class="vcd-card-top">
+            <div class="vcd-sprint-badge">Sprint 3</div>
+            <p class="vcd-prompt-text">"Polish end-to-end. Validate against production only. Stakeholder demo Friday."</p>
+          </div>
+          <div class="vcd-card-bottom">
+            <div class="vcd-constraint-label">Constraint level</div>
+            <div class="vcd-constraint-bar"><div class="vcd-constraint-fill"></div></div>
+          </div>
+        </div>
+        <div class="vcd-evolution-card">
+          <div class="vcd-card-top">
+            <div class="vcd-sprint-badge">Sprint 4+</div>
+            <p class="vcd-prompt-text">"No static specs. Stakeholder demo Friday. Working code only -- not a Figma file."</p>
+          </div>
+          <div class="vcd-card-bottom">
+            <div class="vcd-constraint-label">Constraint level</div>
+            <div class="vcd-constraint-bar"><div class="vcd-constraint-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .vcd-root :global(*) {
+    box-sizing: border-box;
+  }
+
+  .vcd-root {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: #faf9f7;
+    color: #1a1a1a;
+    padding: 2rem 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow:
+      0 1px 2px rgb(0 0 0 / 0.04),
+      0 4px 12px rgb(0 0 0 / 0.03);
+    border: 1px solid rgb(0 0 0 / 0.06);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .vcd-container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .vcd-comparison-wrapper {
+    margin-bottom: 2.25rem;
+  }
+
+  .vcd-comparison {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    gap: 0;
+  }
+
+  @media (min-width: 640px) {
+    .vcd-comparison {
+      grid-template-columns: 1fr 64px 1fr;
+    }
+  }
+
+  .vcd-comparison-col {
+    text-align: center;
+  }
+
+  .vcd-col-header {
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid;
+  }
+
+  .vcd-old .vcd-col-header {
+    color: #b5b0a8;
+    border-color: #e4e0da;
+  }
+  .vcd-new .vcd-col-header {
+    color: #2c6e49;
+    border-color: rgb(44 110 73 / 0.25);
+  }
+
+  .vcd-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .vcd-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6px 0;
+    position: relative;
+  }
+
+  .vcd-step-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .vcd-step-title {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: 640px) {
+    .vcd-step-title {
+      font-size: 14.5px;
+    }
+  }
+
+  .vcd-step-sub {
+    font-size: 11.5px;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 640px) {
+    .vcd-step-sub {
+      font-size: 12.5px;
+    }
+  }
+
+  .vcd-step:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 8px;
+    margin-top: 6px;
+  }
+
+  .vcd-old .vcd-step-number {
+    background: #f0ede8;
+    color: #b5b0a8;
+    border: 1px solid #e4e0da;
+  }
+  .vcd-old .vcd-step:not(:last-child)::after {
+    border-left: 1px dashed #ddd8d0;
+  }
+  .vcd-old .vcd-step-title {
+    color: #a09b93;
+    text-decoration: line-through;
+    text-decoration-color: #ccc8c0;
+  }
+  .vcd-old .vcd-step-sub {
+    color: #c5c0b8;
+  }
+
+  .vcd-new .vcd-step-number {
+    background: #2c6e49;
+    color: #fff;
+  }
+  .vcd-new .vcd-step:not(:last-child)::after {
+    background: rgb(44 110 73 / 0.2);
+  }
+  .vcd-new .vcd-step-title {
+    color: #1a1a1a;
+  }
+  .vcd-new .vcd-step-sub {
+    color: #777;
+  }
+
+  .vcd-center-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .vcd-center-arrow svg {
+    width: 28px;
+    height: 28px;
+    color: #ddd8d0;
+  }
+
+  @media (min-width: 640px) {
+    .vcd-center-arrow svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .vcd-evolution-section {
+    position: relative;
+  }
+
+  .vcd-evolution-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+  .vcd-evolution-label {
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+  .vcd-evolution-line {
+    flex: 1;
+    height: 1px;
+    background: #e4e0da;
+  }
+
+  .vcd-evolution-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .vcd-evolution-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .vcd-evolution-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .vcd-evolution-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 18px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+      0 1px 2px rgb(0 0 0 / 0.04),
+      0 4px 12px rgb(0 0 0 / 0.03);
+    border: 1px solid rgb(0 0 0 / 0.05);
+  }
+
+  .vcd-evolution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+  .vcd-evolution-card:nth-child(1)::before {
+    background: #d4a574;
+  }
+  .vcd-evolution-card:nth-child(2)::before {
+    background: #7a9bb5;
+  }
+  .vcd-evolution-card:nth-child(3)::before {
+    background: #5a8a9e;
+  }
+  .vcd-evolution-card:nth-child(4)::before {
+    background: #2c6e49;
+  }
+
+  .vcd-card-top {
+    flex: 1;
+  }
+
+  .vcd-sprint-badge {
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .vcd-evolution-card:nth-child(1) .vcd-sprint-badge {
+    color: #d4a574;
+  }
+  .vcd-evolution-card:nth-child(2) .vcd-sprint-badge {
+    color: #7a9bb5;
+  }
+  .vcd-evolution-card:nth-child(3) .vcd-sprint-badge {
+    color: #5a8a9e;
+  }
+  .vcd-evolution-card:nth-child(4) .vcd-sprint-badge {
+    color: #2c6e49;
+  }
+
+  .vcd-prompt-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+  }
+
+  .vcd-card-bottom {
+    margin-top: 14px;
+  }
+
+  .vcd-constraint-label {
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 6px;
+  }
+
+  .vcd-constraint-bar {
+    height: 4px;
+    border-radius: 2px;
+    background: #f0ede8;
+    overflow: hidden;
+  }
+  .vcd-constraint-fill {
+    height: 100%;
+    border-radius: 2px;
+  }
+
+  .vcd-evolution-card:nth-child(1) .vcd-constraint-fill {
+    width: 25%;
+    background: #d4a574;
+  }
+  .vcd-evolution-card:nth-child(2) .vcd-constraint-fill {
+    width: 50%;
+    background: #7a9bb5;
+  }
+  .vcd-evolution-card:nth-child(3) .vcd-constraint-fill {
+    width: 75%;
+    background: #5a8a9e;
+  }
+  .vcd-evolution-card:nth-child(4) .vcd-constraint-fill {
+    width: 100%;
+    background: #2c6e49;
+  }
+</style>
