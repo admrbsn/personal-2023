@@ -1,7 +1,7 @@
 ---
 title: "Tribute Recording Flow Redesign: Tribute's Video Submission System Overhaul"
 description: "Lorem ipsum dolor sit amet"
-role: "VP of Product Design"
+role: "Head of Product Design"
 scope: "Recording flow redesign (web and mobile), technical infrastructure overhaul"
 team: "Design, frontend, backend engineering"
 timeline: "~4-6 months"
