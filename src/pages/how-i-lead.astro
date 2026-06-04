@@ -64,11 +64,11 @@ import email from '@icon/email.svg'
 		</header>
 		<main>
 			<!-- Hero -->
-			<section id="lead-hero" class="lead-hero -mt-20 md:-mt-[64px] relative overflow-hidden">
-				<div class="lead-hero-bg" aria-hidden="true"></div>
+			<section id="lead-hero" class="lead-hero brand-hero-surface -mt-20 md:-mt-[64px] relative overflow-hidden">
+				<div class="lead-hero-bg brand-hero-bg-layers" aria-hidden="true"></div>
 				<div class="lead-hero-inner relative z-10">
 					<p class="lead-hero-label">Leadership Philosophy</p>
-					<h2 class="lead-hero-title">I build teams that ship things <em>no one could build alone.</em></h2>
+					<h2 class="lead-hero-title">I build teams that ship things <em class="brand-text-gradient">no one could build alone.</em></h2>
 					<p class="lead-hero-body">
 						Twenty years in, the most important thing I've learned is that the best design leaders aren't the best designers in the room. They're the ones who make the room better. I've done that by staying close to the work, staying honest about what's broken, and being willing to change how we work when the old way stops serving us.
 					</p>
@@ -201,13 +201,13 @@ import email from '@icon/email.svg'
 
 <style>
 	:root {
-		--lead-ink: #111110;
-		--lead-muted: #6b6b67;
-		--lead-rule: #e2e1dc;
-		--lead-paper: #f5efe7;
-		--lead-accent: #5a8a8a;
-		--lead-beige: #e8d0b2;
-		--lead-dark: #141414;
+		--lead-ink: var(--brand-ink);
+		--lead-muted: var(--brand-muted);
+		--lead-rule: #e4e0f0;
+		--lead-paper: var(--brand-surface);
+		--lead-accent: var(--brand-purple-deep);
+		--lead-beige: var(--brand-lavender);
+		--lead-dark: var(--brand-ink);
 		--lead-white: #ffffff;
 	}
 
@@ -231,7 +231,7 @@ import email from '@icon/email.svg'
 		color: white !important;
 	}
 	.lead-header nav a:hover {
-		color: white;
+		color: var(--brand-lavender);
 	}
 	.lead-header nav img {
 		filter: brightness(0) invert(1);
@@ -271,7 +271,6 @@ import email from '@icon/email.svg'
 		min-height: 70vh;
 		display: flex;
 		align-items: center;
-		background: var(--lead-dark);
 		border-bottom: 1px solid rgba(255,255,255,0.08);
 	}
 	.lead-hero-bg {
@@ -279,12 +278,6 @@ import email from '@icon/email.svg'
 		inset: 0;
 		pointer-events: none;
 		z-index: 0;
-		background:
-			radial-gradient(ellipse 70% 70% at 10% 10%, rgba(0,0,0,0.35) 0%, transparent 50%),
-			radial-gradient(ellipse 60% 60% at 90% 90%, rgba(0,0,0,0.3) 0%, transparent 50%),
-			radial-gradient(ellipse 80% 80% at 85% 20%, rgba(255,255,255,0.02) 0%, transparent 50%),
-			radial-gradient(ellipse 60% 60% at 15% 85%, rgba(255,255,255,0.01) 0%, transparent 50%),
-			radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.01) 0%, transparent 50%);
 	}
 	.lead-hero-bg::before {
 		content: "";
@@ -329,7 +322,6 @@ import email from '@icon/email.svg'
 	.lead-hero-title em {
 		font-style: italic;
 		font-weight: 700;
-		color: var(--lead-beige);
 	}
 
 	.lead-hero-body {

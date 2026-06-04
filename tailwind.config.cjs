@@ -6,6 +6,15 @@ module.exports = {
 			fontFamily: {
 				'heading': ['Martian\\ Grotesk', 'sans-serif'],
       },
+			colors: {
+				brand: {
+					ink: '#1b142b',
+					slate: '#15182a',
+					lavender: '#bfabff',
+					purple: '#b026ff',
+					surface: '#f9f7ff',
+				},
+			},
 		},
 	},
 	plugins: [],
