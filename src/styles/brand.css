@@ -52,9 +52,6 @@
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: transparent;
-	/* Per-line box-decoration-break:clone clips italic overshoots; extra end padding for slanted glyphs */
-	padding-inline: 0.05em 0.22em;
-	overflow: visible;
 }
 
 .brand-text-gradient-subtle {

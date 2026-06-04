@@ -68,7 +68,7 @@ import email from '@icon/email.svg'
 				<div class="lead-hero-bg brand-hero-bg-layers" aria-hidden="true"></div>
 				<div class="lead-hero-inner relative z-10">
 					<p class="lead-hero-label">Leadership Philosophy</p>
-					<h2 class="lead-hero-title">I build teams that ship things <em class="brand-text-gradient">no one could build&nbsp;alone.</em></h2>
+					<h2 class="lead-hero-title">I build teams that ship things <span class="brand-text-gradient">no one could build alone.</span></h2>
 					<p class="lead-hero-body">
 						Twenty years in, the most important thing I've learned is that the best design leaders aren't the best designers in the room. They're the ones who make the room better. I've done that by staying close to the work, staying honest about what's broken, and being willing to change how we work when the old way stops serving us.
 					</p>
@@ -320,9 +320,11 @@ import email from '@icon/email.svg'
 		overflow: visible;
 	}
 
-	.lead-hero-title em {
+	.lead-hero-title .brand-text-gradient {
 		font-style: italic;
 		font-weight: 700;
+		box-decoration-break: slice;
+		-webkit-box-decoration-break: slice;
 	}
 
 	.lead-hero-body {

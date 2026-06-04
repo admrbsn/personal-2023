@@ -101,7 +101,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 				<div class="index-hero-triangles" aria-hidden="true"></div>
 				<div class="index-hero-inner w-full max-w-6xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto px-3 md:px-0 pt-20 md:pt-0 relative z-10">
 					<div class="index-hero-copy md:order-none order-1">
-						<h2 class="index-hero-title">Versatile product designer with <em class="brand-text-gradient">technical roots and grit.</em></h2>
+						<h2 class="index-hero-title">Versatile product designer with <span class="brand-text-gradient">technical roots and grit.</span></h2>
 						<p class="index-hero-subtitle">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm Head of Product Design at a Brooklyn-based startup.</p>
 						<ul class="md:hidden flex flex-row items-center mt-12 flex-wrap gap-2.5 text-white">
 							<li>
@@ -461,12 +461,9 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 			font-size: clamp(26px, 5vw, 36px);
 		}
 	}
-	.index-hero-title em {
+	.index-hero-title .brand-text-gradient {
 		font-style: italic;
 		font-weight: 700;
-	}
-	.index-hero-title .brand-text-gradient {
-		/* One gradient box across wrapped lines — avoids per-line glyph clipping */
 		box-decoration-break: slice;
 		-webkit-box-decoration-break: slice;
 	}
