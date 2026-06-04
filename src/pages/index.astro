@@ -57,7 +57,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 		<header role="banner" class="index-header md:flex-row md:items-center md:mx-auto md:px-0 relative z-[60] flex flex-col justify-between w-full max-w-6xl px-3 py-5">
 			<div>
 				<a href="/" class="block">
-					<h1 id="adam-logo" class=" fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black rounded-sm">Adam</h1>
+					<h1 id="adam-logo" class="fixed p-2 text-2xl font-extrabold tracking-wide text-white uppercase bg-black">Adam</h1>
 				</a>
 			</div>
 			<nav class="md:block md:mt-0 hidden">
@@ -100,8 +100,8 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 				<div class="index-hero-bg brand-hero-bg-layers" aria-hidden="true"></div>
 				<div class="index-hero-triangles" aria-hidden="true"></div>
 				<div class="index-hero-inner w-full max-w-6xl h-full right-0 left-0 flex flex-col md:flex-row md:items-center justify-center md:mx-auto px-3 md:px-0 pt-20 md:pt-0 relative z-10">
-					<div class="index-hero-copy md:order-none order-1 md:flex-1 md:min-w-0 md:pr-10">
-						<h2 class="index-hero-title">Versatile product designer with <em class="brand-text-gradient">technical roots and&nbsp;grit.</em></h2>
+					<div class="index-hero-copy md:order-none order-1">
+						<h2 class="index-hero-title">Versatile product designer with <em class="brand-text-gradient">technical roots and grit.</em></h2>
 						<p class="index-hero-subtitle">Design and technology make a great pairing—luckily, I have a background in both. Currently, I'm Head of Product Design at a Brooklyn-based startup.</p>
 						<ul class="md:hidden flex flex-row items-center mt-12 flex-wrap gap-2.5 text-white">
 							<li>
@@ -129,7 +129,7 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 							</li>
 						</ul>
 					</div>
-					<Image class="index-hero-photo w-[91.45px] md:w-[34%] md:max-w-[280px] md:flex-shrink-0 md:ml-10 mb-6 md:mb-0 rounded-sm md:rounded-xl shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.4)]" src={adamProfessional} alt="Portrait of Adam Robertson."/>
+					<Image class="w-[91.45px] md:w-2/5 md:ml-12 mb-6 md:mb-0 rounded-sm md:rounded-xl shadow-[12px_12px_36px_-0px_rgba(0,0,0,0.4)]" src={adamProfessional} alt="Portrait of Adam Robertson."/>
 				</div>
 			</div>
 			<!-- About section -->
@@ -464,6 +464,11 @@ import petersonsTestPrep from '@img/petersons-test-prep.webp'
 	.index-hero-title em {
 		font-style: italic;
 		font-weight: 700;
+	}
+	.index-hero-title .brand-text-gradient {
+		/* One gradient box across wrapped lines — avoids per-line glyph clipping */
+		box-decoration-break: slice;
+		-webkit-box-decoration-break: slice;
 	}
 	.index-hero-subtitle {
 		margin-top: 36px;
