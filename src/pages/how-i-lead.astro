@@ -64,11 +64,11 @@ import email from '@icon/email.svg'
 		</header>
 		<main>
 			<!-- Hero -->
-			<section id="lead-hero" class="lead-hero brand-hero-surface -mt-20 md:-mt-[64px] relative overflow-hidden">
+			<section id="lead-hero" class="lead-hero brand-hero-surface -mt-20 md:-mt-[64px] relative">
 				<div class="lead-hero-bg brand-hero-bg-layers" aria-hidden="true"></div>
 				<div class="lead-hero-inner relative z-10">
 					<p class="lead-hero-label">Leadership Philosophy</p>
-					<h2 class="lead-hero-title">I build teams that ship things <em class="brand-text-gradient">no one could build alone.</em></h2>
+					<h2 class="lead-hero-title">I build teams that ship things <em class="brand-text-gradient">no one could build&nbsp;alone.</em></h2>
 					<p class="lead-hero-body">
 						Twenty years in, the most important thing I've learned is that the best design leaders aren't the best designers in the room. They're the ones who make the room better. I've done that by staying close to the work, staying honest about what's broken, and being willing to change how we work when the old way stops serving us.
 					</p>
@@ -313,10 +313,11 @@ import email from '@icon/email.svg'
 	.lead-hero-title {
 		font-family: 'Martian Grotesk', sans-serif;
 		font-size: clamp(32px, 4.5vw, 52px);
-		line-height: 1.2;
+		line-height: 1.3;
 		font-weight: 400;
 		max-width: 48rem;
 		color: white;
+		overflow: visible;
 	}
 
 	.lead-hero-title em {

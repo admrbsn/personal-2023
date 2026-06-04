@@ -17,7 +17,7 @@
 	/* Resume electric purple — accents only */
 	--brand-purple: #b026ff;
 	--brand-purple-deep: #7856e7;
-	--brand-purple-glow: rgba(176, 38, 255, 0.22);
+	--brand-purple-glow: rgba(176, 38, 255, 0.12);
 
 	--brand-surface: #f9f7ff;
 	--brand-surface-warm: #f5f3fc;
@@ -27,9 +27,9 @@
 .brand-hero-surface {
 	background:
 		radial-gradient(ellipse 90% 70% at 88% -8%, var(--brand-purple-glow) 0%, transparent 52%),
-		radial-gradient(ellipse 75% 55% at 0% 100%, rgba(98, 72, 255, 0.18) 0%, transparent 48%),
+		radial-gradient(ellipse 75% 55% at 0% 100%, rgba(98, 72, 255, 0.1) 0%, transparent 48%),
 		radial-gradient(ellipse 60% 45% at 50% 0%, var(--brand-lavender-glow) 0%, transparent 55%),
-		linear-gradient(155deg, #0f0e18 0%, var(--brand-ink) 42%, var(--brand-slate-mid) 100%);
+		linear-gradient(155deg, #12111c 0%, var(--brand-ink) 48%, #1f1d32 100%);
 }
 
 .brand-hero-bg-layers {
@@ -44,14 +44,18 @@
 	background-image: linear-gradient(
 		125deg,
 		#ffffff 0%,
-		var(--brand-lavender) 42%,
-		#d8b8ff 72%,
-		var(--brand-purple) 100%
+		#ede8ff 28%,
+		var(--brand-lavender) 58%,
+		#d4c8ff 100%
 	);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: transparent;
+	/* background-clip:text trims italic edges; pad + room for descenders */
+	padding-inline: 0.02em 0.1em;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
 
 .brand-text-gradient-subtle {
@@ -95,12 +99,14 @@
 
 #adam-logo {
 	background: linear-gradient(145deg, var(--brand-slate) 0%, var(--brand-ink) 100%);
-	border: 1px solid rgba(176, 38, 255, 0.35);
-	box-shadow: 0 0 28px var(--brand-purple-glow);
+	/* Ring via box-shadow so ::before (w-full) matches the visible box — border made the stack ~1px wider at the bottom */
+	border: none;
+	box-shadow:
+		0 0 0 1px rgba(176, 38, 255, 0.35),
+		0 0 28px var(--brand-purple-glow);
 }
 
 #adam-logo.inverted {
 	background: white;
-	border-color: rgba(27, 20, 43, 0.12);
-	box-shadow: none;
+	box-shadow: 0 0 0 1px rgba(27, 20, 43, 0.12);
 }
